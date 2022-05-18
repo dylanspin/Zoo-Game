@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class UiController : MonoBehaviour
 {
-    [SerializeField] CamLook camScript;
-
 
     private void Start()
     {
-        
+        cursorLock(true);
     }
   
     private void Update()
@@ -20,7 +18,6 @@ public class UiController : MonoBehaviour
         }
     }
 
-
     public void escape(bool active)
     {
 
@@ -28,13 +25,7 @@ public class UiController : MonoBehaviour
 
     private void cursorLock(bool active)//hides cursor
     {
-        if(active)
-        {
-            Screen.lockCursor = true; 
-            camScript.lockLook(false);
-        }else{
-            Screen.lockCursor = false;
-            camScript.lockLook(true);
-        }
+        Screen.lockCursor = active; 
+        // camScript.lockLook(!active);
     }
 }
