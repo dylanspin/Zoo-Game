@@ -148,7 +148,7 @@ public class AnimalMovement : MonoBehaviour
     //jump functions
     private void jump()
     {
-        if(isGrounded && allowJump)
+        if(isGrounded && allowJump && !digging)
         {
             isGrounded = false;
             allowJump = false;
