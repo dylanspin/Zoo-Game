@@ -59,6 +59,11 @@ public class TypeEffect : MonoBehaviour
                         Typing = GetComponent<AudioSource>();
                         Typing.Play();
                    } 
+
+				   else 
+				   {
+					   Debug.Log("It's empty");
+				   }
                     
 			yield return new WaitForSeconds(timeBtwChars);
 
