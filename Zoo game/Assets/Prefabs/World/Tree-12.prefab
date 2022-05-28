@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 79
   m_IsActive: 1
 --- !u!4 &4019764539815835870
 Transform:
@@ -82,18 +82,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8019028671651874581, guid: 9041c987a223e134491763bacdd66da8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 79
+      objectReference: {fileID: 0}
+    - target: {fileID: -7422151822734960208, guid: 9041c987a223e134491763bacdd66da8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 79
+      objectReference: {fileID: 0}
+    - target: {fileID: -7242450453789606078, guid: 9041c987a223e134491763bacdd66da8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 79
+      objectReference: {fileID: 0}
     - target: {fileID: -3097340288434626328, guid: 9041c987a223e134491763bacdd66da8, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8f1d20a1b5bf5f44aa014fe2715b1034, type: 2}
+    - target: {fileID: -2024283774511849237, guid: 9041c987a223e134491763bacdd66da8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 79
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9041c987a223e134491763bacdd66da8, type: 3}
       propertyPath: m_Name
       value: tree-15
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9041c987a223e134491763bacdd66da8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 79
       objectReference: {fileID: 0}
     - target: {fileID: 2821655904238734759, guid: 9041c987a223e134491763bacdd66da8, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8f1d20a1b5bf5f44aa014fe2715b1034, type: 2}
+    - target: {fileID: 4640121139722577524, guid: 9041c987a223e134491763bacdd66da8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7c0bda906de61b046a1e40d54bc7ee81, type: 2}
     - target: {fileID: 7653977287501116505, guid: 9041c987a223e134491763bacdd66da8, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -105,3 +129,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9041c987a223e134491763bacdd66da8, type: 3}
   m_PrefabInstance: {fileID: 5621468903260995469}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6824598063810791270 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8019028671651874581, guid: 9041c987a223e134491763bacdd66da8, type: 3}
+  m_PrefabInstance: {fileID: 5621468903260995469}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &4251655058544663604
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6824598063810791270}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 149541833691738144, guid: 9041c987a223e134491763bacdd66da8, type: 3}

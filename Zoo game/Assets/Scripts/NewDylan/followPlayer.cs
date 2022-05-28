@@ -8,7 +8,6 @@ public class followPlayer : MonoBehaviour
     [SerializeField] private float followSpeed = 0.1f;
     [SerializeField] private Vector3 offset;
 
-   
     private void Start()
     {
         transform.position += offset;

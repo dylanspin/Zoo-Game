@@ -43,8 +43,6 @@ public class AnimalMovement : MonoBehaviour
     private bool digging = false;
     private bool boosted = false;
 
-
-
     private void Start()
     {
         currentSpeed = normalSpeed;
@@ -76,7 +74,7 @@ public class AnimalMovement : MonoBehaviour
         }
         else
         {
-            movementVelocity = new Vector3(x, 0f, 1);
+            movementVelocity = new Vector3(x * 0.75f, 0f, 1);
         }
         Vector3 move = transform.TransformDirection(movementVelocity) * currentSpeed;
 
@@ -163,7 +161,6 @@ public class AnimalMovement : MonoBehaviour
     }
 
     //boost functions
-
     private void boost(bool active)
     {
         if(active)

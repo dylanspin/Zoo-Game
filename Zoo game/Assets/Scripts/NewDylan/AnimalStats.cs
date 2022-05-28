@@ -23,7 +23,7 @@ public class AnimalStats : MonoBehaviour
         gain();
     }
 
-    private void gain()
+    private void Gain()
     {
         if(gaining)
         {
