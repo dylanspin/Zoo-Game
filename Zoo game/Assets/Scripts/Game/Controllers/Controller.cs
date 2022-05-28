@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class Controller : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [Header("Scripts")]
+    [SerializeField] private UiController uiScript;
+    [SerializeField] private CollectController collectScript;
 
-    // Update is called once per frame
-    void Update()
+    public void endMatch()
     {
-        
+
     }
 }

@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class MainUiController : MonoBehaviour
 {
-
     [SerializeField] private GameObject[] pages;
     private int activePage = 0;
     

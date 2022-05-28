@@ -5,11 +5,11 @@ using TMPro;
 
 public class TooltipManager : MonoBehaviour
 {
-
     public static TooltipManager _instance;
 
     public TextMeshProUGUI TextComponent;
-     private void Awake()
+
+    private void Awake()
     {
         if (_instance != null && _instance != this)
         {
@@ -20,8 +20,8 @@ public class TooltipManager : MonoBehaviour
         {
             _instance = this;
         }
-
     }
+
     // Start is called before the first frame update
     void Start()
     {

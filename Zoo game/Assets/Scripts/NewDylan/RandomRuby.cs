@@ -15,5 +15,4 @@ public class RandomRuby : MonoBehaviour
         randomRuby.transform.GetChild(0).GetComponent<MeshRenderer>().material = rubyMat;
         randomRuby.transform.localScale = new Vector3(spawnScale, spawnScale, spawnScale);
     }
-
 }
