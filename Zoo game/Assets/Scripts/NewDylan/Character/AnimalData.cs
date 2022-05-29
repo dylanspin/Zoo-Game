@@ -10,6 +10,9 @@ public class AnimalData : ScriptableObject
     [Header("Shop data")]
     public int price = 0;
     public int unlockId = 0;
+    public string info1 = "Some info 1";
+    public string info2 = "Some info 2";
+    public string fact = "Some fact";
     public Sprite animalImage = null;//image that is shown in the shop
 
     [Header("Animal in game stats")]

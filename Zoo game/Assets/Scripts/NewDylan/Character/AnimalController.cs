@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class AnimalController : MonoBehaviour
 {
-    public  AnimalData testingAnimal;
 
     [Header("Set data")]
     [SerializeField] private GameObject cameraObj;
@@ -21,7 +20,7 @@ public class AnimalController : MonoBehaviour
 
     void Start()
     {
-        setStartData(testingAnimal);
+        setStartData(Values.selectedAnimal);
     }
 
     public void setStartData(AnimalData newAnimal)
