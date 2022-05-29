@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class NewCursor : MonoBehaviour
 {
-    followPlayer prrfasd;
     public Texture2D cursorArrow;
     // Start is called before the first frame update
     void Start()

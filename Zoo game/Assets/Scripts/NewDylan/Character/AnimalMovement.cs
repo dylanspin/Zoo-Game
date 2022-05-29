@@ -5,33 +5,23 @@ using UnityEngine;
 public class AnimalMovement : MonoBehaviour
 {
     [Header("Ground Check")]
-    [SerializeField] private Transform groundCheck;
+    private Transform groundCheck;
     [SerializeField] private LayerMask groundLayers;
     [SerializeField] private float groundDistance;
 
     [Header("Set Data")]
-    [SerializeField] private Rigidbody rbPlayer;//player ridgetbody
-    [SerializeField] private LookAnimal camScript;//player ridgetbody
-    [SerializeField] private AnimalStats statsScript;//player ridgetbody
-    [SerializeField] private CamShake shakeScript;//camera shake/camera 
-
-    [Header("Abilities settings")]
-    [SerializeField] private bool canbreak = false;
-    [SerializeField] private bool canDig = false;
-    [SerializeField] private string[] playerLayers;
-    [SerializeField] private GameObject animalObject;//is temp later needs like a dive animation going in to the ground
+    [SerializeField] private Rigidbody rbPlayer;
+    [SerializeField] private LookAnimal camScript;
+    [SerializeField] private AnimalStats statsScript;
+    [SerializeField] private Abilities abilityScript;
 
     [Header("Movements settings")]
     [SerializeField] private float normalSpeed = 10;
-    [SerializeField] private float boostSpeed = 15;
+    [SerializeField] private float runSpeed = 15;
     [SerializeField] private float minBoost = 15;
     [SerializeField] private float boostStaminaDrain = 15;
     [SerializeField] private float jumpHeight = 10;
     [SerializeField] private float jumpRecharge = 0.5f;
-
-    [Header("Collision settings")]
-    [SerializeField] private float collisionForce = 100;
-    [SerializeField] private float unlockTime = 0.5f;
 
     [Header("Private Data")]
     private float currentSpeed = 5;
@@ -39,13 +29,20 @@ public class AnimalMovement : MonoBehaviour
     private Vector3 impact = Vector3.zero;//extra velocity for adding forces on to the player
     private bool isGrounded;
     private bool allowJump = true;
+    private bool canRun = true;
     private bool lockMovement = false;
-    private bool digging = false;
     private bool boosted = false;
 
-    private void Start()
+    public void setStartData(GameObject newCheck,AnimalData newData)
     {
-        currentSpeed = normalSpeed;
+        groundCheck = newCheck.transform;
+
+        canRun = newData.canRun;
+        allowJump = newData.canJump;
+
+        currentSpeed = newData.speed;
+        normalSpeed = newData.speed;
+        runSpeed = newData.runSpeed;
     }
 
     private void Update()
@@ -59,11 +56,6 @@ public class AnimalMovement : MonoBehaviour
         }   
 
         checkBoost();
-
-        if(Input.GetKeyDown(KeyCode.R))//needs to be mobile input later
-        {
-            dig(!digging);
-        }
 
         fakeForce();//sets impact for 
         
@@ -82,44 +74,18 @@ public class AnimalMovement : MonoBehaviour
     }
 
     //collision functions
-    private void OnCollisionEnter(Collision other) 
-    {
-        collide(other);//checks collision
-    }
 
-    private void collide(Collision other)
+    public void addKnockBack(Collision other,float collisionForce,float timeLocked)
     {
-        if(other.gameObject.layer != LayerMask.NameToLayer("Ground"))//when hitting something else thats not the ground
-        {
-            if(!canbreak)
-            {
-                if(!lockMovement)
-                {
-                    addKnockBack(other);
-                }
-            }
-            else
-            {
-                //needs to check what interaction needs to happen with object and if its breakable else also add knockback
-                breakObject(other);
-            }
-            StartCoroutine(shakeScript.Shake(0.25f,0.05f));
-        }
-    }
-
-    private void addKnockBack(Collision other)
-    {
+        Debug.Log("added");
         lockMovement = true;//locks movement for concussion effect
         camScript.lockCam(true);//locks the camera from moving the player rotation (needs to change to maaikes camera follow)
+       
         Vector3 dir = other.contacts[0].point - transform.position;
         dir = -dir.normalized;
         AddImpact(dir,collisionForce);//adds force in the opesite direction of the collision
-        Invoke("unlockMovement",unlockTime);
-    }
-
-    private void breakObject(Collision other)
-    {
-       
+        
+        Invoke("unlockMovement",timeLocked);
     }
 
     private void unlockMovement()
@@ -146,7 +112,7 @@ public class AnimalMovement : MonoBehaviour
     //jump functions
     private void jump()
     {
-        if(isGrounded && allowJump && !digging)
+        if(isGrounded && allowJump && !abilityScript.getDigging())
         {
             isGrounded = false;
             allowJump = false;
@@ -167,7 +133,7 @@ public class AnimalMovement : MonoBehaviour
         {
             if(statsScript.getStam() > minBoost)
             {
-                currentSpeed = boostSpeed;
+                currentSpeed = runSpeed;
             }
         }
         else
@@ -180,13 +146,16 @@ public class AnimalMovement : MonoBehaviour
 
     private void checkBoost()
     {   
-        if(Input.GetKeyDown(KeyCode.LeftShift))//needs to be mobile input later
+        if(canRun)
         {
-            boost(true);
-        }
-        if(Input.GetKeyUp(KeyCode.LeftShift))//needs to be mobile input later
-        {
-            boost(false);
+            if(Input.GetKeyDown(KeyCode.LeftShift) && !abilityScript.getDigging())//needs to be mobile input later
+            {
+                boost(true);
+            }
+            if(Input.GetKeyUp(KeyCode.LeftShift) || abilityScript.getDigging())//needs to be mobile input later
+            {
+                boost(false);
+            }
         }
 
         if(boosted)
@@ -199,30 +168,18 @@ public class AnimalMovement : MonoBehaviour
         }
     }
 
-    //digging ability
-    
-    /*
-        Still needs delay 
-        Animation
-        ground effect
-        Digging above ground trail effect
-        When going up check if there is something in the way if so cant go up
-        If cant go up show that with a shake or a other indicator
-    */
-    private void dig(bool active)
+    public bool getGrounded()
     {
-        if(canDig && isGrounded)
-        {
-            if(active)
-            {
-                gameObject.layer = LayerMask.NameToLayer(playerLayers[1]);
-            }
-            else
-            {
-                gameObject.layer = LayerMask.NameToLayer(playerLayers[0]);
-            }
-            animalObject.SetActive(!active);
-            digging = active;   
-        }
+        return isGrounded;
+    }
+
+    public bool getLocked()
+    {
+        return lockMovement;
+    }
+
+    public Transform getGroundPos()
+    {
+        return groundCheck;
     }
 }

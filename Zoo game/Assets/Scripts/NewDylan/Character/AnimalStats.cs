@@ -20,7 +20,7 @@ public class AnimalStats : MonoBehaviour
 
     void Update()
     {
-        gain();
+        Gain();
     }
 
     private void Gain()
