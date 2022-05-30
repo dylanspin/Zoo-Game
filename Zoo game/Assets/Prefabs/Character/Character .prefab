@@ -473,8 +473,8 @@ MonoBehaviour:
   sensitivity: 0.5
   rotationSpeed: 1.5
   maxOffsetAngle: 4
-  returnAngleSpeed: 0.005
-  turnSpeed: 0.35
+  returnAngleSpeed: 0.004
+  turnSpeed: 0.2
 --- !u!114 &8668239562702084710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -536,7 +536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9500f093f4e87284ab5e1c3e22a6fc6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testingAnimal: {fileID: 11400000, guid: 3e75f8ac9b94f624185a5ddee1c35623, type: 2}
+  testAnimal: {fileID: 11400000, guid: 3e75f8ac9b94f624185a5ddee1c35623, type: 2}
   cameraObj: {fileID: 8668239563304494289}
   bodySpawnPos: {fileID: 5044783220440576797}
   shakeScript: {fileID: 8668239562783247520}

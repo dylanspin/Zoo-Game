@@ -5,7 +5,6 @@ using UnityEngine;
 public class CollectController : MonoBehaviour
 {
     [Header("Set Data")]
-    [SerializeField] private List<Transform> spawnPoints = new List<Transform>();
     [SerializeField] private List<Transform> hiddenPoints = new List<Transform>();
     [SerializeField] private GameObject coinPrefab;
     [SerializeField] private GameObject friendPrefab;
@@ -17,26 +16,7 @@ public class CollectController : MonoBehaviour
 
     private void Start() 
     {
-        spawnCoins();//spawns coin at random positions
         spawnFriend();
-    }
-
-    private void spawnCoins()
-    {
-        int spawnAmount = coinAmount;
-        if(coinAmount > spawnPoints.Count)//checks if spawn amount is not greater then the spawnpoints 
-        {
-            spawnAmount = spawnPoints.Count;
-        }
-
-        for(int i=0; i<spawnAmount; i++)
-        {
-            Transform coinPoint = spawnPoints[Random.Range(0,spawnPoints.Count)];
-            GameObject spawnedCoin = Instantiate(coinPrefab,coinPoint.position,Quaternion.Euler(0,0,0));
-            spawnedCoin.GetComponent<Animator>().speed = Random.Range(0.7f,1.0f);
-            spawnedCoin.GetComponent<Collect>().setStart(this);
-            spawnPoints.Remove(coinPoint);//removes point from pool
-        }
     }
 
     private void spawnFriend()
