@@ -4,8 +4,8 @@ using UnityEngine;
 
 public static class Values
 {
-    //ints
-    public static int selectedAnimalId = 0;///the selected animal in the scrap book
+    //animal
+    public static AnimalData selectedAnimal; ///the selected animal in the scrap book
 
     //bools
 

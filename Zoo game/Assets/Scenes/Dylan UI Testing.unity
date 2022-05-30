@@ -1166,6 +1166,7 @@ GameObject:
   - component: {fileID: 614514364}
   - component: {fileID: 614514363}
   - component: {fileID: 614514367}
+  - component: {fileID: 614514368}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1272,6 +1273,19 @@ MonoBehaviour:
   - {fileID: 179633872}
   - {fileID: 1810411634}
   - {fileID: 1637201338}
+--- !u!114 &614514368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614514362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18c52600588c885418b6381df31d1091, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bookScript: {fileID: 1810411636}
 --- !u!1 &701028372
 GameObject:
   m_ObjectHideFlags: 0
@@ -2941,7 +2955,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1609584077}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1810411636}
+        m_TargetAssemblyTypeName: BookController, Assembly-CSharp
+        m_MethodName: buyAnimal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1609584077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3430,7 +3456,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1743075109}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 614514368}
+        m_TargetAssemblyTypeName: LevelControllerUi, Assembly-CSharp
+        m_MethodName: playAnimal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1743075109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3602,224 +3640,15 @@ MonoBehaviour:
   - {fileID: 769300091}
   - {fileID: 327959024}
   - {fileID: 2093797700}
-  animalSprites:
-  - {fileID: 21300000, guid: 91b250ff6852b2e4fa68139afc561493, type: 3}
-  - {fileID: 21300000, guid: 91b250ff6852b2e4fa68139afc561493, type: 3}
-  - {fileID: 21300000, guid: 91b250ff6852b2e4fa68139afc561493, type: 3}
-  - {fileID: 21300000, guid: 91b250ff6852b2e4fa68139afc561493, type: 3}
-  - {fileID: 21300000, guid: 91b250ff6852b2e4fa68139afc561493, type: 3}
-  - {fileID: 21300000, guid: 91b250ff6852b2e4fa68139afc561493, type: 3}
   rightAnimalSlot: {fileID: 6042741414611944021}
   animalInfo:
   - {fileID: 461095040}
   - {fileID: 2147185649}
   - {fileID: 470806349}
   - {fileID: 257808532}
-  prices: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  animalName:
-  - Impala
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  info1:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  info2:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  randomFact:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  animals:
+  - {fileID: 11400000, guid: 3e75f8ac9b94f624185a5ddee1c35623, type: 2}
+  - {fileID: 11400000, guid: 3e75f8ac9b94f624185a5ddee1c35623, type: 2}
   moneyAmount: {fileID: 1197472703}
 --- !u!1 &1863107191
 GameObject:

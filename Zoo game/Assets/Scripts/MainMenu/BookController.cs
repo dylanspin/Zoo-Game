@@ -6,17 +6,11 @@ public class BookController : MonoBehaviour
 {   
     [Header("Animal UI")]
     [SerializeField] private AnimalSlot[] uiSlots;//animal ui slots in the book
-    [SerializeField] private Sprite[] animalSprites;//the correct images for the animals in the book
-
     [SerializeField] private AnimalSlot rightAnimalSlot;//the right animal picture 
     [SerializeField] private TMPro.TextMeshProUGUI[] animalInfo;//the text related to the selected animal
 
     [Header("Animal Data")]/////////////wil be made in to scriptable objects so it doesnt have to be like this here
-    [SerializeField] private int[] prices = new int[50];
-    [SerializeField] private string[] animalName = new string[50];
-    [SerializeField] private string[] info1 = new string[50];
-    [SerializeField] private string[] info2 = new string[50];
-    [SerializeField] private string[] randomFact = new string[50];
+    [SerializeField] private AnimalData[] animals;
 
     [Header("Other UI Data")]
     [SerializeField] private TMPro.TextMeshProUGUI moneyAmount;
@@ -30,6 +24,8 @@ public class BookController : MonoBehaviour
     private void Start()
     {
         loadData();
+        showRight(lastSelected);
+        // unlocked[0] = true;
     }
 
     private void loadData()
@@ -37,10 +33,12 @@ public class BookController : MonoBehaviour
         BookData loadData = SaveScript.loadBook();
         if(loadData != null)
         {
-            //username = loadData.username; ///example
-        
-        }else{
-            Debug.Log("No data found");
+            unlocked = loadData.unlocks;
+            money = loadData.money;
+        }
+        else
+        {
+            Debug.Log("No save data found");
         }
 
         setData();
@@ -56,18 +54,25 @@ public class BookController : MonoBehaviour
     {
         for(int i=0; i<uiSlots.Length; i++)
         {
-            uiSlots[i].setData(i,animalSprites[i],unlocked[i],true,this);
+            bool exist = i < animals.Length;
+            if(exist)
+            {
+                uiSlots[i].setData(i,animals[i].animalImage,unlocked[i],true,this);
+            }
+            uiSlots[i].gameObject.SetActive(exist);
         }
     }   
 
-    public void buyAnimal(int slot)
+    public void buyAnimal()
     {
-        if(money > prices[slot] && !unlocked[slot])
+        if(money >= animals[lastSelected].price && !unlocked[lastSelected])
         {
-            money -= prices[slot];
-            unlocked[slot] = true;
+            money -= animals[lastSelected].price;
+            unlocked[lastSelected] = true;
             SaveScript.saveBook(this);//saves book data
 
+            uiSlots[lastSelected].setData(lastSelected,animals[lastSelected].animalImage,unlocked[lastSelected],true,this);
+            showRight(lastSelected);
             //do some ui Stuff indicating that animal is unlocked
         }
         else
@@ -84,16 +89,19 @@ public class BookController : MonoBehaviour
             showId = lastSelected;
         }
         
-        uiSlots[showId].setData(showId,animalSprites[showId],unlocked[showId],true,this);
+        showRight(showId);
+    }
 
-        Debug.Log(showId);
-        /////needs to be later from scriptable animal
-        if(unlocked[showId])
+    private void showRight(int id)
+    {
+        rightAnimalSlot.setData(id,animals[id].animalImage,unlocked[id],true,this);
+
+        if(unlocked[id])
         {
-            animalInfo[0].text = animalName[showId];
-            animalInfo[1].text = info1[showId];
-            animalInfo[2].text = info2[showId];
-            animalInfo[3].text = randomFact[showId];
+            animalInfo[0].text = animals[id].name;
+            animalInfo[1].text = animals[id].info1;
+            animalInfo[2].text = animals[id].info2;
+            animalInfo[3].text = animals[id].fact;
         }
         else
         {
@@ -104,14 +112,31 @@ public class BookController : MonoBehaviour
         }
     }
 
-    public void selectAnimal(int slotId)
+    public void selectAnimal(int slotId)//selecting animal with left click
     {
         lastSelected = slotId;
-        if(unlocked[slotId])
-        {
+        showRight(lastSelected);
+    }
 
+    public AnimalData getCurrent()
+    {
+        if(unlocked[lastSelected])
+        {
+            return animals[lastSelected];
+        }   
+        else//when not unlocked
+        {
+            return null;
         }
     }
 
+    public bool[] getUnlocks()
+    {
+        return unlocked;
+    }
 
+    public int getMoney()
+    {
+        return money;
+    }
 }

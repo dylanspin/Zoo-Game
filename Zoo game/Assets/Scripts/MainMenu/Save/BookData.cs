@@ -13,6 +13,9 @@ public class BookData
 
     public BookData(BookController oData)
     { 
+
+        unlocks = oData.getUnlocks();
+        money = oData.getMoney();
         /*
             set the public values example : 
             username = oData.username;

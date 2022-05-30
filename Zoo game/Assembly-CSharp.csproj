@@ -2,8 +2,6 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
-    <CscToolPath>C:\Program Files\Unity\Hub\Editor\2020.3.28f1\Editor\Data\Tools\RoslynScripts</CscToolPath>
-    <CscToolExe>unity_csc.bat</CscToolExe>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -11,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{79533248-AA35-9C93-A69B-F7585F2239A1}</ProjectGuid>
+    <ProjectGuid>{48325379-35aa-939c-a69b-f7585f2239a1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -30,15 +28,6 @@
     <NoWarn>0169</NoWarn>
     <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>Temp\bin\Release\</OutputPath>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <NoWarn>0169</NoWarn>
-    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
-  </PropertyGroup>
   <PropertyGroup>
     <NoConfig>true</NoConfig>
     <NoStdLib>true</NoStdLib>
@@ -46,44 +35,46 @@
     <ImplicitlyExpandNETStandardFacades>false</ImplicitlyExpandNETStandardFacades>
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
-  <PropertyGroup>
-    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <UnityProjectGenerator>Unity/VSTU</UnityProjectGenerator>
-    <UnityProjectType>Game:1</UnityProjectType>
-    <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
-    <UnityVersion>2020.3.28f1</UnityVersion>
-  </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\NewDylan\followPlayer.cs" />
      <Compile Include="Assets\Scripts\LevelLoader.cs" />
-     <Compile Include="Assets\Scripts\NewDylan\CamShake.cs" />
+     <Compile Include="Assets\Scripts\NewDylan\Other\CamShake.cs" />
      <Compile Include="Assets\Scripts\Game\Controllers\Controller.cs" />
+     <Compile Include="Assets\Scripts\NewDylan\UI\AnimalSlot.cs" />
      <Compile Include="Assets\Scripts\MainMenu\MainUiController.cs" />
-     <Compile Include="Assets\Scripts\NewDylan\AnimalStats.cs" />
+     <Compile Include="Assets\Scripts\NewDylan\Character\AnimalStats.cs" />
      <Compile Include="Assets\Scenes\Celeste\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\MainMenu\Save\BookData.cs" />
      <Compile Include="Assets\Scripts\Game\character\Maaike\CameraBehaviour.cs" />
      <Compile Include="Assets\Scripts\Game\character\Maaike\PlayerBehaviour.cs" />
      <Compile Include="Assets\Scripts\MainMenu\SettingsController.cs" />
-     <Compile Include="Assets\Scripts\UI\ToolTip.cs" />
+     <Compile Include="Assets\Scripts\NewDylan\UI\Timer.cs" />
+     <Compile Include="Assets\Scripts\Faye\UI\ToolTip.cs" />
      <Compile Include="Assets\Maaike\Scripts maaike\AnimalMovment.cs" />
      <Compile Include="Assets\Scripts\Game\Controllers\UiController.cs" />
-     <Compile Include="Assets\Scripts\CutScene\Skip.cs" />
+     <Compile Include="Assets\Scripts\Faye\CutScene\Skip.cs" />
      <Compile Include="Assets\Scripts\Game\character\CamLook.cs" />
-     <Compile Include="Assets\Scripts\UI\NewCursor.cs" />
-     <Compile Include="Assets\Scripts\UI\CursorScript.cs" />
+     <Compile Include="Assets\Scripts\Faye\UI\NewCursor.cs" />
+     <Compile Include="Assets\Scripts\Faye\UI\CursorScript.cs" />
      <Compile Include="Assets\Scripts\MainMenu\BookController.cs" />
      <Compile Include="Assets\Scripts\MainMenu\Save\SettingData.cs" />
-     <Compile Include="Assets\Scripts\NewDylan\LookAnimal.cs" />
-     <Compile Include="Assets\Scripts\UI\TooltipManager.cs" />
-     <Compile Include="Assets\Scripts\NewDylan\CollectController.cs" />
+     <Compile Include="Assets\Scripts\NewDylan\Character\LookAnimal.cs" />
+     <Compile Include="Assets\Scripts\Faye\UI\TooltipManager.cs" />
+     <Compile Include="Assets\Scripts\NewDylan\Other\CollectController.cs" />
      <Compile Include="Assets\Scripts\MainMenu\Values.cs" />
-     <Compile Include="Assets\Scripts\NewDylan\LoadingScreen.cs" />
-     <Compile Include="Assets\Scripts\CutScene\TypeEffect.cs" />
-     <Compile Include="Assets\Scripts\NewDylan\Collect.cs" />
-     <Compile Include="Assets\Scripts\NewDylan\AnimalMovement.cs" />
-     <Compile Include="Assets\Scripts\NewDylan\RandomRuby.cs" />
+     <Compile Include="Assets\Scripts\NewDylan\UI\LoadingScreen.cs" />
+     <Compile Include="Assets\Scripts\NewDylan\UI\Hover.cs" />
+     <Compile Include="Assets\Scripts\Faye\CutScene\TypeEffect.cs" />
+     <Compile Include="Assets\Scripts\NewDylan\Other\Collect.cs" />
+     <Compile Include="Assets\Scripts\NewDylan\Character\AnimalMovement.cs" />
+     <Compile Include="Assets\Scripts\NewDylan\Other\camFollow.cs" />
+     <Compile Include="Assets\Scripts\NewDylan\Other\RandomRuby.cs" />
      <Compile Include="Assets\Scripts\MainMenu\Save\SaveScript.cs" />
+     <Compile Include="Assets\Scripts\NewDylan\Character\Abilities.cs" />
+     <Compile Include="Assets\Scripts\NewDylan\Character\animalCol.cs" />
+     <Compile Include="Assets\Scripts\NewDylan\Character\AnimalController.cs" />
+     <Compile Include="Assets\Scripts\NewDylan\Character\AnimalData.cs" />
+     <Compile Include="Assets\Scripts\NewDylan\Character\AnimalPrefab.cs" />
+     <Compile Include="Assets\Scripts\NewDylan\UI\LevelControllerUi.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -329,6 +320,12 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
         <HintPath>C:\Users\celes\Documents\School\Zoo-game\Zoo game\Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+        <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.28f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+        <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.28f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.28f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\mscorlib.dll</HintPath>
@@ -752,134 +749,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Unity.VSCode.Editor.csproj">
-      <Project>{BBDCDD37-66F6-9019-05D8-89DCFA29D696}</Project>
-      <Name>Unity.VSCode.Editor</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Universal.Shaders.csproj">
-      <Project>{12BC9FBE-C265-4307-E93C-A7111BAAFA04}</Project>
-      <Name>Unity.RenderPipelines.Universal.Shaders</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Universal.Runtime.csproj">
-      <Project>{DC14009D-8099-DB4D-B3EF-D0B982E57FAE}</Project>
-      <Name>Unity.RenderPipelines.Universal.Runtime</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
-      <Project>{73812D2D-021B-B264-738C-255A4CBD7E67}</Project>
-      <Name>Unity.TextMeshPro.Editor</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Timeline.csproj">
-      <Project>{E3BA006A-0A47-4EA1-8B41-26E87ED8683D}</Project>
-      <Name>Unity.Timeline</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="Unity.TextMeshPro.csproj">
-      <Project>{56183AFB-232F-23C1-B5B5-AD7D88814601}</Project>
-      <Name>Unity.TextMeshPro</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Searcher.Editor.csproj">
-      <Project>{E24ECF3F-BB6E-87D0-296D-5E8915069D76}</Project>
-      <Name>Unity.Searcher.Editor</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Core.Runtime.csproj">
-      <Project>{71DD778F-37DD-5B03-D0AC-05F3715B7B2F}</Project>
-      <Name>Unity.RenderPipelines.Core.Runtime</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Postprocessing.Editor.csproj">
-      <Project>{8A84F36F-D121-C6D0-0AB8-A8A66C0CBF85}</Project>
-      <Name>Unity.Postprocessing.Editor</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{2D43ED9D-8C41-99AB-F1A5-A915BD993A37}</Project>
-      <Name>UnityEditor.UI</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="Unity.PlasticSCM.Editor.csproj">
-      <Project>{3D99AF97-7768-90A3-C28F-CC55ECD8E9FA}</Project>
-      <Name>Unity.PlasticSCM.Editor</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Rider.Editor.csproj">
-      <Project>{3AF3B7D4-E90A-1B71-F9D8-362192676CDD}</Project>
-      <Name>Unity.Rider.Editor</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Core.ShaderLibrary.csproj">
-      <Project>{0883995B-5B25-F339-8BF9-74920E7749CC}</Project>
-      <Name>Unity.RenderPipelines.Core.ShaderLibrary</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{91608273-144A-6C05-0341-8ED693FE74D9}</Project>
-      <Name>UnityEngine.UI</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Mathematics.csproj">
-      <Project>{E57A0047-5E7C-0D3E-8272-EB4E9473AAC9}</Project>
-      <Name>Unity.Mathematics</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="Unity.ShaderGraph.Editor.csproj">
-      <Project>{2531F2ED-3B3D-0208-1355-FBA3E94F43BE}</Project>
-      <Name>Unity.ShaderGraph.Editor</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="Cinemachine.csproj">
-      <Project>{5EC03709-4FC2-F5E6-34B7-243FCA13D2CD}</Project>
-      <Name>Cinemachine</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="com.unity.cinemachine.editor.csproj">
-      <Project>{8456C97C-9969-6DB1-169C-4CDF83920429}</Project>
-      <Name>com.unity.cinemachine.editor</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Postprocessing.Runtime.csproj">
-      <Project>{2FF7D80E-A355-143D-B823-4EC68E3D6367}</Project>
-      <Name>Unity.Postprocessing.Runtime</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Universal.Editor.csproj">
-      <Project>{6AFCC18F-2565-CD74-C70A-DB78F0AD545F}</Project>
-      <Name>Unity.RenderPipelines.Universal.Editor</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipeline.Universal.ShaderLibrary.csproj">
-      <Project>{5FBAA8CC-36A2-2E09-2AB8-739047002A6D}</Project>
-      <Name>Unity.RenderPipeline.Universal.ShaderLibrary</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.csproj">
-      <Project>{3E0215C1-24EA-2F68-26E6-419034DD949B}</Project>
-      <Name>Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Timeline.Editor.csproj">
-      <Project>{59098D39-A669-B2AD-48EB-FBA0F0FFE76A}</Project>
-      <Name>Unity.Timeline.Editor</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Mathematics.Editor.csproj">
-      <Project>{7D7F2657-2630-A8BC-7A5B-9FA24A38805C}</Project>
-      <Name>Unity.Mathematics.Editor</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
-    <ProjectReference Include="Unity.RenderPipelines.Core.Editor.csproj">
-      <Project>{FC5112D9-3D2B-2D69-A367-26E722CDEE0C}</Project>
-      <Name>Unity.RenderPipelines.Core.Editor</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Target Name="GenerateTargetFrameworkMonikerAttribute" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
