@@ -25,7 +25,7 @@ public class UiController : MonoBehaviour
 
     private void cursorLock(bool active)//hides cursor
     {
-        Screen.lockCursor = active; 
+        // Screen.lockCursor = active; 
         // camScript.lockLook(!active);
     }
 }
