@@ -8,7 +8,7 @@ public static class Values
     public static AnimalData selectedAnimal; ///the selected animal in the scrap book
 
     //bools
-
+    public static bool pauzed = false;
     
     //string
 }

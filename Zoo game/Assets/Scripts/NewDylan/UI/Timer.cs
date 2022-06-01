@@ -53,6 +53,11 @@ public class Timer : MonoBehaviour
                 count.text = minutes.ToString() + ":0" + seconds.ToString("F0");
             }
         }
+        
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            endTime();
+        }
     }
 
     private void endTime()

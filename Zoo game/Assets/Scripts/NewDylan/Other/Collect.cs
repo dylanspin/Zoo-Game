@@ -6,6 +6,7 @@ public class Collect : MonoBehaviour
 {
     [Header("Set data")]
     [SerializeField] private ParticleSystem collectEffect;
+    [SerializeField] private Animator anim;
     [SerializeField] private bool isCoin = true;
 
     [Header("Private data")]
@@ -27,7 +28,8 @@ public class Collect : MonoBehaviour
         if(!collected)  
         {
             collected = true;
-            gameObject.SetActive(false);
+            anim.SetBool("Collect",true);
+            // gameObject.SetActive(false);
             if(collectEffect)
             {
                 collectEffect.Play();

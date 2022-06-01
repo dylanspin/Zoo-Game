@@ -10,14 +10,18 @@ public class MainUiController : MonoBehaviour
     
     private void Start()
     {
-        //setting ui stuff maybe
+        Values.pauzed = false;
+        Time.timeScale = 1;
     }
 
     public void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-            
+            if(activePage != 0)
+            {
+                openPage(0);
+            }
         }
     }
 
@@ -25,6 +29,7 @@ public class MainUiController : MonoBehaviour
     {
         pages[activePage].SetActive(false);
         pages[open].SetActive(true);
+        activePage = open;
     }
 
     public void quitGame()

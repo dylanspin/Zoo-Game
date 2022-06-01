@@ -8,6 +8,7 @@ public class CollectController : MonoBehaviour
     [SerializeField] private List<Transform> hiddenPoints = new List<Transform>();
     [SerializeField] private GameObject coinPrefab;
     [SerializeField] private GameObject friendPrefab;
+    [SerializeField] private UiController uiScript;
     [SerializeField] private int coinAmount = 30;
     
     [Header("Private Data")]
@@ -31,10 +32,16 @@ public class CollectController : MonoBehaviour
         if(isCoin)
         {
             coinsCollected ++;
+            uiScript.setCollected(coinsCollected);
         }
         else
         {
             friendsCollected ++;
         }
+    }
+
+    public int getMoney()
+    {
+        return coinsCollected;
     }
 }

@@ -47,30 +47,33 @@ public class AnimalMovement : MonoBehaviour
 
     private void Update()
     {
-        isGrounded = Physics.Raycast(groundCheck.position,-groundCheck.up,groundDistance,groundLayers);
-        // Debug.DrawRay(groundCheck.position, -groundCheck.up * groundDistance, Color.red);//draws line to check the ground distance check
-
-        if(Input.GetKeyDown(KeyCode.Space))//needs to be mobile input later
+        if(!Values.pauzed)
         {
-            jump();
-        }   
+            isGrounded = Physics.Raycast(groundCheck.position,-groundCheck.up,groundDistance,groundLayers);
+            // Debug.DrawRay(groundCheck.position, -groundCheck.up * groundDistance, Color.red);//draws line to check the ground distance check
 
-        checkBoost();
+            if(Input.GetKeyDown(KeyCode.Space))//needs to be mobile input later
+            {
+                jump();
+            }   
 
-        fakeForce();//sets impact for 
-        
-        float x = Input.GetAxis("Horizontal");
-        if(lockMovement)
-        {
-            movementVelocity = new Vector3(0, 0f, 0);
+            checkBoost();
+
+            fakeForce();//sets impact for 
+            
+            float x = Input.GetAxis("Horizontal");
+            if(lockMovement)
+            {
+                movementVelocity = new Vector3(0, 0f, 0);
+            }
+            else
+            {
+                movementVelocity = new Vector3(x * 0.75f, 0f, 1);
+            }
+            Vector3 move = transform.TransformDirection(movementVelocity) * currentSpeed;
+
+            rbPlayer.velocity = new Vector3(move.x ,rbPlayer.velocity.y, move.z) + (impact);
         }
-        else
-        {
-            movementVelocity = new Vector3(x * 0.75f, 0f, 1);
-        }
-        Vector3 move = transform.TransformDirection(movementVelocity) * currentSpeed;
-
-        rbPlayer.velocity = new Vector3(move.x ,rbPlayer.velocity.y, move.z) + (impact);
     }
 
     //collision functions
