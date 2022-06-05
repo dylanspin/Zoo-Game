@@ -20,6 +20,14 @@ public class CollectController : MonoBehaviour
         spawnFriend();
     }
 
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.O))
+        {
+            collectItem(true);
+        }
+    }
+
     private void spawnFriend()
     {
         Transform hiddenPoint = hiddenPoints[Random.Range(0,hiddenPoints.Count)];
@@ -43,5 +51,10 @@ public class CollectController : MonoBehaviour
     public int getMoney()
     {
         return coinsCollected;
+    }
+
+    public int getmax()
+    {
+        return coinAmount;
     }
 }

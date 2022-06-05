@@ -11,6 +11,16 @@ public class Controller : MonoBehaviour
 
     public void endMatch()
     {
-        bookScript.saveMoney(collectScript.getMoney());
+        int currentAmount = collectScript.getMoney();
+        int maxAmount = collectScript.getmax();
+        if(currentAmount > maxAmount)
+        {
+            currentAmount = maxAmount;
+        }
+        int part = (int)Mathf.Floor((float)currentAmount / (maxAmount / 2));
+        Debug.Log(part);
+
+        bookScript.saveMoney(currentAmount);
+        uiScript.showEndScreen(part,currentAmount,maxAmount);
     }
 }
