@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [CreateAssetMenu(fileName = "Animal", menuName = "Animals/Animal")]
 public class AnimalData : ScriptableObject
@@ -18,6 +19,7 @@ public class AnimalData : ScriptableObject
     [Header("Animal in game stats")]
     public float speed = 10;
     public float runSpeed = 10;
+    public float jumpHeight = 20;
     public bool canRun = false;
     public bool canJump = false;
     public bool canDig = false;
@@ -25,4 +27,5 @@ public class AnimalData : ScriptableObject
 
     [Header("In Game data")]
     public GameObject AnimalObject;
+    public int playLevelIndex = 1;
 }

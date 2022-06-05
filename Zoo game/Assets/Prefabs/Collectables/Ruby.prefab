@@ -59,7 +59,7 @@ Transform:
   m_GameObject: {fileID: 6698920957270208764}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -2.9293196, y: 0.999, z: 8.974897}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children:
   - {fileID: 3264608573794883497}
   m_Father: {fileID: 0}
@@ -95,7 +95,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4373234316586053737
 MonoBehaviour:
@@ -110,6 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectEffect: {fileID: 0}
+  anim: {fileID: 6698920957270208763}
   isCoin: 1
 --- !u!114 &7496918123427095920
 MonoBehaviour:

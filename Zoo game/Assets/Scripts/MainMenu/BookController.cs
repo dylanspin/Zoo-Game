@@ -5,6 +5,7 @@ using UnityEngine;
 public class BookController : MonoBehaviour
 {   
     [Header("Animal UI")]
+    [SerializeField] private bool loadUi = false;
     [SerializeField] private AnimalSlot[] uiSlots;//animal ui slots in the book
     [SerializeField] private AnimalSlot rightAnimalSlot;//the right animal picture 
     [SerializeField] private TMPro.TextMeshProUGUI[] animalInfo;//the text related to the selected animal
@@ -20,11 +21,13 @@ public class BookController : MonoBehaviour
     private int money = 0;
     private int lastSelected = 0;
 
-
     private void Start()
     {
         loadData();
-        showRight(lastSelected);
+        if(loadUi)
+        {
+            showRight(lastSelected);
+        }
         // unlocked[0] = true;
     }
 
@@ -40,8 +43,11 @@ public class BookController : MonoBehaviour
         {
             Debug.Log("No save data found");
         }
-
-        setData();
+        
+        if(loadUi)
+        {
+            setData();
+        }
     }
 
     private void setData()
@@ -138,5 +144,15 @@ public class BookController : MonoBehaviour
     public int getMoney()
     {
         return money;
+    }
+
+    /////////////in game
+
+    public void saveMoney(int amount)
+    {
+        money += amount;
+        SaveScript.saveBook(this);//saves book data
+
+        Debug.Log("Saved : " + money);
     }
 }

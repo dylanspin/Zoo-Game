@@ -8,7 +8,6 @@ public static class SaveScript
     public static string saveBookLoc = "/scrapBook.save";//where the scrapBook settings get saved
     public static string saveSettingsLoc = "/scrapSettings.save";//where the settings get saved
 
-
     public static void saveBook(BookController oData)///called after something is unlocked for example
     {
         BinaryFormatter formatter = new BinaryFormatter();
