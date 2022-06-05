@@ -6,8 +6,7 @@ using UnityEngine.SceneManagement;
 [CreateAssetMenu(fileName = "Animal", menuName = "Animals/Animal")]
 public class AnimalData : ScriptableObject
 {
-    new public string name = "AnimalName";
-
+    public string animalName = "AnimalName";
     [Header("Shop data")]
     public int price = 0;
     public int unlockId = 0;
