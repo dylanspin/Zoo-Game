@@ -19,7 +19,7 @@ public class LevelLoader : MonoBehaviour
     public void LoadNextLevel ()
     {
         //SceneManager.LoadScene(4);
-        StartCoroutine (LoadLevel(SceneManager.GetActiveScene(). buildIndex +1 ));
+        StartCoroutine (LoadLevel(SceneManager.GetActiveScene(). buildIndex +1));
     }
 
     IEnumerator LoadLevel (int LevelIndex)
@@ -27,7 +27,6 @@ public class LevelLoader : MonoBehaviour
         transition.SetTrigger ("Start");
         yield return new WaitForSeconds (transitionTime);
         SceneManager.LoadScene (LevelIndex);
-
     }
 }
 

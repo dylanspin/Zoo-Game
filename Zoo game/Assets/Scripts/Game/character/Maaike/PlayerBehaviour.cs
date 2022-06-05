@@ -15,12 +15,12 @@ public class PlayerBehaviour : MonoBehaviour
     
     private Vector3 velocity;
 
-    //private Rigidbody _rb;
+    private Rigidbody _rb;
 
-    /*void Start()
+    void Start()
     {
-        _rb = GetComponentRigidbody > ();
-    }*/
+        _rb = GetComponent<Rigidbody>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -41,15 +41,15 @@ public class PlayerBehaviour : MonoBehaviour
     }
 
 
-   /* void FixedUpdate()
+   void FixedUpdate()
     {
         if(Input.GetKeyDown(KeyCode.Space))
-       // _rb.AddForce(Vector3.up * jumpVelocity, ForceMode.Impulse);
-        velocity.y += gravity * Time.deltaTime;
-        controller.Move(velocity * Time.deltaTime);
+        _rb.AddForce(Vector3.up * jumpVelocity, ForceMode.Impulse);
+        //velocity.y += gravity * Time.deltaTime;
+       // controller.Move(velocity * Time.deltaTime);
 
-        velocity.y = Mathf.Sqrt(jumpVelocity * -2 * gravity);//change this to correct jumpheight
-    }*/
+        //velocity.y = Mathf.Sqrt(jumpVelocity * -2 * gravity);//change this to correct jumpheight
+    }
 }
 
 //velocity.y += gravity * Time.deltaTime;

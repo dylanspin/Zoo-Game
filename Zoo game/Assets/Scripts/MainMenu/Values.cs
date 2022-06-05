@@ -2,17 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Values : MonoBehaviour
+public static class Values
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    //animal
+    public static AnimalData selectedAnimal; ///the selected animal in the scrap book
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    //bools
+    public static bool pauzed = false;
+    
+    //string
 }
