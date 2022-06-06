@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class MainUiController : MonoBehaviour
 {
     [SerializeField] private GameObject[] pages;
+    [SerializeField] private bool[] animSwitch;
+    [SerializeField] private Animator anim;
     private int activePage = 0;
     
     private void Start()
@@ -27,8 +29,15 @@ public class MainUiController : MonoBehaviour
 
     public void openPage(int open)//later we can add animations
     {
-        pages[activePage].SetActive(false);
-        pages[open].SetActive(true);
+        if(!animSwitch[open])
+        {
+            pages[activePage].SetActive(false);
+            pages[open].SetActive(true);
+        }
+        else
+        {
+            anim.SetInteger("Page",open);
+        }
         activePage = open;
     }
 
