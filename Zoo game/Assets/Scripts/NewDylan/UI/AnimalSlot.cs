@@ -8,19 +8,28 @@ public class AnimalSlot : MonoBehaviour
     [Header("Set data")]
     [SerializeField] private Image animalImage;
     [SerializeField] private GameObject notUnlocked;
+    [SerializeField] private TMPro.TextMeshProUGUI animalName;
 
     [Header("Private data")]
     private int slotId;
     private BookController controllerScript;
 
-    public void setData(int setId,Sprite setImage,bool unlocked,bool active,BookController newController)//gets called from book controller script
+    public void setData(int setId,AnimalData animalInfo,bool unlocked,bool active,BookController newController)//gets called from book controller script
     {
         slotId = setId;
-        animalImage.sprite = setImage;
+        animalImage.sprite = animalInfo.animalImage;
         gameObject.SetActive(active);//for when there is no animal for that slot
         animalImage.gameObject.SetActive(unlocked);
         notUnlocked.SetActive(!unlocked);
         controllerScript = newController;
+        if(unlocked)
+        {
+            animalName.text = animalInfo.animalName; 
+        }
+        else
+        {
+            animalName.text = "?"; 
+        }
     }
 
     public void hoverAnimal(bool active)//when hovering 

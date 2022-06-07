@@ -10,6 +10,11 @@ public class camFollow : MonoBehaviour
     [SerializeField] private float translateSpeed;
     [SerializeField] private float rotationSpeed;
 
+    public void setStartData(AnimalData newAnimal)
+    {
+        offset = newAnimal.camOffset;
+    }
+
     private void FixedUpdate()
     {
         positionLerping();

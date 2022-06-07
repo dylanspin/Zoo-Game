@@ -38,11 +38,15 @@ public class AnimalMovement : MonoBehaviour
         groundCheck = newCheck.transform;
 
         canRun = newData.canRun;
+
+        jumpHeight = newData.jumpHeight;
         allowJump = newData.canJump;
 
         currentSpeed = newData.speed;
         normalSpeed = newData.speed;
         runSpeed = newData.runSpeed;
+
+        rbPlayer.mass = newData.animalMass;
     }
 
     private void Update()
@@ -68,7 +72,7 @@ public class AnimalMovement : MonoBehaviour
             }
             else
             {
-                movementVelocity = new Vector3(x * 0.75f, 0f, 1);
+                movementVelocity = new Vector3(x * 0.5f, 0f, 1);
             }
             Vector3 move = transform.TransformDirection(movementVelocity) * currentSpeed;
 

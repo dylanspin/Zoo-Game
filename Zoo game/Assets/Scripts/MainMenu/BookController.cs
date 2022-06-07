@@ -15,6 +15,7 @@ public class BookController : MonoBehaviour
 
     [Header("Other UI Data")]
     [SerializeField] private TMPro.TextMeshProUGUI moneyAmount;
+    [SerializeField] private GameObject[] buttons;
 
     [Header("Private Data")]
     private bool[] unlocked = new bool[50];
@@ -41,6 +42,8 @@ public class BookController : MonoBehaviour
         }
         else
         {
+            unlocked[0] = true;
+            money = 0;
             Debug.Log("No save data found");
         }
         
@@ -63,7 +66,7 @@ public class BookController : MonoBehaviour
             bool exist = i < animals.Length;
             if(exist)
             {
-                uiSlots[i].setData(i,animals[i].animalImage,unlocked[i],true,this);
+                uiSlots[i].setData(i,animals[i],unlocked[i],true,this);
             }
             uiSlots[i].gameObject.SetActive(exist);
         }
@@ -77,7 +80,7 @@ public class BookController : MonoBehaviour
             unlocked[lastSelected] = true;
             SaveScript.saveBook(this);//saves book data
 
-            uiSlots[lastSelected].setData(lastSelected,animals[lastSelected].animalImage,unlocked[lastSelected],true,this);
+            uiSlots[lastSelected].setData(lastSelected,animals[lastSelected],unlocked[lastSelected],true,this);
             showRight(lastSelected);
             //do some ui Stuff indicating that animal is unlocked
         }
@@ -100,11 +103,11 @@ public class BookController : MonoBehaviour
 
     private void showRight(int id)
     {
-        rightAnimalSlot.setData(id,animals[id].animalImage,unlocked[id],true,this);
+        rightAnimalSlot.setData(id,animals[id],unlocked[id],true,this);
 
         if(unlocked[id])
         {
-            animalInfo[0].text = animals[id].name;
+            animalInfo[0].text = animals[id].animalName;
             animalInfo[1].text = animals[id].info1;
             animalInfo[2].text = animals[id].info2;
             animalInfo[3].text = animals[id].fact;
@@ -122,6 +125,8 @@ public class BookController : MonoBehaviour
     {
         lastSelected = slotId;
         showRight(lastSelected);
+        buttons[0].SetActive(unlocked[lastSelected]);
+        buttons[1].SetActive(!unlocked[lastSelected]);
     }
 
     public AnimalData getCurrent()

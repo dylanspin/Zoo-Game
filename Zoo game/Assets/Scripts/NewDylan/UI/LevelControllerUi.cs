@@ -17,6 +17,19 @@ public class LevelControllerUi : MonoBehaviour
     [Header("Private data")]
     private AnimalData loadAnimal;
     private int levelIndex = 1;
+    private float progress = 0;
+    private bool loading = false;
+
+
+    private void Update()
+    {
+        if(loading)
+        {
+            progress = Mathf.Lerp(progress,100,0.003f);
+            slider.value = progress; 
+            loadingText.text = "Loading: " + progress.ToString("F2") + "%"; 
+        }
+    }
 
     public void playAnimal()
     {
@@ -34,10 +47,11 @@ public class LevelControllerUi : MonoBehaviour
 
     private void checkLevel(AnimalData playAnimal)
     {
+        loading = true;
         loadAnimal = playAnimal;
 
         anim.SetBool("Load",true);
-        Invoke("startLoad",1.5f);//so it actually shows the loading screen instead of instantly loading 
+        Invoke("startLoad",3f);//1.5f
     }
 
     private void startLoad()
@@ -51,10 +65,10 @@ public class LevelControllerUi : MonoBehaviour
 
         while (!operation.isDone) 
         { 
-            float progress = Mathf.Clamp01(operation.progress / .9f); 
+            // float progress2 = Mathf.Clamp01(operation.progress / .9f); 
             
-            slider.value = progress; 
-            loadingText.text = "Loading: " + progress * 100f + "%"; 
+            // slider.value = progress2; 
+            // loadingText.text = "Loading: " + progress2 * 100f + "%"; 
 
             yield return null; 
         } 
