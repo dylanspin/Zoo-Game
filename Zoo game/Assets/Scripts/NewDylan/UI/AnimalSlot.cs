@@ -22,7 +22,14 @@ public class AnimalSlot : MonoBehaviour
         animalImage.gameObject.SetActive(unlocked);
         notUnlocked.SetActive(!unlocked);
         controllerScript = newController;
-        animalName.text = animalInfo.animalName; 
+        if(unlocked)
+        {
+            animalName.text = animalInfo.animalName; 
+        }
+        else
+        {
+            animalName.text = "?"; 
+        }
     }
 
     public void hoverAnimal(bool active)//when hovering 

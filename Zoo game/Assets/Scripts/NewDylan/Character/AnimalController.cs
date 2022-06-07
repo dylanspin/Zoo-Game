@@ -13,6 +13,7 @@ public class AnimalController : MonoBehaviour
 
     [Header("Scripts")]
     [SerializeField] private CamShake shakeScript;
+    [SerializeField] private camFollow followScript;
     [SerializeField] private animalCol colScript;
     [SerializeField] private AnimalMovement moveScript;
     [SerializeField] private Abilities abilitieScript;
@@ -41,7 +42,8 @@ public class AnimalController : MonoBehaviour
 
         abilitieScript.setStartData(prefabScript.animalBody,newAnimal);
         moveScript.setStartData(prefabScript.groundCheck,newAnimal);
-        colScript.setStartData(newAnimal);
+        colScript.setStartData(newAnimal,prefabScript.collideEffect);
+        followScript.setStartData(newAnimal);
     }
 
 }

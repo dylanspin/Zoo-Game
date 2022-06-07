@@ -15,6 +15,7 @@ public class BookController : MonoBehaviour
 
     [Header("Other UI Data")]
     [SerializeField] private TMPro.TextMeshProUGUI moneyAmount;
+    [SerializeField] private GameObject[] buttons;
 
     [Header("Private Data")]
     private bool[] unlocked = new bool[50];
@@ -41,6 +42,8 @@ public class BookController : MonoBehaviour
         }
         else
         {
+            unlocked[0] = true;
+            money = 0;
             Debug.Log("No save data found");
         }
         
@@ -122,6 +125,8 @@ public class BookController : MonoBehaviour
     {
         lastSelected = slotId;
         showRight(lastSelected);
+        buttons[0].SetActive(unlocked[lastSelected]);
+        buttons[1].SetActive(!unlocked[lastSelected]);
     }
 
     public AnimalData getCurrent()

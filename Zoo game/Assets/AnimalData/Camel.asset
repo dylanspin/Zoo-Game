@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b92935fa8743f743a1e104e85f602c5, type: 3}
+  m_Name: Camel
+  m_EditorClassIdentifier: 
+  animalName: Camel
+  price: 0
+  info1: Some info 1
+  info2: Some info 2
+  fact: Some fact
+  animalImage: {fileID: 21300000, guid: fd3a7ff8f550a1441baab58b35c3e221, type: 3}
+  animalMass: 4
+  speed: 20
+  runSpeed: 25
+  jumpHeight: 0
+  canRun: 1
+  canJump: 0
+  canDig: 0
+  canBreak: 0
+  AnimalObject: {fileID: 1684825514099774455, guid: 5b29d4f972d2b544388c40e64ef24910, type: 3}
+  camOffset: {x: 0, y: 4, z: -7}
+  playLevelIndex: 1
