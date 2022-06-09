@@ -53,23 +53,25 @@ public class UiController : MonoBehaviour
         // camScript.lockLook(!active);
     }
 
-    public void setCollected(int amount)
+    public void setCollected(int amount,int maxAmount)
     {
-        string addAmount = "000";
-        if(amount > 100)
-        {
-            addAmount = "";
-        }
-        else if(amount > 10)
-        {
-            addAmount = "0";
-        }
-        else if(amount > 1)
-        {
-            addAmount = "00";
-        }
+        // string addAmount = "000";
+        // if(amount > 100)
+        // {
+        //     addAmount = "";
+        // }
+        // else if(amount > 10)
+        // {
+        //     addAmount = "0";
+        // }
+        // else if(amount > 1)
+        // {
+        //     addAmount = "00";
+        // }
 
-        count.text = addAmount + amount;
+        // count.text = addAmount + amount;
+        count.text = amount + " / " + maxAmount;
+
     }
 
     public void showEndScreen(int rating,int current,int max)

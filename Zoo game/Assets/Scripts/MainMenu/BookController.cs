@@ -15,6 +15,8 @@ public class BookController : MonoBehaviour
 
     [Header("Other UI Data")]
     [SerializeField] private TMPro.TextMeshProUGUI moneyAmount;
+    [SerializeField] private buyPopUp popUp;
+    [SerializeField] private unlockedAnimal unlockScreen;
     [SerializeField] private GameObject[] buttons;
 
     [Header("Private Data")]
@@ -72,6 +74,11 @@ public class BookController : MonoBehaviour
         }
     }   
 
+    public void showBuy()
+    {
+        popUp.showPopUp(animals[lastSelected]);
+    }
+
     public void buyAnimal()
     {
         if(money >= animals[lastSelected].price && !unlocked[lastSelected])
@@ -82,10 +89,13 @@ public class BookController : MonoBehaviour
 
             uiSlots[lastSelected].setData(lastSelected,animals[lastSelected],unlocked[lastSelected],true,this);
             showRight(lastSelected);
-            //do some ui Stuff indicating that animal is unlocked
+            popUp.closePopUp();
+            unlockScreen.showUnlocked(animals[lastSelected]);
+            showButtons(true);
         }
         else
         {
+            popUp.cantBuy();
             //show message or something else indicating not enough money
         }
     }   
@@ -111,6 +121,7 @@ public class BookController : MonoBehaviour
             animalInfo[1].text = animals[id].info1;
             animalInfo[2].text = animals[id].info2;
             animalInfo[3].text = animals[id].fact;
+            animalInfo[4].transform.parent.gameObject.SetActive(false);
         }
         else
         {
@@ -118,6 +129,8 @@ public class BookController : MonoBehaviour
             {
                 animalInfo[i].text = "Unknown";
             }
+            animalInfo[4].transform.parent.gameObject.SetActive(true);
+            animalInfo[4].text = animals[id].price.ToString();
         }
     }
 
@@ -125,8 +138,13 @@ public class BookController : MonoBehaviour
     {
         lastSelected = slotId;
         showRight(lastSelected);
-        buttons[0].SetActive(unlocked[lastSelected]);
-        buttons[1].SetActive(!unlocked[lastSelected]);
+        showButtons(unlocked[lastSelected]);
+    }
+
+    public void showButtons(bool active)
+    {
+        buttons[0].SetActive(active);
+        buttons[1].SetActive(!active);
     }
 
     public AnimalData getCurrent()

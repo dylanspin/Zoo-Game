@@ -24,7 +24,7 @@ public class CollectController : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.O))
+        if(Input.GetKey(KeyCode.O))
         {
             collectItem(true);
         }
@@ -48,6 +48,7 @@ public class CollectController : MonoBehaviour
             spawnedCoin.GetComponent<Animator>().speed = Random.Range(0.7f,1.0f);
             spawnedCoin.GetComponent<Collect>().setStart(this);
         }
+        uiScript.setCollected(0,coinAmount);
     }
 
     public void collectItem(bool isCoin)
@@ -55,7 +56,7 @@ public class CollectController : MonoBehaviour
         if(isCoin)
         {
             coinsCollected ++;
-            uiScript.setCollected(coinsCollected);
+            uiScript.setCollected(coinsCollected,coinAmount);
         }
         else
         {
