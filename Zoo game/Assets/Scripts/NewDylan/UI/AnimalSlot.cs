@@ -7,7 +7,7 @@ public class AnimalSlot : MonoBehaviour
 {
     [Header("Set data")]
     [SerializeField] private Image animalImage;
-    [SerializeField] private GameObject notUnlocked;
+    [SerializeField] private GameObject[] notUnlocked;
     [SerializeField] private TMPro.TextMeshProUGUI animalName;
 
     [Header("Private data")]
@@ -20,7 +20,9 @@ public class AnimalSlot : MonoBehaviour
         animalImage.sprite = animalInfo.animalImage;
         gameObject.SetActive(active);//for when there is no animal for that slot
         animalImage.gameObject.SetActive(unlocked);
-        notUnlocked.SetActive(!unlocked);
+        
+        notUnlocked[0].SetActive(!unlocked && !animalInfo.codeunlock);
+        notUnlocked[1].SetActive(!unlocked && animalInfo.codeunlock);
         controllerScript = newController;
         if(unlocked)
         {

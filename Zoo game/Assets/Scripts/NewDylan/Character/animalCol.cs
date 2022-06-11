@@ -15,6 +15,7 @@ public class animalCol : MonoBehaviour
     [SerializeField] private AnimalMovement moveScript;
     [SerializeField] private Abilities abilityScript;
     [SerializeField] private CamShake shakeScript;//camera shake/camera 
+    [SerializeField] private Controller controllerScript; 
 
     [Header("Private data")]
     private bool canbreak = false;
@@ -39,7 +40,8 @@ public class animalCol : MonoBehaviour
             {
                 if(!canbreak)
                 {
-                    addKnockBack(other);
+                    controllerScript.endMatch();
+                    // addKnockBack(other);
                 }
                 else
                 {

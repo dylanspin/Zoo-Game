@@ -8,6 +8,15 @@ public class Controller : MonoBehaviour
     [SerializeField] private UiController uiScript;
     [SerializeField] private CollectController collectScript;
     [SerializeField] private BookController bookScript;
+    [SerializeField] private TrackMovement trackScript;
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            endMatch();
+        }
+    }
 
     public void endMatch()
     {
@@ -18,9 +27,8 @@ public class Controller : MonoBehaviour
             currentAmount = maxAmount;
         }
         int part = (int)Mathf.Floor((float)currentAmount / (maxAmount / 2));
-        Debug.Log(part);
 
         bookScript.saveMoney(currentAmount);
-        uiScript.showEndScreen(part,currentAmount,maxAmount);
+        uiScript.showEndScreen(part,currentAmount,trackScript.getDistance());//needs distance
     }
 }

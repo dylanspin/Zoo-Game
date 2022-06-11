@@ -9,6 +9,8 @@ public class AnimalData : ScriptableObject
     public string animalName = "AnimalName";
     [Header("Shop data")]
     public int price = 0;
+    public bool codeunlock = false;
+    public string code = "someCode";
     public string info1 = "Some info 1";
     public string info2 = "Some info 2";
     public string fact = "Some fact";

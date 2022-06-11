@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
+    //////////////////////////////////////NOT USED ANYMORE////////////////////////////////////////
+
     [Header("Scripts")]
     [SerializeField] private Controller controllerScript;
 

@@ -7,7 +7,6 @@ public class TrackPart : MonoBehaviour
     [SerializeField] private GameObject[] possibleEndParts;
     [SerializeField] private Transform[] coinSpawns;
     [SerializeField] private GameObject coinPrefab;
-
     private TrackController controllerScript;
     private CollectController collectScript;
     private bool coinSpawned = false;
@@ -21,7 +20,7 @@ public class TrackPart : MonoBehaviour
             coinSpawned = true;
             controllerScript = newController;
             collectScript = newCollect;
-            spawnCoins();
+            spawnCoins();//bugged
         }
     }
 

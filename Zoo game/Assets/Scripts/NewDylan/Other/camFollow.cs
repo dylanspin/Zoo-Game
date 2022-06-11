@@ -18,7 +18,7 @@ public class camFollow : MonoBehaviour
     private void FixedUpdate()
     {
         positionLerping();
-        rotationLerping();
+      //  rotationLerping();
     }
 
     private void positionLerping()

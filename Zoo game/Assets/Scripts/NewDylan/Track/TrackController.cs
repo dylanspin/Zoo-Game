@@ -13,6 +13,7 @@ public class TrackController : MonoBehaviour
     [SerializeField] private int lengthInfront = 10;
     [SerializeField] private GameObject startTrack;
     [SerializeField] private List<TrackPart> partTracks;
+    [SerializeField] private Transform[] lanePositions;
 
     private void Start()
     {
@@ -25,13 +26,14 @@ public class TrackController : MonoBehaviour
 
     public void spawnNewPart(Vector3 lastPos,GameObject newPart,bool offset)
     {
-        Vector3 spawnPos = spawnOffset;
+        Vector3 spawnPos = lastPos;
         if(offset)
         {
-            spawnPos += lastPos;
+            spawnPos += spawnOffset;
         }
 
-        TrackPart partScript = Instantiate(newPart, spawnPos, Quaternion.Euler(0,0,0),transform).GetComponent<TrackPart>(); 
+        GameObject trackPart = Instantiate(newPart, spawnPos, Quaternion.Euler(0,0,0),transform) as GameObject; 
+        TrackPart partScript = trackPart.GetComponent<TrackPart>();
         partScript.setStart(this,collecScript);
         partTracks.Add(partScript);
         if(partTracks.Count-4 > lengthInfront)
@@ -47,4 +49,11 @@ public class TrackController : MonoBehaviour
         partTracks[partTracks.Count-1].createNewPart();
         Debug.Log("added at end");
     }
+
+
+    public Transform[] getLanes()
+    {
+        return lanePositions;
+    }
+   
 }

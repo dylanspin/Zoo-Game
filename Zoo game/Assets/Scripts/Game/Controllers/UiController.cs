@@ -10,6 +10,7 @@ public class UiController : MonoBehaviour
     [SerializeField] private EndScreen endScript;
     [SerializeField] private GameObject gameInfo;//timer and counter
     [SerializeField] private TMPro.TextMeshProUGUI count;
+    [SerializeField] private TMPro.TextMeshProUGUI distanceText;
 
     [Header("Private data")]
     private bool gameEnded = false;
@@ -31,9 +32,9 @@ public class UiController : MonoBehaviour
 
     public void escape(bool active)
     {
-        escapeMenu.SetActive(active);
         if(!gameEnded)
         {
+            escapeMenu.SetActive(active);
             if(active)
             {
                 Time.timeScale = 0;
@@ -43,43 +44,48 @@ public class UiController : MonoBehaviour
                 Time.timeScale = 1;
             }
             cursorLock(!active);
+            Values.pauzed = active;
         }
-        Values.pauzed = active;
     }
 
     private void cursorLock(bool active)//hides cursor
     {
-        Screen.lockCursor = active; 
+        // Screen.lockCursor = active; 
         // camScript.lockLook(!active);
     }
 
     public void setCollected(int amount,int maxAmount)
     {
-        // string addAmount = "000";
-        // if(amount > 100)
-        // {
-        //     addAmount = "";
-        // }
-        // else if(amount > 10)
-        // {
-        //     addAmount = "0";
-        // }
-        // else if(amount > 1)
-        // {
-        //     addAmount = "00";
-        // }
+        string addAmount = "000";
+        if(amount > 100)
+        {
+            addAmount = "";
+        }
+        else if(amount > 10)
+        {
+            addAmount = "0";
+        }
+        else if(amount > 1)
+        {
+            addAmount = "00";
+        }
 
-        // count.text = addAmount + amount;
-        count.text = amount + " / " + maxAmount;
-
+        count.text = addAmount + amount;
+        // count.text = amount + " / " + maxAmount;
     }
 
-    public void showEndScreen(int rating,int current,int max)
+    public void setDistance(float distance)
     {
+        distanceText.text = distance.ToString("F0");
+    }
+
+    public void showEndScreen(int rating,int current,float distance)
+    {
+        gameEnded = true;
         Values.pauzed = true;
         Time.timeScale = 0;
         cursorLock(false);
-        endScript.showEndScreen(rating,current,max);
+        endScript.showEndScreen(rating,current,distance);
         gameInfo.SetActive(false);//turns off timer and counter
     }
 

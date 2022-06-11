@@ -12,7 +12,7 @@ public class AnimalController : MonoBehaviour
     [SerializeField] private GameObject bodySpawnPos;
 
     [Header("Scripts")]
-    [SerializeField] private CamShake shakeScript;
+    [SerializeField] private TrackController trackScript;
     [SerializeField] private camFollow followScript;
     [SerializeField] private animalCol colScript;
     [SerializeField] private AnimalMovement moveScript;
@@ -35,13 +35,13 @@ public class AnimalController : MonoBehaviour
 
     public void setStartData(AnimalData newAnimal)
     {
-        cameraObj.transform.parent = null;
+      //  cameraObj.transform.parent = null;
         transform.parent = null;
 
         AnimalPrefab prefabScript = Instantiate(newAnimal.AnimalObject, bodySpawnPos.transform.position, Quaternion.Euler(0,0,0),transform).GetComponent<AnimalPrefab>(); 
 
         abilitieScript.setStartData(prefabScript.animalBody,newAnimal);
-        moveScript.setStartData(prefabScript.groundCheck,newAnimal);
+        moveScript.setStartData(prefabScript.groundCheck,newAnimal,trackScript.getLanes());
         colScript.setStartData(newAnimal,prefabScript.collideEffect);
         followScript.setStartData(newAnimal);
     }

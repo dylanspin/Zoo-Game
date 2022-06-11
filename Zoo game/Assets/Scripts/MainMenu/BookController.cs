@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class BookController : MonoBehaviour
 {   
@@ -74,6 +75,11 @@ public class BookController : MonoBehaviour
         }
     }   
 
+    public void showCode()
+    {
+        popUp.showPopUp(animals[lastSelected]);
+    }
+
     public void showBuy()
     {
         popUp.showPopUp(animals[lastSelected]);
@@ -81,7 +87,17 @@ public class BookController : MonoBehaviour
 
     public void buyAnimal()
     {
-        if(money >= animals[lastSelected].price && !unlocked[lastSelected])
+        bool canUnlock = false;
+        if(animals[lastSelected].codeunlock)
+        {
+            canUnlock = popUp.getCode() == animals[lastSelected].code;
+        }
+        else
+        {
+            canUnlock = money >= animals[lastSelected].price && !unlocked[lastSelected];
+        }
+
+        if(canUnlock)
         {
             money -= animals[lastSelected].price;
             unlocked[lastSelected] = true;
@@ -91,7 +107,7 @@ public class BookController : MonoBehaviour
             showRight(lastSelected);
             popUp.closePopUp();
             unlockScreen.showUnlocked(animals[lastSelected]);
-            showButtons(true);
+            showButtons(0);
         }
         else
         {
@@ -131,20 +147,51 @@ public class BookController : MonoBehaviour
             }
             animalInfo[4].transform.parent.gameObject.SetActive(true);
             animalInfo[4].text = animals[id].price.ToString();
+            if(animals[id].codeunlock)
+            {
+                animalInfo[4].text = "Code";
+            }
+        }
+
+        checkButtons(id);
+    }
+
+    public void selectAnimal(int id)//selecting animal with left click
+    {
+        lastSelected = id;
+        showRight(lastSelected);
+        checkButtons(lastSelected);
+    }
+
+    private void checkButtons(int id)
+    {
+        if(unlocked[id])
+        {
+            showButtons(0);//play button
+        }
+        else
+        {
+            if(animals[id].codeunlock)
+            {
+                showButtons(2);//code button
+            }
+            else
+            {
+                showButtons(1);//buy button
+            }
         }
     }
 
-    public void selectAnimal(int slotId)//selecting animal with left click
+    public void showButtons(int slot)
     {
-        lastSelected = slotId;
-        showRight(lastSelected);
-        showButtons(unlocked[lastSelected]);
-    }
-
-    public void showButtons(bool active)
-    {
-        buttons[0].SetActive(active);
-        buttons[1].SetActive(!active);
+        buttons[slot].SetActive(true);
+        for(int i=0; i<buttons.Length; i++)
+        {
+            if(i != slot)
+            {
+                buttons[i].SetActive(false);
+            }
+        }
     }
 
     public AnimalData getCurrent()

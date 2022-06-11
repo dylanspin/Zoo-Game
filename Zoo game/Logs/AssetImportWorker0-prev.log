@@ -15,11 +15,11 @@ D:/Users/dylan/Zoo game/Zoo game
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-56204
+50511
 Successfully changed project path to: D:/Users/dylan/Zoo game/Zoo game
 D:/Users/dylan/Zoo game/Zoo game
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 74.79 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 82.67 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.28f1 (f5400f52e03f)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.28f1/Editor/Data/Resources/UnitySubsystems
@@ -35,100 +35,98 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.28f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.28f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.28f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56372
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56484
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.28f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.28f1/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.28f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.28f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
-Registered in 0.003589 seconds.
+Registered in 0.003173 seconds.
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 67.24 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 75.46 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.771 seconds
+- Completed reload, in  0.617 seconds
 Domain Reload Profiling:
-	ReloadAssembly (772ms)
-		BeginReloadAssembly (81ms)
+	ReloadAssembly (617ms)
+		BeginReloadAssembly (62ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (607ms)
-			LoadAssemblies (79ms)
+		EndReloadAssembly (485ms)
+			LoadAssemblies (61ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (251ms)
+			SetupTypeCache (144ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (30ms)
-			SetupLoadedEditorAssemblies (200ms)
+			RebuildScriptCaches (29ms)
+			SetupLoadedEditorAssemblies (201ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (7ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (67ms)
-				BeforeProcessingInitializeOnLoad (12ms)
-				ProcessInitializeOnLoadAttributes (85ms)
-				ProcessInitializeOnLoadMethodAttributes (28ms)
+				RefreshPlugins (76ms)
+				BeforeProcessingInitializeOnLoad (13ms)
+				ProcessInitializeOnLoadAttributes (81ms)
+				ProcessInitializeOnLoadMethodAttributes (25ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.004529 seconds.
+Registered in 0.003940 seconds.
 Begin MonoManager ReloadAssembly
-Error: Could not load signature of UnityEngine.Rendering.Universal.Internal.DeferredLights:StorePunctualLightData due to: Could not load file or assembly 'Unity.Mathematics, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null' or one of its dependencies. assembly:Unity.Mathematics, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null type:<unknown type> member:(null) signature:<none>
-Unloading broken assembly Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll, this assembly can cause crashes in the runtime
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 67.19 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 72.65 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.622 seconds
+- Completed reload, in  1.735 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2623ms)
-		BeginReloadAssembly (167ms)
+	ReloadAssembly (1736ms)
+		BeginReloadAssembly (148ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (20ms)
-		EndReloadAssembly (2388ms)
-			LoadAssemblies (315ms)
+			CreateAndSetChildDomain (18ms)
+		EndReloadAssembly (1530ms)
+			LoadAssemblies (97ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (355ms)
+			SetupTypeCache (338ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (63ms)
-			SetupLoadedEditorAssemblies (1530ms)
+			RebuildScriptCaches (60ms)
+			SetupLoadedEditorAssemblies (916ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (6ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (68ms)
-				BeforeProcessingInitializeOnLoad (93ms)
-				ProcessInitializeOnLoadAttributes (1346ms)
-				ProcessInitializeOnLoadMethodAttributes (9ms)
-				AfterProcessingInitializeOnLoad (7ms)
+				RefreshPlugins (73ms)
+				BeforeProcessingInitializeOnLoad (92ms)
+				ProcessInitializeOnLoadAttributes (728ms)
+				ProcessInitializeOnLoadMethodAttributes (11ms)
+				AfterProcessingInitializeOnLoad (6ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (8ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
-Refreshing native plugins compatible for Editor in 1.19 ms, found 2 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 0.72 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3036 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 137.6 MB.
-System memory in use after: 137.8 MB.
+Unloading 3695 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 166.9 MB.
+System memory in use after: 167.2 MB.
 
-Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 3474.
-Total: 4.595800 ms (FindLiveObjects: 0.226500 ms CreateObjectMapping: 0.151800 ms MarkObjects: 4.127900 ms  DeleteObjects: 0.088500 ms)
+Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 4132.
+Total: 3.843600 ms (FindLiveObjects: 0.267600 ms CreateObjectMapping: 0.171300 ms MarkObjects: 3.301800 ms  DeleteObjects: 0.102000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -136,1433 +134,232 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
   custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:srp/default-shader: 00a0da0d000000000000000000000000 -> 0000e00a000e0de00000e000e0000000
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/TerrainData_b23fa95a-7490-426f-91d6-fbfd828ea44a.asset
-  artifactKey: Guid(0646af5baf86d2a4ba1c5b6b5a19f34c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TerrainData_b23fa95a-7490-426f-91d6-fbfd828ea44a.asset using Guid(0646af5baf86d2a4ba1c5b6b5a19f34c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_terrainDetailGrassBillboardShader () [0x00000] in D:\Users\dylan\Zoo game\Zoo game\Library\PackageCache\com.unity.render-pipelines.universal@10.8.1\Runtime\Data\UniversalRenderPipelineAsset.cs:838 
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_terrainDetailLitShader () [0x00000] in D:\Users\dylan\Zoo game\Zoo game\Library\PackageCache\com.unity.render-pipelines.universal@10.8.1\Runtime\Data\UniversalRenderPipelineAsset.cs:828 
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_terrainDetailGrassShader () [0x00000] in D:\Users\dylan\Zoo game\Zoo game\Library\PackageCache\com.unity.render-pipelines.universal@10.8.1\Runtime\Data\UniversalRenderPipelineAsset.cs:833 
-
- -> (artifact id: '88ceaadcbe81f893f0afe8a9cca34beb') in 0.078323 seconds 
-  Import took 0.082764 seconds .
+  path: Assets/Ui/Images/MainMenu
+  artifactKey: Guid(233d85a624718104584386927dc98093) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ui/Images/MainMenu using Guid(233d85a624718104584386927dc98093) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9709f10253c4cf19bd2d8c5dffd2bbe5') in 0.008261 seconds 
+  Import took 0.014288 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000204 seconds.
-  path: Assets/rig.fbx
-  artifactKey: Guid(90845623ad69a2b46a107025e390ccb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/rig.fbx using Guid(90845623ad69a2b46a107025e390ccb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7166dce12 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7166aebc2 (Unity) ResolveArtifactV2
-0x00007ff7166c7d60 (Unity) ImportToObjects
-0x00007ff7166c71a8 (Unity) ImportAsset
-0x00007ff716661238 (Unity) AssetImportWorker::Import
-0x00007ff71668691a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff71670e2f2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff716710450 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff716713bce (Unity) asio::io_service::run
-0x00007ff7166af8db (Unity) RunAssetImportWorkerClientV2
-0x00007ff7166af930 (Unity) RunAssetImporterV2
-0x00007ff716155b49 (Unity) Application::InitializeProject
-0x00007ff7165ab4f2 (Unity) WinMain
-0x00007ff717c3bd4e (Unity) __scrt_common_main_seh
-0x00007ffc87087034 (KERNEL32) BaseThreadInitThunk
-0x00007ffc88342651 (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(90845623ad69a2b46a107025e390ccb5) Importer(-1,00000000000000000000000000000000), Assets/rig.fbx from editor
-Resuming Guid(90845623ad69a2b46a107025e390ccb5) Importer(-1,00000000000000000000000000000000) -> f6e2334cb4045bc8ed41745498ee74cc 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
-Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7166dce12 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7166aebc2 (Unity) ResolveArtifactV2
-0x00007ff7166a6cb1 (Unity) ProduceArtifactV2
-0x00007ff71663ce5e (Unity) AssetDatabase::ProduceArtifact
-0x00007ff716626db8 (Unity) PreviewImporter::GenerateAssetData
-0x00007ff7166c8132 (Unity) ImportToObjects
-0x00007ff7166c71a8 (Unity) ImportAsset
-0x00007ff716661238 (Unity) AssetImportWorker::Import
-0x00007ff71668691a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff71670e2f2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff716710450 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff716713bce (Unity) asio::io_service::run
-0x00007ff7166af8db (Unity) RunAssetImportWorkerClientV2
-0x00007ff7166af930 (Unity) RunAssetImporterV2
-0x00007ff716155b49 (Unity) Application::InitializeProject
-0x00007ff7165ab4f2 (Unity) WinMain
-0x00007ff717c3bd4e (Unity) __scrt_common_main_seh
-0x00007ffc87087034 (KERNEL32) BaseThreadInitThunk
-0x00007ffc88342651 (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(90845623ad69a2b46a107025e390ccb5) Importer(-1,00000000000000000000000000000000), Assets/rig.fbx from editor
-Resuming Guid(90845623ad69a2b46a107025e390ccb5) Importer(-1,00000000000000000000000000000000) -> f6e2334cb4045bc8ed41745498ee74cc 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
- -> (artifact id: '3f1346f2e3a89b76de6c352c12633e80') in 0.887801 seconds 
-  Import took 0.917199 seconds .
+  Time since last request: 5.662713 seconds.
+  path: Assets/Ui/Images/scrapBook/bigbox.png
+  artifactKey: Guid(a6c10409d52f36a469ea84d1c90012df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ui/Images/scrapBook/bigbox.png using Guid(a6c10409d52f36a469ea84d1c90012df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f3a0b1b48e8a8d9cc9ff19e3a962f8f') in 0.647526 seconds 
+  Import took 0.665056 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000159 seconds.
-  path: Assets/New Terrain.asset
-  artifactKey: Guid(5fb745e4c8429ef4481812bb2abbb01b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/New Terrain.asset using Guid(5fb745e4c8429ef4481812bb2abbb01b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_terrainDetailGrassBillboardShader () [0x00000] in D:\Users\dylan\Zoo game\Zoo game\Library\PackageCache\com.unity.render-pipelines.universal@10.8.1\Runtime\Data\UniversalRenderPipelineAsset.cs:838 
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_terrainDetailLitShader () [0x00000] in D:\Users\dylan\Zoo game\Zoo game\Library\PackageCache\com.unity.render-pipelines.universal@10.8.1\Runtime\Data\UniversalRenderPipelineAsset.cs:828 
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_terrainDetailGrassShader () [0x00000] in D:\Users\dylan\Zoo game\Zoo game\Library\PackageCache\com.unity.render-pipelines.universal@10.8.1\Runtime\Data\UniversalRenderPipelineAsset.cs:833 
-
- -> (artifact id: '543605045af9f8db073089c1ac5974d7') in 0.016877 seconds 
-  Import took 0.021731 seconds .
+  Time since last request: 8.563837 seconds.
+  path: Assets/Ui/Images/scrapBook/bigbox.png
+  artifactKey: Guid(a6c10409d52f36a469ea84d1c90012df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ui/Images/scrapBook/bigbox.png using Guid(a6c10409d52f36a469ea84d1c90012df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b51dae17aea21234bf80ca998cce514c') in 0.047199 seconds 
+  Import took 0.053186 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000170 seconds.
-  path: Assets/Elephant.fbx
-  artifactKey: Guid(7201f0e3c490a8a469341205f576ed32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Elephant.fbx using Guid(7201f0e3c490a8a469341205f576ed32) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7166dce12 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7166aebc2 (Unity) ResolveArtifactV2
-0x00007ff7166c7d60 (Unity) ImportToObjects
-0x00007ff7166c71a8 (Unity) ImportAsset
-0x00007ff716661238 (Unity) AssetImportWorker::Import
-0x00007ff71668691a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff71670e2f2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff716710450 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff716713bce (Unity) asio::io_service::run
-0x00007ff7166af8db (Unity) RunAssetImportWorkerClientV2
-0x00007ff7166af930 (Unity) RunAssetImporterV2
-0x00007ff716155b49 (Unity) Application::InitializeProject
-0x00007ff7165ab4f2 (Unity) WinMain
-0x00007ff717c3bd4e (Unity) __scrt_common_main_seh
-0x00007ffc87087034 (KERNEL32) BaseThreadInitThunk
-0x00007ffc88342651 (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(7201f0e3c490a8a469341205f576ed32) Importer(-1,00000000000000000000000000000000), Assets/Elephant.fbx from editor
-Resuming Guid(7201f0e3c490a8a469341205f576ed32) Importer(-1,00000000000000000000000000000000) -> ea4ea6d74ad4234f08211545678bd776 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
-Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7166dce12 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7166aebc2 (Unity) ResolveArtifactV2
-0x00007ff7166a6cb1 (Unity) ProduceArtifactV2
-0x00007ff71663ce5e (Unity) AssetDatabase::ProduceArtifact
-0x00007ff716626db8 (Unity) PreviewImporter::GenerateAssetData
-0x00007ff7166c8132 (Unity) ImportToObjects
-0x00007ff7166c71a8 (Unity) ImportAsset
-0x00007ff716661238 (Unity) AssetImportWorker::Import
-0x00007ff71668691a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff71670e2f2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff716710450 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff716713bce (Unity) asio::io_service::run
-0x00007ff7166af8db (Unity) RunAssetImportWorkerClientV2
-0x00007ff7166af930 (Unity) RunAssetImporterV2
-0x00007ff716155b49 (Unity) Application::InitializeProject
-0x00007ff7165ab4f2 (Unity) WinMain
-0x00007ff717c3bd4e (Unity) __scrt_common_main_seh
-0x00007ffc87087034 (KERNEL32) BaseThreadInitThunk
-0x00007ffc88342651 (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(7201f0e3c490a8a469341205f576ed32) Importer(-1,00000000000000000000000000000000), Assets/Elephant.fbx from editor
-Resuming Guid(7201f0e3c490a8a469341205f576ed32) Importer(-1,00000000000000000000000000000000) -> ea4ea6d74ad4234f08211545678bd776 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
- -> (artifact id: '35caafb5db614ad7db7335094d277e1d') in 0.012794 seconds 
-  Import took 0.021769 seconds .
+  Time since last request: 1.869392 seconds.
+  path: Assets/Ui/Images/scrapBook/bigbox.png
+  artifactKey: Guid(a6c10409d52f36a469ea84d1c90012df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ui/Images/scrapBook/bigbox.png using Guid(a6c10409d52f36a469ea84d1c90012df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '908881ecd934d1aaeddbf2f8b70b159d') in 0.030775 seconds 
+  Import took 0.036262 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000253 seconds.
-  path: Assets/Gazelle.fbx
-  artifactKey: Guid(01b4adb363f8cea43947e74b25719299) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Gazelle.fbx using Guid(01b4adb363f8cea43947e74b25719299) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7166dce12 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7166aebc2 (Unity) ResolveArtifactV2
-0x00007ff7166c7d60 (Unity) ImportToObjects
-0x00007ff7166c71a8 (Unity) ImportAsset
-0x00007ff716661238 (Unity) AssetImportWorker::Import
-0x00007ff71668691a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff71670e2f2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff716710450 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff716713bce (Unity) asio::io_service::run
-0x00007ff7166af8db (Unity) RunAssetImportWorkerClientV2
-0x00007ff7166af930 (Unity) RunAssetImporterV2
-0x00007ff716155b49 (Unity) Application::InitializeProject
-0x00007ff7165ab4f2 (Unity) WinMain
-0x00007ff717c3bd4e (Unity) __scrt_common_main_seh
-0x00007ffc87087034 (KERNEL32) BaseThreadInitThunk
-0x00007ffc88342651 (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(01b4adb363f8cea43947e74b25719299) Importer(-1,00000000000000000000000000000000), Assets/Gazelle.fbx from editor
-Resuming Guid(01b4adb363f8cea43947e74b25719299) Importer(-1,00000000000000000000000000000000) -> a60ad48ffa12a8edd077c64e518e019e 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
-Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7166dce12 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7166aebc2 (Unity) ResolveArtifactV2
-0x00007ff7166a6cb1 (Unity) ProduceArtifactV2
-0x00007ff71663ce5e (Unity) AssetDatabase::ProduceArtifact
-0x00007ff716626db8 (Unity) PreviewImporter::GenerateAssetData
-0x00007ff7166c8132 (Unity) ImportToObjects
-0x00007ff7166c71a8 (Unity) ImportAsset
-0x00007ff716661238 (Unity) AssetImportWorker::Import
-0x00007ff71668691a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff71670e2f2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff716710450 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff716713bce (Unity) asio::io_service::run
-0x00007ff7166af8db (Unity) RunAssetImportWorkerClientV2
-0x00007ff7166af930 (Unity) RunAssetImporterV2
-0x00007ff716155b49 (Unity) Application::InitializeProject
-0x00007ff7165ab4f2 (Unity) WinMain
-0x00007ff717c3bd4e (Unity) __scrt_common_main_seh
-0x00007ffc87087034 (KERNEL32) BaseThreadInitThunk
-0x00007ffc88342651 (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(01b4adb363f8cea43947e74b25719299) Importer(-1,00000000000000000000000000000000), Assets/Gazelle.fbx from editor
-Resuming Guid(01b4adb363f8cea43947e74b25719299) Importer(-1,00000000000000000000000000000000) -> a60ad48ffa12a8edd077c64e518e019e 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
- -> (artifact id: '95865e7cd1d0647742a30ec894ec8cdc') in 0.011276 seconds 
-  Import took 0.017881 seconds .
+  Time since last request: 16.125923 seconds.
+  path: Assets/Ui/Images/InGameUi
+  artifactKey: Guid(cf4687bf5071ac9469cece698dd4d28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ui/Images/InGameUi using Guid(cf4687bf5071ac9469cece698dd4d28b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aae0119dadd0968cc30d8d159f10041d') in 0.009538 seconds 
+  Import took 0.015222 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000154 seconds.
-  path: Assets/BookLalalala.blend
-  artifactKey: Guid(cc18f24a3e223c84b9d462c060d90748) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BookLalalala.blend using Guid(cc18f24a3e223c84b9d462c060d90748) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7166dce12 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7166aebc2 (Unity) ResolveArtifactV2
-0x00007ff7166c7d60 (Unity) ImportToObjects
-0x00007ff7166c71a8 (Unity) ImportAsset
-0x00007ff716661238 (Unity) AssetImportWorker::Import
-0x00007ff71668691a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff71670e2f2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff716710450 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff716713bce (Unity) asio::io_service::run
-0x00007ff7166af8db (Unity) RunAssetImportWorkerClientV2
-0x00007ff7166af930 (Unity) RunAssetImporterV2
-0x00007ff716155b49 (Unity) Application::InitializeProject
-0x00007ff7165ab4f2 (Unity) WinMain
-0x00007ff717c3bd4e (Unity) __scrt_common_main_seh
-0x00007ffc87087034 (KERNEL32) BaseThreadInitThunk
-0x00007ffc88342651 (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(cc18f24a3e223c84b9d462c060d90748) Importer(-1,00000000000000000000000000000000), Assets/BookLalalala.blend from editor
-Resuming Guid(cc18f24a3e223c84b9d462c060d90748) Importer(-1,00000000000000000000000000000000) -> e555cab99104bcda7b077bd680049e07 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
-Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7166dce12 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7166aebc2 (Unity) ResolveArtifactV2
-0x00007ff7166a6cb1 (Unity) ProduceArtifactV2
-0x00007ff71663ce5e (Unity) AssetDatabase::ProduceArtifact
-0x00007ff716626db8 (Unity) PreviewImporter::GenerateAssetData
-0x00007ff7166c8132 (Unity) ImportToObjects
-0x00007ff7166c71a8 (Unity) ImportAsset
-0x00007ff716661238 (Unity) AssetImportWorker::Import
-0x00007ff71668691a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff71670e2f2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff716710450 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff716713bce (Unity) asio::io_service::run
-0x00007ff7166af8db (Unity) RunAssetImportWorkerClientV2
-0x00007ff7166af930 (Unity) RunAssetImporterV2
-0x00007ff716155b49 (Unity) Application::InitializeProject
-0x00007ff7165ab4f2 (Unity) WinMain
-0x00007ff717c3bd4e (Unity) __scrt_common_main_seh
-0x00007ffc87087034 (KERNEL32) BaseThreadInitThunk
-0x00007ffc88342651 (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(cc18f24a3e223c84b9d462c060d90748) Importer(-1,00000000000000000000000000000000), Assets/BookLalalala.blend from editor
-Resuming Guid(cc18f24a3e223c84b9d462c060d90748) Importer(-1,00000000000000000000000000000000) -> e555cab99104bcda7b077bd680049e07 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
- -> (artifact id: 'fb604a15f7faea597dddf44519bd67b7') in 0.013489 seconds 
-  Import took 0.018630 seconds .
+  Time since last request: 12.444787 seconds.
+  path: Assets/Ui/Prefabs/AnimalSlot.prefab
+  artifactKey: Guid(ffe382cfe066eb2479cf54b851c08e74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ui/Prefabs/AnimalSlot.prefab using Guid(ffe382cfe066eb2479cf54b851c08e74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '869cc861d0748eb51997f9486618bfc9') in 0.058609 seconds 
+  Import took 0.064702 seconds .
 
 ========================================================================
-Received Import Request.
-  Time since last request: 0.000169 seconds.
-  path: Assets/TerrainData_d1481c4c-b833-4397-9d89-394ab8a44d93.asset
-  artifactKey: Guid(d10e284a00cc1d34fb494ff0f4fd041a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TerrainData_d1481c4c-b833-4397-9d89-394ab8a44d93.asset using Guid(d10e284a00cc1d34fb494ff0f4fd041a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_terrainDetailGrassBillboardShader () [0x00000] in D:\Users\dylan\Zoo game\Zoo game\Library\PackageCache\com.unity.render-pipelines.universal@10.8.1\Runtime\Data\UniversalRenderPipelineAsset.cs:838 
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004180 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.81 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.376 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1376ms)
+		BeginReloadAssembly (136ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (44ms)
+		EndReloadAssembly (1177ms)
+			LoadAssemblies (114ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (376ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (55ms)
+			SetupLoadedEditorAssemblies (522ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (8ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (117ms)
+				ProcessInitializeOnLoadAttributes (379ms)
+				ProcessInitializeOnLoadMethodAttributes (9ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (13ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.80 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3535 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 157.7 MB.
+System memory in use after: 158.0 MB.
 
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_terrainDetailLitShader () [0x00000] in D:\Users\dylan\Zoo game\Zoo game\Library\PackageCache\com.unity.render-pipelines.universal@10.8.1\Runtime\Data\UniversalRenderPipelineAsset.cs:828 
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 4141.
+Total: 4.728800 ms (FindLiveObjects: 0.290800 ms CreateObjectMapping: 0.251500 ms MarkObjects: 4.160500 ms  DeleteObjects: 0.025100 ms)
 
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_terrainDetailGrassShader () [0x00000] in D:\Users\dylan\Zoo game\Zoo game\Library\PackageCache\com.unity.render-pipelines.universal@10.8.1\Runtime\Data\UniversalRenderPipelineAsset.cs:833 
-
- -> (artifact id: '07ea5bc8bb1d8442871c2cb6cf8124e9') in 0.012429 seconds 
-  Import took 0.016978 seconds .
-
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
-Received Import Request.
-  Time since last request: 0.000155 seconds.
-  path: Assets/New Terrain 2.asset
-  artifactKey: Guid(fa470d114b24a2443b9d702224922d08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/New Terrain 2.asset using Guid(fa470d114b24a2443b9d702224922d08) Importer(815301076,1909f56bfc062723c751e8b465ee728b) NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_terrainDetailGrassBillboardShader () [0x00000] in D:\Users\dylan\Zoo game\Zoo game\Library\PackageCache\com.unity.render-pipelines.universal@10.8.1\Runtime\Data\UniversalRenderPipelineAsset.cs:838 
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006269 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.87 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.644 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1644ms)
+		BeginReloadAssembly (135ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (43ms)
+		EndReloadAssembly (1441ms)
+			LoadAssemblies (120ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (474ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (60ms)
+			SetupLoadedEditorAssemblies (641ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (8ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (125ms)
+				ProcessInitializeOnLoadAttributes (485ms)
+				ProcessInitializeOnLoadMethodAttributes (11ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (21ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.76 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3535 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 157.8 MB.
+System memory in use after: 158.0 MB.
 
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_terrainDetailLitShader () [0x00000] in D:\Users\dylan\Zoo game\Zoo game\Library\PackageCache\com.unity.render-pipelines.universal@10.8.1\Runtime\Data\UniversalRenderPipelineAsset.cs:828 
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 4143.
+Total: 7.994700 ms (FindLiveObjects: 0.273000 ms CreateObjectMapping: 0.258200 ms MarkObjects: 7.050500 ms  DeleteObjects: 0.411000 ms)
 
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_terrainDetailGrassShader () [0x00000] in D:\Users\dylan\Zoo game\Zoo game\Library\PackageCache\com.unity.render-pipelines.universal@10.8.1\Runtime\Data\UniversalRenderPipelineAsset.cs:833 
-
- -> (artifact id: '333dc5bfa2c46bab6e85a2f6327b3019') in 0.011348 seconds 
-  Import took 0.045730 seconds .
-
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
-Received Import Request.
-  Time since last request: 0.000158 seconds.
-  path: Assets/New Terrain 1.asset
-  artifactKey: Guid(3cbbe0ce48a88f74c94e89df4ea9f01d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/New Terrain 1.asset using Guid(3cbbe0ce48a88f74c94e89df4ea9f01d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_terrainDetailGrassBillboardShader () [0x00000] in D:\Users\dylan\Zoo game\Zoo game\Library\PackageCache\com.unity.render-pipelines.universal@10.8.1\Runtime\Data\UniversalRenderPipelineAsset.cs:838 
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010532 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.97 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.547 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1547ms)
+		BeginReloadAssembly (166ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (56ms)
+		EndReloadAssembly (1310ms)
+			LoadAssemblies (140ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (410ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (62ms)
+			SetupLoadedEditorAssemblies (572ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (8ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (133ms)
+				ProcessInitializeOnLoadAttributes (411ms)
+				ProcessInitializeOnLoadMethodAttributes (11ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (15ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.59 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3535 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 157.8 MB.
+System memory in use after: 158.0 MB.
 
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_terrainDetailLitShader () [0x00000] in D:\Users\dylan\Zoo game\Zoo game\Library\PackageCache\com.unity.render-pipelines.universal@10.8.1\Runtime\Data\UniversalRenderPipelineAsset.cs:828 
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 4145.
+Total: 5.779400 ms (FindLiveObjects: 0.437100 ms CreateObjectMapping: 0.548700 ms MarkObjects: 4.764000 ms  DeleteObjects: 0.028400 ms)
 
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_terrainDetailGrassShader () [0x00000] in D:\Users\dylan\Zoo game\Zoo game\Library\PackageCache\com.unity.render-pipelines.universal@10.8.1\Runtime\Data\UniversalRenderPipelineAsset.cs:833 
-
- -> (artifact id: 'fefa65acaf7d11baddc5140987e6e37c') in 0.013149 seconds 
-  Import took 0.017778 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000184 seconds.
-  path: Assets/Prairiedog.fbx
-  artifactKey: Guid(34770e6492ad9444293528cc401b9c47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prairiedog.fbx using Guid(34770e6492ad9444293528cc401b9c47) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7166dce12 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7166aebc2 (Unity) ResolveArtifactV2
-0x00007ff7166c7d60 (Unity) ImportToObjects
-0x00007ff7166c71a8 (Unity) ImportAsset
-0x00007ff716661238 (Unity) AssetImportWorker::Import
-0x00007ff71668691a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff71670e2f2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff716710450 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff716713bce (Unity) asio::io_service::run
-0x00007ff7166af8db (Unity) RunAssetImportWorkerClientV2
-0x00007ff7166af930 (Unity) RunAssetImporterV2
-0x00007ff716155b49 (Unity) Application::InitializeProject
-0x00007ff7165ab4f2 (Unity) WinMain
-0x00007ff717c3bd4e (Unity) __scrt_common_main_seh
-0x00007ffc87087034 (KERNEL32) BaseThreadInitThunk
-0x00007ffc88342651 (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(34770e6492ad9444293528cc401b9c47) Importer(-1,00000000000000000000000000000000), Assets/Prairiedog.fbx from editor
-Resuming Guid(34770e6492ad9444293528cc401b9c47) Importer(-1,00000000000000000000000000000000) -> 4a2cc76e9d8660fd00406ee116f95fbd 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
-Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7166dce12 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7166aebc2 (Unity) ResolveArtifactV2
-0x00007ff7166a6cb1 (Unity) ProduceArtifactV2
-0x00007ff71663ce5e (Unity) AssetDatabase::ProduceArtifact
-0x00007ff716626db8 (Unity) PreviewImporter::GenerateAssetData
-0x00007ff7166c8132 (Unity) ImportToObjects
-0x00007ff7166c71a8 (Unity) ImportAsset
-0x00007ff716661238 (Unity) AssetImportWorker::Import
-0x00007ff71668691a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff71670e2f2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff716710450 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff716713bce (Unity) asio::io_service::run
-0x00007ff7166af8db (Unity) RunAssetImportWorkerClientV2
-0x00007ff7166af930 (Unity) RunAssetImporterV2
-0x00007ff716155b49 (Unity) Application::InitializeProject
-0x00007ff7165ab4f2 (Unity) WinMain
-0x00007ff717c3bd4e (Unity) __scrt_common_main_seh
-0x00007ffc87087034 (KERNEL32) BaseThreadInitThunk
-0x00007ffc88342651 (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(34770e6492ad9444293528cc401b9c47) Importer(-1,00000000000000000000000000000000), Assets/Prairiedog.fbx from editor
-Resuming Guid(34770e6492ad9444293528cc401b9c47) Importer(-1,00000000000000000000000000000000) -> 4a2cc76e9d8660fd00406ee116f95fbd 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
- -> (artifact id: '3fb81787af70344761cd8e3d20560382') in 0.009423 seconds 
-  Import took 0.014534 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000265 seconds.
-  path: Assets/TerrainData_36db222a-f43b-453a-ade9-636f07ec192c.asset
-  artifactKey: Guid(be1885b8ed46a804ca7a774160cd6531) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TerrainData_36db222a-f43b-453a-ade9-636f07ec192c.asset using Guid(be1885b8ed46a804ca7a774160cd6531) Importer(815301076,1909f56bfc062723c751e8b465ee728b) NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_terrainDetailGrassBillboardShader () [0x00000] in D:\Users\dylan\Zoo game\Zoo game\Library\PackageCache\com.unity.render-pipelines.universal@10.8.1\Runtime\Data\UniversalRenderPipelineAsset.cs:838 
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_terrainDetailLitShader () [0x00000] in D:\Users\dylan\Zoo game\Zoo game\Library\PackageCache\com.unity.render-pipelines.universal@10.8.1\Runtime\Data\UniversalRenderPipelineAsset.cs:828 
-
-NullReferenceException: Object reference not set to an instance of an object
-  at UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset.get_terrainDetailGrassShader () [0x00000] in D:\Users\dylan\Zoo game\Zoo game\Library\PackageCache\com.unity.render-pipelines.universal@10.8.1\Runtime\Data\UniversalRenderPipelineAsset.cs:833 
-
- -> (artifact id: 'cd8dd228336b0d9bbe8610220af5c059') in 0.010401 seconds 
-  Import took 0.036402 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000195 seconds.
-  path: Assets/Mongoose.fbx
-  artifactKey: Guid(cffa29117ebd85643a8bf7efc5e030b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mongoose.fbx using Guid(cffa29117ebd85643a8bf7efc5e030b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7166dce12 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7166aebc2 (Unity) ResolveArtifactV2
-0x00007ff7166c7d60 (Unity) ImportToObjects
-0x00007ff7166c71a8 (Unity) ImportAsset
-0x00007ff716661238 (Unity) AssetImportWorker::Import
-0x00007ff71668691a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff71670e2f2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff716710450 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff716713bce (Unity) asio::io_service::run
-0x00007ff7166af8db (Unity) RunAssetImportWorkerClientV2
-0x00007ff7166af930 (Unity) RunAssetImporterV2
-0x00007ff716155b49 (Unity) Application::InitializeProject
-0x00007ff7165ab4f2 (Unity) WinMain
-0x00007ff717c3bd4e (Unity) __scrt_common_main_seh
-0x00007ffc87087034 (KERNEL32) BaseThreadInitThunk
-0x00007ffc88342651 (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(cffa29117ebd85643a8bf7efc5e030b3) Importer(-1,00000000000000000000000000000000), Assets/Mongoose.fbx from editor
-Resuming Guid(cffa29117ebd85643a8bf7efc5e030b3) Importer(-1,00000000000000000000000000000000) -> 2eab3a3a95732abe961fc6c34a5c0010 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
-Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7166dce12 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7166aebc2 (Unity) ResolveArtifactV2
-0x00007ff7166a6cb1 (Unity) ProduceArtifactV2
-0x00007ff71663ce5e (Unity) AssetDatabase::ProduceArtifact
-0x00007ff716626db8 (Unity) PreviewImporter::GenerateAssetData
-0x00007ff7166c8132 (Unity) ImportToObjects
-0x00007ff7166c71a8 (Unity) ImportAsset
-0x00007ff716661238 (Unity) AssetImportWorker::Import
-0x00007ff71668691a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff71670e2f2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff716710450 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff716713bce (Unity) asio::io_service::run
-0x00007ff7166af8db (Unity) RunAssetImportWorkerClientV2
-0x00007ff7166af930 (Unity) RunAssetImporterV2
-0x00007ff716155b49 (Unity) Application::InitializeProject
-0x00007ff7165ab4f2 (Unity) WinMain
-0x00007ff717c3bd4e (Unity) __scrt_common_main_seh
-0x00007ffc87087034 (KERNEL32) BaseThreadInitThunk
-0x00007ffc88342651 (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(cffa29117ebd85643a8bf7efc5e030b3) Importer(-1,00000000000000000000000000000000), Assets/Mongoose.fbx from editor
-Resuming Guid(cffa29117ebd85643a8bf7efc5e030b3) Importer(-1,00000000000000000000000000000000) -> 2eab3a3a95732abe961fc6c34a5c0010 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
- -> (artifact id: '23a0f6049b3aa4bdef87ded52d728349') in 0.019495 seconds 
-  Import took 0.059558 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 196.361091 seconds.
-  path: Assets/Scenes/Dylan UI Testing.unity
-  artifactKey: Guid(6e3ca1983b5bdba419970d22eb101dbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Dylan UI Testing.unity using Guid(6e3ca1983b5bdba419970d22eb101dbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd7dd42ea635e337c690e205028db6ec') in 0.008223 seconds 
-  Import took 0.013491 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1667.820757 seconds.
-  path: Assets/Ui/Images/bookAnimals
-  artifactKey: Guid(1cc85cc72da031849b47db3b27d5565b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ui/Images/bookAnimals using Guid(1cc85cc72da031849b47db3b27d5565b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3dec1ad7d606348c171cf6ef709214ae') in 0.007295 seconds 
-  Import took 0.013552 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.381590 seconds.
-  path: Assets/Ui/Images/bookAnimals/Mongoos_With_Border.png
-  artifactKey: Guid(d1322db7cf0e4a242aee05aca1b32a97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ui/Images/bookAnimals/Mongoos_With_Border.png using Guid(d1322db7cf0e4a242aee05aca1b32a97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a59f67e2662ff8b8ff2d651eb36a6e2') in 0.050730 seconds 
-  Import took 0.064468 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000210 seconds.
-  path: Assets/Ui/Images/bookAnimals/Mongoos_Without_Border.png
-  artifactKey: Guid(97be8dd83e9b67d42afc39ad7813c016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ui/Images/bookAnimals/Mongoos_Without_Border.png using Guid(97be8dd83e9b67d42afc39ad7813c016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e5a2d854f851d16c15c22879cd7bfb9') in 0.016195 seconds 
-  Import took 0.021810 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.395033 seconds.
-  path: Assets/Ui/Images/bookAnimals/Mongoos_With_Border.png
-  artifactKey: Guid(d1322db7cf0e4a242aee05aca1b32a97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ui/Images/bookAnimals/Mongoos_With_Border.png using Guid(d1322db7cf0e4a242aee05aca1b32a97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ffafd15fa24f4a53f16f89b2cd1fb2da') in 0.052251 seconds 
-  Import took 0.056598 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000238 seconds.
-  path: Assets/Ui/Images/bookAnimals/Mongoos_Without_Border.png
-  artifactKey: Guid(97be8dd83e9b67d42afc39ad7813c016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ui/Images/bookAnimals/Mongoos_Without_Border.png using Guid(97be8dd83e9b67d42afc39ad7813c016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'decdbeb452b125f3eb3177a8dfa20e08') in 0.035158 seconds 
-  Import took 0.048141 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.695701 seconds.
-  path: Assets/BookLalalala.blend
-  artifactKey: Guid(cc18f24a3e223c84b9d462c060d90748) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BookLalalala.blend using Guid(cc18f24a3e223c84b9d462c060d90748) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7166dce12 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7166aebc2 (Unity) ResolveArtifactV2
-0x00007ff7166c7d60 (Unity) ImportToObjects
-0x00007ff7166c71a8 (Unity) ImportAsset
-0x00007ff716661238 (Unity) AssetImportWorker::Import
-0x00007ff71668691a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff71670e2f2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff716710450 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff716713bce (Unity) asio::io_service::run
-0x00007ff7166af8db (Unity) RunAssetImportWorkerClientV2
-0x00007ff7166af930 (Unity) RunAssetImporterV2
-0x00007ff716155b49 (Unity) Application::InitializeProject
-0x00007ff7165ab4f2 (Unity) WinMain
-0x00007ff717c3bd4e (Unity) __scrt_common_main_seh
-0x00007ffc87087034 (KERNEL32) BaseThreadInitThunk
-0x00007ffc88342651 (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(cc18f24a3e223c84b9d462c060d90748) Importer(-1,00000000000000000000000000000000), Assets/BookLalalala.blend from editor
-Resuming Guid(cc18f24a3e223c84b9d462c060d90748) Importer(-1,00000000000000000000000000000000) -> e555cab99104bcda7b077bd680049e07 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
-Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7166dce12 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7166aebc2 (Unity) ResolveArtifactV2
-0x00007ff7166a6cb1 (Unity) ProduceArtifactV2
-0x00007ff71663ce5e (Unity) AssetDatabase::ProduceArtifact
-0x00007ff716626db8 (Unity) PreviewImporter::GenerateAssetData
-0x00007ff7166c8132 (Unity) ImportToObjects
-0x00007ff7166c71a8 (Unity) ImportAsset
-0x00007ff716661238 (Unity) AssetImportWorker::Import
-0x00007ff71668691a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff71670e2f2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff716710450 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff716713bce (Unity) asio::io_service::run
-0x00007ff7166af8db (Unity) RunAssetImportWorkerClientV2
-0x00007ff7166af930 (Unity) RunAssetImporterV2
-0x00007ff716155b49 (Unity) Application::InitializeProject
-0x00007ff7165ab4f2 (Unity) WinMain
-0x00007ff717c3bd4e (Unity) __scrt_common_main_seh
-0x00007ffc87087034 (KERNEL32) BaseThreadInitThunk
-0x00007ffc88342651 (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(cc18f24a3e223c84b9d462c060d90748) Importer(-1,00000000000000000000000000000000), Assets/BookLalalala.blend from editor
-Resuming Guid(cc18f24a3e223c84b9d462c060d90748) Importer(-1,00000000000000000000000000000000) -> e555cab99104bcda7b077bd680049e07 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
- -> (artifact id: 'fb604a15f7faea597dddf44519bd67b7') in 0.008610 seconds 
-  Import took 0.013335 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000260 seconds.
-  path: Assets/rig.fbx
-  artifactKey: Guid(90845623ad69a2b46a107025e390ccb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/rig.fbx using Guid(90845623ad69a2b46a107025e390ccb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7166dce12 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7166aebc2 (Unity) ResolveArtifactV2
-0x00007ff7166c7d60 (Unity) ImportToObjects
-0x00007ff7166c71a8 (Unity) ImportAsset
-0x00007ff716661238 (Unity) AssetImportWorker::Import
-0x00007ff71668691a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff71670e2f2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff716710450 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff716713bce (Unity) asio::io_service::run
-0x00007ff7166af8db (Unity) RunAssetImportWorkerClientV2
-0x00007ff7166af930 (Unity) RunAssetImporterV2
-0x00007ff716155b49 (Unity) Application::InitializeProject
-0x00007ff7165ab4f2 (Unity) WinMain
-0x00007ff717c3bd4e (Unity) __scrt_common_main_seh
-0x00007ffc87087034 (KERNEL32) BaseThreadInitThunk
-0x00007ffc88342651 (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(90845623ad69a2b46a107025e390ccb5) Importer(-1,00000000000000000000000000000000), Assets/rig.fbx from editor
-Resuming Guid(90845623ad69a2b46a107025e390ccb5) Importer(-1,00000000000000000000000000000000) -> f6e2334cb4045bc8ed41745498ee74cc 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
-Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7166dce12 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7166aebc2 (Unity) ResolveArtifactV2
-0x00007ff7166a6cb1 (Unity) ProduceArtifactV2
-0x00007ff71663ce5e (Unity) AssetDatabase::ProduceArtifact
-0x00007ff716626db8 (Unity) PreviewImporter::GenerateAssetData
-0x00007ff7166c8132 (Unity) ImportToObjects
-0x00007ff7166c71a8 (Unity) ImportAsset
-0x00007ff716661238 (Unity) AssetImportWorker::Import
-0x00007ff71668691a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff71670e2f2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff716710450 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff716713bce (Unity) asio::io_service::run
-0x00007ff7166af8db (Unity) RunAssetImportWorkerClientV2
-0x00007ff7166af930 (Unity) RunAssetImporterV2
-0x00007ff716155b49 (Unity) Application::InitializeProject
-0x00007ff7165ab4f2 (Unity) WinMain
-0x00007ff717c3bd4e (Unity) __scrt_common_main_seh
-0x00007ffc87087034 (KERNEL32) BaseThreadInitThunk
-0x00007ffc88342651 (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(90845623ad69a2b46a107025e390ccb5) Importer(-1,00000000000000000000000000000000), Assets/rig.fbx from editor
-Resuming Guid(90845623ad69a2b46a107025e390ccb5) Importer(-1,00000000000000000000000000000000) -> f6e2334cb4045bc8ed41745498ee74cc 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
- -> (artifact id: '3f1346f2e3a89b76de6c352c12633e80') in 0.009894 seconds 
-  Import took 0.014053 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000253 seconds.
-  path: Assets/Elephant.fbx
-  artifactKey: Guid(7201f0e3c490a8a469341205f576ed32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Elephant.fbx using Guid(7201f0e3c490a8a469341205f576ed32) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7166dce12 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7166aebc2 (Unity) ResolveArtifactV2
-0x00007ff7166c7d60 (Unity) ImportToObjects
-0x00007ff7166c71a8 (Unity) ImportAsset
-0x00007ff716661238 (Unity) AssetImportWorker::Import
-0x00007ff71668691a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff71670e2f2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff716710450 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff716713bce (Unity) asio::io_service::run
-0x00007ff7166af8db (Unity) RunAssetImportWorkerClientV2
-0x00007ff7166af930 (Unity) RunAssetImporterV2
-0x00007ff716155b49 (Unity) Application::InitializeProject
-0x00007ff7165ab4f2 (Unity) WinMain
-0x00007ff717c3bd4e (Unity) __scrt_common_main_seh
-0x00007ffc87087034 (KERNEL32) BaseThreadInitThunk
-0x00007ffc88342651 (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(7201f0e3c490a8a469341205f576ed32) Importer(-1,00000000000000000000000000000000), Assets/Elephant.fbx from editor
-Resuming Guid(7201f0e3c490a8a469341205f576ed32) Importer(-1,00000000000000000000000000000000) -> ea4ea6d74ad4234f08211545678bd776 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
-Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7166dce12 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7166aebc2 (Unity) ResolveArtifactV2
-0x00007ff7166a6cb1 (Unity) ProduceArtifactV2
-0x00007ff71663ce5e (Unity) AssetDatabase::ProduceArtifact
-0x00007ff716626db8 (Unity) PreviewImporter::GenerateAssetData
-0x00007ff7166c8132 (Unity) ImportToObjects
-0x00007ff7166c71a8 (Unity) ImportAsset
-0x00007ff716661238 (Unity) AssetImportWorker::Import
-0x00007ff71668691a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff71670e2f2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff716710450 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff716713bce (Unity) asio::io_service::run
-0x00007ff7166af8db (Unity) RunAssetImportWorkerClientV2
-0x00007ff7166af930 (Unity) RunAssetImporterV2
-0x00007ff716155b49 (Unity) Application::InitializeProject
-0x00007ff7165ab4f2 (Unity) WinMain
-0x00007ff717c3bd4e (Unity) __scrt_common_main_seh
-0x00007ffc87087034 (KERNEL32) BaseThreadInitThunk
-0x00007ffc88342651 (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(7201f0e3c490a8a469341205f576ed32) Importer(-1,00000000000000000000000000000000), Assets/Elephant.fbx from editor
-Resuming Guid(7201f0e3c490a8a469341205f576ed32) Importer(-1,00000000000000000000000000000000) -> ea4ea6d74ad4234f08211545678bd776 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
- -> (artifact id: '35caafb5db614ad7db7335094d277e1d') in 0.008540 seconds 
-  Import took 0.013005 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000174 seconds.
-  path: Assets/Gazelle.fbx
-  artifactKey: Guid(01b4adb363f8cea43947e74b25719299) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Gazelle.fbx using Guid(01b4adb363f8cea43947e74b25719299) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7166dce12 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7166aebc2 (Unity) ResolveArtifactV2
-0x00007ff7166c7d60 (Unity) ImportToObjects
-0x00007ff7166c71a8 (Unity) ImportAsset
-0x00007ff716661238 (Unity) AssetImportWorker::Import
-0x00007ff71668691a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff71670e2f2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff716710450 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff716713bce (Unity) asio::io_service::run
-0x00007ff7166af8db (Unity) RunAssetImportWorkerClientV2
-0x00007ff7166af930 (Unity) RunAssetImporterV2
-0x00007ff716155b49 (Unity) Application::InitializeProject
-0x00007ff7165ab4f2 (Unity) WinMain
-0x00007ff717c3bd4e (Unity) __scrt_common_main_seh
-0x00007ffc87087034 (KERNEL32) BaseThreadInitThunk
-0x00007ffc88342651 (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(01b4adb363f8cea43947e74b25719299) Importer(-1,00000000000000000000000000000000), Assets/Gazelle.fbx from editor
-Resuming Guid(01b4adb363f8cea43947e74b25719299) Importer(-1,00000000000000000000000000000000) -> a60ad48ffa12a8edd077c64e518e019e 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
-Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7166dce12 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7166aebc2 (Unity) ResolveArtifactV2
-0x00007ff7166a6cb1 (Unity) ProduceArtifactV2
-0x00007ff71663ce5e (Unity) AssetDatabase::ProduceArtifact
-0x00007ff716626db8 (Unity) PreviewImporter::GenerateAssetData
-0x00007ff7166c8132 (Unity) ImportToObjects
-0x00007ff7166c71a8 (Unity) ImportAsset
-0x00007ff716661238 (Unity) AssetImportWorker::Import
-0x00007ff71668691a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff71670e2f2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff716710450 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff716713bce (Unity) asio::io_service::run
-0x00007ff7166af8db (Unity) RunAssetImportWorkerClientV2
-0x00007ff7166af930 (Unity) RunAssetImporterV2
-0x00007ff716155b49 (Unity) Application::InitializeProject
-0x00007ff7165ab4f2 (Unity) WinMain
-0x00007ff717c3bd4e (Unity) __scrt_common_main_seh
-0x00007ffc87087034 (KERNEL32) BaseThreadInitThunk
-0x00007ffc88342651 (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(01b4adb363f8cea43947e74b25719299) Importer(-1,00000000000000000000000000000000), Assets/Gazelle.fbx from editor
-Resuming Guid(01b4adb363f8cea43947e74b25719299) Importer(-1,00000000000000000000000000000000) -> a60ad48ffa12a8edd077c64e518e019e 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
- -> (artifact id: '95865e7cd1d0647742a30ec894ec8cdc') in 0.009465 seconds 
-  Import took 0.014676 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000242 seconds.
-  path: Assets/Prairiedog.fbx
-  artifactKey: Guid(34770e6492ad9444293528cc401b9c47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prairiedog.fbx using Guid(34770e6492ad9444293528cc401b9c47) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7166dce12 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7166aebc2 (Unity) ResolveArtifactV2
-0x00007ff7166c7d60 (Unity) ImportToObjects
-0x00007ff7166c71a8 (Unity) ImportAsset
-0x00007ff716661238 (Unity) AssetImportWorker::Import
-0x00007ff71668691a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff71670e2f2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff716710450 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff716713bce (Unity) asio::io_service::run
-0x00007ff7166af8db (Unity) RunAssetImportWorkerClientV2
-0x00007ff7166af930 (Unity) RunAssetImporterV2
-0x00007ff716155b49 (Unity) Application::InitializeProject
-0x00007ff7165ab4f2 (Unity) WinMain
-0x00007ff717c3bd4e (Unity) __scrt_common_main_seh
-0x00007ffc87087034 (KERNEL32) BaseThreadInitThunk
-0x00007ffc88342651 (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(34770e6492ad9444293528cc401b9c47) Importer(-1,00000000000000000000000000000000), Assets/Prairiedog.fbx from editor
-Resuming Guid(34770e6492ad9444293528cc401b9c47) Importer(-1,00000000000000000000000000000000) -> 4a2cc76e9d8660fd00406ee116f95fbd 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
-Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7166dce12 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7166aebc2 (Unity) ResolveArtifactV2
-0x00007ff7166a6cb1 (Unity) ProduceArtifactV2
-0x00007ff71663ce5e (Unity) AssetDatabase::ProduceArtifact
-0x00007ff716626db8 (Unity) PreviewImporter::GenerateAssetData
-0x00007ff7166c8132 (Unity) ImportToObjects
-0x00007ff7166c71a8 (Unity) ImportAsset
-0x00007ff716661238 (Unity) AssetImportWorker::Import
-0x00007ff71668691a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff71670e2f2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff716710450 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff716713bce (Unity) asio::io_service::run
-0x00007ff7166af8db (Unity) RunAssetImportWorkerClientV2
-0x00007ff7166af930 (Unity) RunAssetImporterV2
-0x00007ff716155b49 (Unity) Application::InitializeProject
-0x00007ff7165ab4f2 (Unity) WinMain
-0x00007ff717c3bd4e (Unity) __scrt_common_main_seh
-0x00007ffc87087034 (KERNEL32) BaseThreadInitThunk
-0x00007ffc88342651 (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(34770e6492ad9444293528cc401b9c47) Importer(-1,00000000000000000000000000000000), Assets/Prairiedog.fbx from editor
-Resuming Guid(34770e6492ad9444293528cc401b9c47) Importer(-1,00000000000000000000000000000000) -> 4a2cc76e9d8660fd00406ee116f95fbd 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
- -> (artifact id: '3fb81787af70344761cd8e3d20560382') in 0.009045 seconds 
-  Import took 0.013817 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000246 seconds.
-  path: Assets/Mongoose.fbx
-  artifactKey: Guid(cffa29117ebd85643a8bf7efc5e030b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mongoose.fbx using Guid(cffa29117ebd85643a8bf7efc5e030b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7166dce12 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7166aebc2 (Unity) ResolveArtifactV2
-0x00007ff7166c7d60 (Unity) ImportToObjects
-0x00007ff7166c71a8 (Unity) ImportAsset
-0x00007ff716661238 (Unity) AssetImportWorker::Import
-0x00007ff71668691a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff71670e2f2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff716710450 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff716713bce (Unity) asio::io_service::run
-0x00007ff7166af8db (Unity) RunAssetImportWorkerClientV2
-0x00007ff7166af930 (Unity) RunAssetImporterV2
-0x00007ff716155b49 (Unity) Application::InitializeProject
-0x00007ff7165ab4f2 (Unity) WinMain
-0x00007ff717c3bd4e (Unity) __scrt_common_main_seh
-0x00007ffc87087034 (KERNEL32) BaseThreadInitThunk
-0x00007ffc88342651 (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(cffa29117ebd85643a8bf7efc5e030b3) Importer(-1,00000000000000000000000000000000), Assets/Mongoose.fbx from editor
-Resuming Guid(cffa29117ebd85643a8bf7efc5e030b3) Importer(-1,00000000000000000000000000000000) -> 2eab3a3a95732abe961fc6c34a5c0010 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
-Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7166dce12 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7166aebc2 (Unity) ResolveArtifactV2
-0x00007ff7166a6cb1 (Unity) ProduceArtifactV2
-0x00007ff71663ce5e (Unity) AssetDatabase::ProduceArtifact
-0x00007ff716626db8 (Unity) PreviewImporter::GenerateAssetData
-0x00007ff7166c8132 (Unity) ImportToObjects
-0x00007ff7166c71a8 (Unity) ImportAsset
-0x00007ff716661238 (Unity) AssetImportWorker::Import
-0x00007ff71668691a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff71670e2f2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff716710450 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff716713bce (Unity) asio::io_service::run
-0x00007ff7166af8db (Unity) RunAssetImportWorkerClientV2
-0x00007ff7166af930 (Unity) RunAssetImporterV2
-0x00007ff716155b49 (Unity) Application::InitializeProject
-0x00007ff7165ab4f2 (Unity) WinMain
-0x00007ff717c3bd4e (Unity) __scrt_common_main_seh
-0x00007ffc87087034 (KERNEL32) BaseThreadInitThunk
-0x00007ffc88342651 (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(cffa29117ebd85643a8bf7efc5e030b3) Importer(-1,00000000000000000000000000000000), Assets/Mongoose.fbx from editor
-Resuming Guid(cffa29117ebd85643a8bf7efc5e030b3) Importer(-1,00000000000000000000000000000000) -> 2eab3a3a95732abe961fc6c34a5c0010 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
- -> (artifact id: '23a0f6049b3aa4bdef87ded52d728349') in 0.009886 seconds 
-  Import took 0.015652 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.872212 seconds.
-  path: Assets/AnimalData/Camel.asset
-  artifactKey: Guid(eebb34663d5a5a34290dcb4eaac9ae52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AnimalData/Camel.asset using Guid(eebb34663d5a5a34290dcb4eaac9ae52) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7166dce12 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7166aebc2 (Unity) ResolveArtifactV2
-0x00007ff71667bcad (Unity) GUIDPersistentManagerV2::PathIDToPathNameInternal
-0x00007ff7157e69d4 (Unity) PersistentManager::GetStreamNameSpaceInternal
-0x00007ff7157e6286 (Unity) PersistentManager::GetSerializedFileIfObjectAvailable
-0x00007ff7157eb543 (Unity) PersistentManager::ReadAndActivateObjectThreaded
-0x00007ff7157ebdf4 (Unity) PersistentManager::ReadObjectThreaded
-0x00007ff7157ebb13 (Unity) PersistentManager::ReadObject
-0x00007ff714bfef22 (Unity) PPtr<Mesh>::operator Mesh * __ptr64
-0x00007ff71540c4e5 (Unity) SkinnedMeshRenderer::UpdateCachedMesh
-0x00007ff715403ed8 (Unity) SkinnedMeshRenderer::AwakeFromLoad
-0x00007ff71581451f (Unity) AwakeFromLoadQueue::InvokePersistentManagerAwake
-0x00007ff715814eb2 (Unity) AwakeFromLoadQueue::PersistentManagerAwakeFromLoad
-0x00007ff715815023 (Unity) AwakeFromLoadQueue::PersistentManagerAwakeFromLoad
-0x00007ff7157e7a44 (Unity) PersistentManager::IntegrateAllThreadedObjects
-0x00007ff7157e8587 (Unity) PersistentManager::LoadAndIntegrateAllPreallocatedObjects
-0x00007ff7157ebb82 (Unity) PersistentManager::ReadObject
-0x00007ff71662a561 (Unity) WritePreviews
-0x00007ff716626ede (Unity) PreviewImporter::GenerateAssetData
-0x00007ff7166c8132 (Unity) ImportToObjects
-0x00007ff7166c71a8 (Unity) ImportAsset
-0x00007ff716661238 (Unity) AssetImportWorker::Import
-0x00007ff71668691a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff71670e2f2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff716710450 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff716713bce (Unity) asio::io_service::run
-0x00007ff7166af8db (Unity) RunAssetImportWorkerClientV2
-0x00007ff7166af930 (Unity) RunAssetImporterV2
-0x00007ff716155b49 (Unity) Application::InitializeProject
-0x00007ff7165ab4f2 (Unity) WinMain
-0x00007ff717c3bd4e (Unity) __scrt_common_main_seh
-0x00007ffc87087034 (KERNEL32) BaseThreadInitThunk
-0x00007ffc88342651 (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(90845623ad69a2b46a107025e390ccb5) Importer(-1,00000000000000000000000000000000), Assets/rig.fbx from editor
-Resuming Guid(90845623ad69a2b46a107025e390ccb5) Importer(-1,00000000000000000000000000000000) -> f6e2334cb4045bc8ed41745498ee74cc 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
-Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7166dce12 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7166aebc2 (Unity) ResolveArtifactV2
-0x00007ff71667bcad (Unity) GUIDPersistentManagerV2::PathIDToPathNameInternal
-0x00007ff7157e69d4 (Unity) PersistentManager::GetStreamNameSpaceInternal
-0x00007ff7157e6286 (Unity) PersistentManager::GetSerializedFileIfObjectAvailable
-0x00007ff7157eb543 (Unity) PersistentManager::ReadAndActivateObjectThreaded
-0x00007ff7157ebdf4 (Unity) PersistentManager::ReadObjectThreaded
-0x00007ff7157ebb13 (Unity) PersistentManager::ReadObject
-0x00007ff714c08226 (Unity) ParticleSystemRenderer::UpdateCachedMesh
-0x00007ff714bff4c5 (Unity) ParticleSystemRenderer::AwakeFromLoad
-0x00007ff71581451f (Unity) AwakeFromLoadQueue::InvokePersistentManagerAwake
-0x00007ff715814eb2 (Unity) AwakeFromLoadQueue::PersistentManagerAwakeFromLoad
-0x00007ff715815023 (Unity) AwakeFromLoadQueue::PersistentManagerAwakeFromLoad
-0x00007ff7157e7a44 (Unity) PersistentManager::IntegrateAllThreadedObjects
-0x00007ff7157e8587 (Unity) PersistentManager::LoadAndIntegrateAllPreallocatedObjects
-0x00007ff7157ebb82 (Unity) PersistentManager::ReadObject
-0x00007ff71662a561 (Unity) WritePreviews
-0x00007ff716626ede (Unity) PreviewImporter::GenerateAssetData
-0x00007ff7166c8132 (Unity) ImportToObjects
-0x00007ff7166c71a8 (Unity) ImportAsset
-0x00007ff716661238 (Unity) AssetImportWorker::Import
-0x00007ff71668691a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff71670e2f2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff716710450 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff716713bce (Unity) asio::io_service::run
-0x00007ff7166af8db (Unity) RunAssetImportWorkerClientV2
-0x00007ff7166af930 (Unity) RunAssetImporterV2
-0x00007ff716155b49 (Unity) Application::InitializeProject
-0x00007ff7165ab4f2 (Unity) WinMain
-0x00007ff717c3bd4e (Unity) __scrt_common_main_seh
-0x00007ffc87087034 (KERNEL32) BaseThreadInitThunk
-0x00007ffc88342651 (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(c9a46024a6d99694790775d8df611749) Importer(-1,00000000000000000000000000000000), Assets/Obj/Particles/ico.obj from editor
-Resuming Guid(c9a46024a6d99694790775d8df611749) Importer(-1,00000000000000000000000000000000) -> 04ccb4c2f6a0f5aaa87ec98e8b9f2c51 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
-Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7166dce12 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7166aebc2 (Unity) ResolveArtifactV2
-0x00007ff71667bcad (Unity) GUIDPersistentManagerV2::PathIDToPathNameInternal
-0x00007ff7157e69d4 (Unity) PersistentManager::GetStreamNameSpaceInternal
-0x00007ff7157e6286 (Unity) PersistentManager::GetSerializedFileIfObjectAvailable
-0x00007ff7157eb543 (Unity) PersistentManager::ReadAndActivateObjectThreaded
-0x00007ff7157ebdf4 (Unity) PersistentManager::ReadObjectThreaded
-0x00007ff7157ebb13 (Unity) PersistentManager::ReadObject
-0x00007ff714c08226 (Unity) ParticleSystemRenderer::UpdateCachedMesh
-0x00007ff714bff4c5 (Unity) ParticleSystemRenderer::AwakeFromLoad
-0x00007ff71581451f (Unity) AwakeFromLoadQueue::InvokePersistentManagerAwake
-0x00007ff715814eb2 (Unity) AwakeFromLoadQueue::PersistentManagerAwakeFromLoad
-0x00007ff715815023 (Unity) AwakeFromLoadQueue::PersistentManagerAwakeFromLoad
-0x00007ff7157e7a44 (Unity) PersistentManager::IntegrateAllThreadedObjects
-0x00007ff7157e8587 (Unity) PersistentManager::LoadAndIntegrateAllPreallocatedObjects
-0x00007ff7157ebb82 (Unity) PersistentManager::ReadObject
-0x00007ff71662a561 (Unity) WritePreviews
-0x00007ff716626ede (Unity) PreviewImporter::GenerateAssetData
-0x00007ff7166c8132 (Unity) ImportToObjects
-0x00007ff7166c71a8 (Unity) ImportAsset
-0x00007ff716661238 (Unity) AssetImportWorker::Import
-0x00007ff71668691a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff71670e2f2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff716710450 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff716713bce (Unity) asio::io_service::run
-0x00007ff7166af8db (Unity) RunAssetImportWorkerClientV2
-0x00007ff7166af930 (Unity) RunAssetImporterV2
-0x00007ff716155b49 (Unity) Application::InitializeProject
-0x00007ff7165ab4f2 (Unity) WinMain
-0x00007ff717c3bd4e (Unity) __scrt_common_main_seh
-0x00007ffc87087034 (KERNEL32) BaseThreadInitThunk
-0x00007ffc88342651 (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(06194ea56a7049a4485cabd0bd49e2ef) Importer(-1,00000000000000000000000000000000), Assets/Prefabs/Particle Effects/star.fbx from editor
-Resuming Guid(06194ea56a7049a4485cabd0bd49e2ef) Importer(-1,00000000000000000000000000000000) -> 7b5f0d3072a6e34e71365de361c109dd 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
- -> (artifact id: 'bd59d26862363cf6befbd5236ef50067') in 0.091157 seconds 
-  Import took 0.096167 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000260 seconds.
-  path: Assets/AnimalData/Impala.asset
-  artifactKey: Guid(1f1d8192488176e4292723b8123ebfe5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AnimalData/Impala.asset using Guid(1f1d8192488176e4292723b8123ebfe5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7166dce12 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7166aebc2 (Unity) ResolveArtifactV2
-0x00007ff71667bcad (Unity) GUIDPersistentManagerV2::PathIDToPathNameInternal
-0x00007ff7157e69d4 (Unity) PersistentManager::GetStreamNameSpaceInternal
-0x00007ff7157e6286 (Unity) PersistentManager::GetSerializedFileIfObjectAvailable
-0x00007ff7157eb543 (Unity) PersistentManager::ReadAndActivateObjectThreaded
-0x00007ff7157ebdf4 (Unity) PersistentManager::ReadObjectThreaded
-0x00007ff7157ebb13 (Unity) PersistentManager::ReadObject
-0x00007ff714bfef22 (Unity) PPtr<Mesh>::operator Mesh * __ptr64
-0x00007ff71540c4e5 (Unity) SkinnedMeshRenderer::UpdateCachedMesh
-0x00007ff715403ed8 (Unity) SkinnedMeshRenderer::AwakeFromLoad
-0x00007ff71581451f (Unity) AwakeFromLoadQueue::InvokePersistentManagerAwake
-0x00007ff715814eb2 (Unity) AwakeFromLoadQueue::PersistentManagerAwakeFromLoad
-0x00007ff715815023 (Unity) AwakeFromLoadQueue::PersistentManagerAwakeFromLoad
-0x00007ff7157e7a44 (Unity) PersistentManager::IntegrateAllThreadedObjects
-0x00007ff7157e8587 (Unity) PersistentManager::LoadAndIntegrateAllPreallocatedObjects
-0x00007ff7157ebb82 (Unity) PersistentManager::ReadObject
-0x00007ff71662a561 (Unity) WritePreviews
-0x00007ff716626ede (Unity) PreviewImporter::GenerateAssetData
-0x00007ff7166c8132 (Unity) ImportToObjects
-0x00007ff7166c71a8 (Unity) ImportAsset
-0x00007ff716661238 (Unity) AssetImportWorker::Import
-0x00007ff71668691a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff71670e2f2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff716710450 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff716713bce (Unity) asio::io_service::run
-0x00007ff7166af8db (Unity) RunAssetImportWorkerClientV2
-0x00007ff7166af930 (Unity) RunAssetImporterV2
-0x00007ff716155b49 (Unity) Application::InitializeProject
-0x00007ff7165ab4f2 (Unity) WinMain
-0x00007ff717c3bd4e (Unity) __scrt_common_main_seh
-0x00007ffc87087034 (KERNEL32) BaseThreadInitThunk
-0x00007ffc88342651 (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(01b4adb363f8cea43947e74b25719299) Importer(-1,00000000000000000000000000000000), Assets/Gazelle.fbx from editor
-Resuming Guid(01b4adb363f8cea43947e74b25719299) Importer(-1,00000000000000000000000000000000) -> a60ad48ffa12a8edd077c64e518e019e 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
-Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7166dce12 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7166aebc2 (Unity) ResolveArtifactV2
-0x00007ff71667bcad (Unity) GUIDPersistentManagerV2::PathIDToPathNameInternal
-0x00007ff7157e69d4 (Unity) PersistentManager::GetStreamNameSpaceInternal
-0x00007ff7157e6286 (Unity) PersistentManager::GetSerializedFileIfObjectAvailable
-0x00007ff7157eb543 (Unity) PersistentManager::ReadAndActivateObjectThreaded
-0x00007ff7157ebdf4 (Unity) PersistentManager::ReadObjectThreaded
-0x00007ff7157ebb13 (Unity) PersistentManager::ReadObject
-0x00007ff714c08226 (Unity) ParticleSystemRenderer::UpdateCachedMesh
-0x00007ff714bff4c5 (Unity) ParticleSystemRenderer::AwakeFromLoad
-0x00007ff71581451f (Unity) AwakeFromLoadQueue::InvokePersistentManagerAwake
-0x00007ff715814eb2 (Unity) AwakeFromLoadQueue::PersistentManagerAwakeFromLoad
-0x00007ff715815023 (Unity) AwakeFromLoadQueue::PersistentManagerAwakeFromLoad
-0x00007ff7157e7a44 (Unity) PersistentManager::IntegrateAllThreadedObjects
-0x00007ff7157e8587 (Unity) PersistentManager::LoadAndIntegrateAllPreallocatedObjects
-0x00007ff7157ebb82 (Unity) PersistentManager::ReadObject
-0x00007ff71662a561 (Unity) WritePreviews
-0x00007ff716626ede (Unity) PreviewImporter::GenerateAssetData
-0x00007ff7166c8132 (Unity) ImportToObjects
-0x00007ff7166c71a8 (Unity) ImportAsset
-0x00007ff716661238 (Unity) AssetImportWorker::Import
-0x00007ff71668691a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff71670e2f2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff716710450 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff716713bce (Unity) asio::io_service::run
-0x00007ff7166af8db (Unity) RunAssetImportWorkerClientV2
-0x00007ff7166af930 (Unity) RunAssetImporterV2
-0x00007ff716155b49 (Unity) Application::InitializeProject
-0x00007ff7165ab4f2 (Unity) WinMain
-0x00007ff717c3bd4e (Unity) __scrt_common_main_seh
-0x00007ffc87087034 (KERNEL32) BaseThreadInitThunk
-0x00007ffc88342651 (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(c9a46024a6d99694790775d8df611749) Importer(-1,00000000000000000000000000000000), Assets/Obj/Particles/ico.obj from editor
-Resuming Guid(c9a46024a6d99694790775d8df611749) Importer(-1,00000000000000000000000000000000) -> 04ccb4c2f6a0f5aaa87ec98e8b9f2c51 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
-Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7166dce12 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7166aebc2 (Unity) ResolveArtifactV2
-0x00007ff71667bcad (Unity) GUIDPersistentManagerV2::PathIDToPathNameInternal
-0x00007ff7157e69d4 (Unity) PersistentManager::GetStreamNameSpaceInternal
-0x00007ff7157e6286 (Unity) PersistentManager::GetSerializedFileIfObjectAvailable
-0x00007ff7157eb543 (Unity) PersistentManager::ReadAndActivateObjectThreaded
-0x00007ff7157ebdf4 (Unity) PersistentManager::ReadObjectThreaded
-0x00007ff7157ebb13 (Unity) PersistentManager::ReadObject
-0x00007ff714c08226 (Unity) ParticleSystemRenderer::UpdateCachedMesh
-0x00007ff714bff4c5 (Unity) ParticleSystemRenderer::AwakeFromLoad
-0x00007ff71581451f (Unity) AwakeFromLoadQueue::InvokePersistentManagerAwake
-0x00007ff715814eb2 (Unity) AwakeFromLoadQueue::PersistentManagerAwakeFromLoad
-0x00007ff715815023 (Unity) AwakeFromLoadQueue::PersistentManagerAwakeFromLoad
-0x00007ff7157e7a44 (Unity) PersistentManager::IntegrateAllThreadedObjects
-0x00007ff7157e8587 (Unity) PersistentManager::LoadAndIntegrateAllPreallocatedObjects
-0x00007ff7157ebb82 (Unity) PersistentManager::ReadObject
-0x00007ff71662a561 (Unity) WritePreviews
-0x00007ff716626ede (Unity) PreviewImporter::GenerateAssetData
-0x00007ff7166c8132 (Unity) ImportToObjects
-0x00007ff7166c71a8 (Unity) ImportAsset
-0x00007ff716661238 (Unity) AssetImportWorker::Import
-0x00007ff71668691a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff71670e2f2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff716710450 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff716713bce (Unity) asio::io_service::run
-0x00007ff7166af8db (Unity) RunAssetImportWorkerClientV2
-0x00007ff7166af930 (Unity) RunAssetImporterV2
-0x00007ff716155b49 (Unity) Application::InitializeProject
-0x00007ff7165ab4f2 (Unity) WinMain
-0x00007ff717c3bd4e (Unity) __scrt_common_main_seh
-0x00007ffc87087034 (KERNEL32) BaseThreadInitThunk
-0x00007ffc88342651 (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(06194ea56a7049a4485cabd0bd49e2ef) Importer(-1,00000000000000000000000000000000), Assets/Prefabs/Particle Effects/star.fbx from editor
-Resuming Guid(06194ea56a7049a4485cabd0bd49e2ef) Importer(-1,00000000000000000000000000000000) -> 7b5f0d3072a6e34e71365de361c109dd 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
- -> (artifact id: '9437a90f3ff595a073f007a383c39e33') in 0.038216 seconds 
-  Import took 0.043463 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000264 seconds.
-  path: Assets/AnimalData/Elephant.asset
-  artifactKey: Guid(d9c2eaad652d3ec479f80985b1b5ecea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AnimalData/Elephant.asset using Guid(d9c2eaad652d3ec479f80985b1b5ecea) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7166dce12 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7166aebc2 (Unity) ResolveArtifactV2
-0x00007ff71667bcad (Unity) GUIDPersistentManagerV2::PathIDToPathNameInternal
-0x00007ff7157e69d4 (Unity) PersistentManager::GetStreamNameSpaceInternal
-0x00007ff7157e6286 (Unity) PersistentManager::GetSerializedFileIfObjectAvailable
-0x00007ff7157eb543 (Unity) PersistentManager::ReadAndActivateObjectThreaded
-0x00007ff7157ebdf4 (Unity) PersistentManager::ReadObjectThreaded
-0x00007ff7157ebb13 (Unity) PersistentManager::ReadObject
-0x00007ff714bfef22 (Unity) PPtr<Mesh>::operator Mesh * __ptr64
-0x00007ff71540c4e5 (Unity) SkinnedMeshRenderer::UpdateCachedMesh
-0x00007ff715403ed8 (Unity) SkinnedMeshRenderer::AwakeFromLoad
-0x00007ff71581451f (Unity) AwakeFromLoadQueue::InvokePersistentManagerAwake
-0x00007ff715814eb2 (Unity) AwakeFromLoadQueue::PersistentManagerAwakeFromLoad
-0x00007ff715815023 (Unity) AwakeFromLoadQueue::PersistentManagerAwakeFromLoad
-0x00007ff7157e7a44 (Unity) PersistentManager::IntegrateAllThreadedObjects
-0x00007ff7157e8587 (Unity) PersistentManager::LoadAndIntegrateAllPreallocatedObjects
-0x00007ff7157ebb82 (Unity) PersistentManager::ReadObject
-0x00007ff71662a561 (Unity) WritePreviews
-0x00007ff716626ede (Unity) PreviewImporter::GenerateAssetData
-0x00007ff7166c8132 (Unity) ImportToObjects
-0x00007ff7166c71a8 (Unity) ImportAsset
-0x00007ff716661238 (Unity) AssetImportWorker::Import
-0x00007ff71668691a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff71670e2f2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff716710450 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff716713bce (Unity) asio::io_service::run
-0x00007ff7166af8db (Unity) RunAssetImportWorkerClientV2
-0x00007ff7166af930 (Unity) RunAssetImporterV2
-0x00007ff716155b49 (Unity) Application::InitializeProject
-0x00007ff7165ab4f2 (Unity) WinMain
-0x00007ff717c3bd4e (Unity) __scrt_common_main_seh
-0x00007ffc87087034 (KERNEL32) BaseThreadInitThunk
-0x00007ffc88342651 (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(7201f0e3c490a8a469341205f576ed32) Importer(-1,00000000000000000000000000000000), Assets/Elephant.fbx from editor
-Resuming Guid(7201f0e3c490a8a469341205f576ed32) Importer(-1,00000000000000000000000000000000) -> ea4ea6d74ad4234f08211545678bd776 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
-Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7166dce12 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7166aebc2 (Unity) ResolveArtifactV2
-0x00007ff71667bcad (Unity) GUIDPersistentManagerV2::PathIDToPathNameInternal
-0x00007ff7157e69d4 (Unity) PersistentManager::GetStreamNameSpaceInternal
-0x00007ff7157e6286 (Unity) PersistentManager::GetSerializedFileIfObjectAvailable
-0x00007ff7157eb543 (Unity) PersistentManager::ReadAndActivateObjectThreaded
-0x00007ff7157ebdf4 (Unity) PersistentManager::ReadObjectThreaded
-0x00007ff7157ebb13 (Unity) PersistentManager::ReadObject
-0x00007ff714c08226 (Unity) ParticleSystemRenderer::UpdateCachedMesh
-0x00007ff714bff4c5 (Unity) ParticleSystemRenderer::AwakeFromLoad
-0x00007ff71581451f (Unity) AwakeFromLoadQueue::InvokePersistentManagerAwake
-0x00007ff715814eb2 (Unity) AwakeFromLoadQueue::PersistentManagerAwakeFromLoad
-0x00007ff715815023 (Unity) AwakeFromLoadQueue::PersistentManagerAwakeFromLoad
-0x00007ff7157e7a44 (Unity) PersistentManager::IntegrateAllThreadedObjects
-0x00007ff7157e8587 (Unity) PersistentManager::LoadAndIntegrateAllPreallocatedObjects
-0x00007ff7157ebb82 (Unity) PersistentManager::ReadObject
-0x00007ff71662a561 (Unity) WritePreviews
-0x00007ff716626ede (Unity) PreviewImporter::GenerateAssetData
-0x00007ff7166c8132 (Unity) ImportToObjects
-0x00007ff7166c71a8 (Unity) ImportAsset
-0x00007ff716661238 (Unity) AssetImportWorker::Import
-0x00007ff71668691a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff71670e2f2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff716710450 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff716713bce (Unity) asio::io_service::run
-0x00007ff7166af8db (Unity) RunAssetImportWorkerClientV2
-0x00007ff7166af930 (Unity) RunAssetImporterV2
-0x00007ff716155b49 (Unity) Application::InitializeProject
-0x00007ff7165ab4f2 (Unity) WinMain
-0x00007ff717c3bd4e (Unity) __scrt_common_main_seh
-0x00007ffc87087034 (KERNEL32) BaseThreadInitThunk
-0x00007ffc88342651 (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(c9a46024a6d99694790775d8df611749) Importer(-1,00000000000000000000000000000000), Assets/Obj/Particles/ico.obj from editor
-Resuming Guid(c9a46024a6d99694790775d8df611749) Importer(-1,00000000000000000000000000000000) -> 04ccb4c2f6a0f5aaa87ec98e8b9f2c51 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
-Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7166dce12 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7166aebc2 (Unity) ResolveArtifactV2
-0x00007ff71667bcad (Unity) GUIDPersistentManagerV2::PathIDToPathNameInternal
-0x00007ff7157e69d4 (Unity) PersistentManager::GetStreamNameSpaceInternal
-0x00007ff7157e6286 (Unity) PersistentManager::GetSerializedFileIfObjectAvailable
-0x00007ff7157eb543 (Unity) PersistentManager::ReadAndActivateObjectThreaded
-0x00007ff7157ebdf4 (Unity) PersistentManager::ReadObjectThreaded
-0x00007ff7157ebb13 (Unity) PersistentManager::ReadObject
-0x00007ff714c08226 (Unity) ParticleSystemRenderer::UpdateCachedMesh
-0x00007ff714bff4c5 (Unity) ParticleSystemRenderer::AwakeFromLoad
-0x00007ff71581451f (Unity) AwakeFromLoadQueue::InvokePersistentManagerAwake
-0x00007ff715814eb2 (Unity) AwakeFromLoadQueue::PersistentManagerAwakeFromLoad
-0x00007ff715815023 (Unity) AwakeFromLoadQueue::PersistentManagerAwakeFromLoad
-0x00007ff7157e7a44 (Unity) PersistentManager::IntegrateAllThreadedObjects
-0x00007ff7157e8587 (Unity) PersistentManager::LoadAndIntegrateAllPreallocatedObjects
-0x00007ff7157ebb82 (Unity) PersistentManager::ReadObject
-0x00007ff71662a561 (Unity) WritePreviews
-0x00007ff716626ede (Unity) PreviewImporter::GenerateAssetData
-0x00007ff7166c8132 (Unity) ImportToObjects
-0x00007ff7166c71a8 (Unity) ImportAsset
-0x00007ff716661238 (Unity) AssetImportWorker::Import
-0x00007ff71668691a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff71670e2f2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff716710450 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff716713bce (Unity) asio::io_service::run
-0x00007ff7166af8db (Unity) RunAssetImportWorkerClientV2
-0x00007ff7166af930 (Unity) RunAssetImporterV2
-0x00007ff716155b49 (Unity) Application::InitializeProject
-0x00007ff7165ab4f2 (Unity) WinMain
-0x00007ff717c3bd4e (Unity) __scrt_common_main_seh
-0x00007ffc87087034 (KERNEL32) BaseThreadInitThunk
-0x00007ffc88342651 (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(06194ea56a7049a4485cabd0bd49e2ef) Importer(-1,00000000000000000000000000000000), Assets/Prefabs/Particle Effects/star.fbx from editor
-Resuming Guid(06194ea56a7049a4485cabd0bd49e2ef) Importer(-1,00000000000000000000000000000000) -> 7b5f0d3072a6e34e71365de361c109dd 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
- -> (artifact id: '8aabfc78d85180377df9fcb2d0e8fdb1') in 0.030908 seconds 
-  Import took 0.046762 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000244 seconds.
-  path: Assets/AnimalData/PrairyDog.asset
-  artifactKey: Guid(3e75f8ac9b94f624185a5ddee1c35623) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AnimalData/PrairyDog.asset using Guid(3e75f8ac9b94f624185a5ddee1c35623) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7166dce12 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7166aebc2 (Unity) ResolveArtifactV2
-0x00007ff71667bcad (Unity) GUIDPersistentManagerV2::PathIDToPathNameInternal
-0x00007ff7157e69d4 (Unity) PersistentManager::GetStreamNameSpaceInternal
-0x00007ff7157e6286 (Unity) PersistentManager::GetSerializedFileIfObjectAvailable
-0x00007ff7157eb543 (Unity) PersistentManager::ReadAndActivateObjectThreaded
-0x00007ff7157ebdf4 (Unity) PersistentManager::ReadObjectThreaded
-0x00007ff7157ebb13 (Unity) PersistentManager::ReadObject
-0x00007ff714bfef22 (Unity) PPtr<Mesh>::operator Mesh * __ptr64
-0x00007ff71540c4e5 (Unity) SkinnedMeshRenderer::UpdateCachedMesh
-0x00007ff715403ed8 (Unity) SkinnedMeshRenderer::AwakeFromLoad
-0x00007ff71581451f (Unity) AwakeFromLoadQueue::InvokePersistentManagerAwake
-0x00007ff715814eb2 (Unity) AwakeFromLoadQueue::PersistentManagerAwakeFromLoad
-0x00007ff715815023 (Unity) AwakeFromLoadQueue::PersistentManagerAwakeFromLoad
-0x00007ff7157e7a44 (Unity) PersistentManager::IntegrateAllThreadedObjects
-0x00007ff7157e8587 (Unity) PersistentManager::LoadAndIntegrateAllPreallocatedObjects
-0x00007ff7157ebb82 (Unity) PersistentManager::ReadObject
-0x00007ff71662a561 (Unity) WritePreviews
-0x00007ff716626ede (Unity) PreviewImporter::GenerateAssetData
-0x00007ff7166c8132 (Unity) ImportToObjects
-0x00007ff7166c71a8 (Unity) ImportAsset
-0x00007ff716661238 (Unity) AssetImportWorker::Import
-0x00007ff71668691a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff71670e2f2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff716710450 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff716713bce (Unity) asio::io_service::run
-0x00007ff7166af8db (Unity) RunAssetImportWorkerClientV2
-0x00007ff7166af930 (Unity) RunAssetImporterV2
-0x00007ff716155b49 (Unity) Application::InitializeProject
-0x00007ff7165ab4f2 (Unity) WinMain
-0x00007ff717c3bd4e (Unity) __scrt_common_main_seh
-0x00007ffc87087034 (KERNEL32) BaseThreadInitThunk
-0x00007ffc88342651 (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(d07c43c9e0c6ea7478a145bb6ca1d7f5) Importer(-1,00000000000000000000000000000000), Assets/Animations/Prairie/Prairiedogrig.fbx from editor
-Resuming Guid(d07c43c9e0c6ea7478a145bb6ca1d7f5) Importer(-1,00000000000000000000000000000000) -> 662e54c45685f3b2d9cde075b3bd3421 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
-Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7166dce12 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7166aebc2 (Unity) ResolveArtifactV2
-0x00007ff71667bcad (Unity) GUIDPersistentManagerV2::PathIDToPathNameInternal
-0x00007ff7157e69d4 (Unity) PersistentManager::GetStreamNameSpaceInternal
-0x00007ff7157e6286 (Unity) PersistentManager::GetSerializedFileIfObjectAvailable
-0x00007ff7157eb543 (Unity) PersistentManager::ReadAndActivateObjectThreaded
-0x00007ff7157ebdf4 (Unity) PersistentManager::ReadObjectThreaded
-0x00007ff7157ebb13 (Unity) PersistentManager::ReadObject
-0x00007ff714c08226 (Unity) ParticleSystemRenderer::UpdateCachedMesh
-0x00007ff714bff4c5 (Unity) ParticleSystemRenderer::AwakeFromLoad
-0x00007ff71581451f (Unity) AwakeFromLoadQueue::InvokePersistentManagerAwake
-0x00007ff715814eb2 (Unity) AwakeFromLoadQueue::PersistentManagerAwakeFromLoad
-0x00007ff715815023 (Unity) AwakeFromLoadQueue::PersistentManagerAwakeFromLoad
-0x00007ff7157e7a44 (Unity) PersistentManager::IntegrateAllThreadedObjects
-0x00007ff7157e8587 (Unity) PersistentManager::LoadAndIntegrateAllPreallocatedObjects
-0x00007ff7157ebb82 (Unity) PersistentManager::ReadObject
-0x00007ff71662a561 (Unity) WritePreviews
-0x00007ff716626ede (Unity) PreviewImporter::GenerateAssetData
-0x00007ff7166c8132 (Unity) ImportToObjects
-0x00007ff7166c71a8 (Unity) ImportAsset
-0x00007ff716661238 (Unity) AssetImportWorker::Import
-0x00007ff71668691a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff71670e2f2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff716710450 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff716713bce (Unity) asio::io_service::run
-0x00007ff7166af8db (Unity) RunAssetImportWorkerClientV2
-0x00007ff7166af930 (Unity) RunAssetImporterV2
-0x00007ff716155b49 (Unity) Application::InitializeProject
-0x00007ff7165ab4f2 (Unity) WinMain
-0x00007ff717c3bd4e (Unity) __scrt_common_main_seh
-0x00007ffc87087034 (KERNEL32) BaseThreadInitThunk
-0x00007ffc88342651 (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(c9a46024a6d99694790775d8df611749) Importer(-1,00000000000000000000000000000000), Assets/Obj/Particles/ico.obj from editor
-Resuming Guid(c9a46024a6d99694790775d8df611749) Importer(-1,00000000000000000000000000000000) -> 04ccb4c2f6a0f5aaa87ec98e8b9f2c51 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
-Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7166dce12 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7166aebc2 (Unity) ResolveArtifactV2
-0x00007ff71667bcad (Unity) GUIDPersistentManagerV2::PathIDToPathNameInternal
-0x00007ff7157e69d4 (Unity) PersistentManager::GetStreamNameSpaceInternal
-0x00007ff7157e6286 (Unity) PersistentManager::GetSerializedFileIfObjectAvailable
-0x00007ff7157eb543 (Unity) PersistentManager::ReadAndActivateObjectThreaded
-0x00007ff7157ebdf4 (Unity) PersistentManager::ReadObjectThreaded
-0x00007ff7157ebb13 (Unity) PersistentManager::ReadObject
-0x00007ff714c08226 (Unity) ParticleSystemRenderer::UpdateCachedMesh
-0x00007ff714bff4c5 (Unity) ParticleSystemRenderer::AwakeFromLoad
-0x00007ff71581451f (Unity) AwakeFromLoadQueue::InvokePersistentManagerAwake
-0x00007ff715814eb2 (Unity) AwakeFromLoadQueue::PersistentManagerAwakeFromLoad
-0x00007ff715815023 (Unity) AwakeFromLoadQueue::PersistentManagerAwakeFromLoad
-0x00007ff7157e7a44 (Unity) PersistentManager::IntegrateAllThreadedObjects
-0x00007ff7157e8587 (Unity) PersistentManager::LoadAndIntegrateAllPreallocatedObjects
-0x00007ff7157ebb82 (Unity) PersistentManager::ReadObject
-0x00007ff71662a561 (Unity) WritePreviews
-0x00007ff716626ede (Unity) PreviewImporter::GenerateAssetData
-0x00007ff7166c8132 (Unity) ImportToObjects
-0x00007ff7166c71a8 (Unity) ImportAsset
-0x00007ff716661238 (Unity) AssetImportWorker::Import
-0x00007ff71668691a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff71670e2f2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff716710450 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff716713bce (Unity) asio::io_service::run
-0x00007ff7166af8db (Unity) RunAssetImportWorkerClientV2
-0x00007ff7166af930 (Unity) RunAssetImporterV2
-0x00007ff716155b49 (Unity) Application::InitializeProject
-0x00007ff7165ab4f2 (Unity) WinMain
-0x00007ff717c3bd4e (Unity) __scrt_common_main_seh
-0x00007ffc87087034 (KERNEL32) BaseThreadInitThunk
-0x00007ffc88342651 (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(06194ea56a7049a4485cabd0bd49e2ef) Importer(-1,00000000000000000000000000000000), Assets/Prefabs/Particle Effects/star.fbx from editor
-Resuming Guid(06194ea56a7049a4485cabd0bd49e2ef) Importer(-1,00000000000000000000000000000000) -> 7b5f0d3072a6e34e71365de361c109dd 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
- -> (artifact id: '45b3d69323e19d23ba53407ff8a3646e') in 0.033147 seconds 
-  Import took 0.084140 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 42.646867 seconds.
-  path: Assets/AnimalData/PrairyDog.asset
-  artifactKey: Guid(3e75f8ac9b94f624185a5ddee1c35623) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/AnimalData/PrairyDog.asset using Guid(3e75f8ac9b94f624185a5ddee1c35623) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7166dce12 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7166aebc2 (Unity) ResolveArtifactV2
-0x00007ff71667bcad (Unity) GUIDPersistentManagerV2::PathIDToPathNameInternal
-0x00007ff7157e69d4 (Unity) PersistentManager::GetStreamNameSpaceInternal
-0x00007ff7157e6286 (Unity) PersistentManager::GetSerializedFileIfObjectAvailable
-0x00007ff7157eb543 (Unity) PersistentManager::ReadAndActivateObjectThreaded
-0x00007ff7157ebdf4 (Unity) PersistentManager::ReadObjectThreaded
-0x00007ff7157ebb13 (Unity) PersistentManager::ReadObject
-0x00007ff714bfef22 (Unity) PPtr<Mesh>::operator Mesh * __ptr64
-0x00007ff71540c4e5 (Unity) SkinnedMeshRenderer::UpdateCachedMesh
-0x00007ff715403ed8 (Unity) SkinnedMeshRenderer::AwakeFromLoad
-0x00007ff71581451f (Unity) AwakeFromLoadQueue::InvokePersistentManagerAwake
-0x00007ff715814eb2 (Unity) AwakeFromLoadQueue::PersistentManagerAwakeFromLoad
-0x00007ff715815023 (Unity) AwakeFromLoadQueue::PersistentManagerAwakeFromLoad
-0x00007ff7157e7a44 (Unity) PersistentManager::IntegrateAllThreadedObjects
-0x00007ff7157e8587 (Unity) PersistentManager::LoadAndIntegrateAllPreallocatedObjects
-0x00007ff7157ebb82 (Unity) PersistentManager::ReadObject
-0x00007ff71662a561 (Unity) WritePreviews
-0x00007ff716626ede (Unity) PreviewImporter::GenerateAssetData
-0x00007ff7166c8132 (Unity) ImportToObjects
-0x00007ff7166c71a8 (Unity) ImportAsset
-0x00007ff716661238 (Unity) AssetImportWorker::Import
-0x00007ff71668691a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff71670e2f2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff716710450 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff716713bce (Unity) asio::io_service::run
-0x00007ff7166af8db (Unity) RunAssetImportWorkerClientV2
-0x00007ff7166af930 (Unity) RunAssetImporterV2
-0x00007ff716155b49 (Unity) Application::InitializeProject
-0x00007ff7165ab4f2 (Unity) WinMain
-0x00007ff717c3bd4e (Unity) __scrt_common_main_seh
-0x00007ffc87087034 (KERNEL32) BaseThreadInitThunk
-0x00007ffc88342651 (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(d07c43c9e0c6ea7478a145bb6ca1d7f5) Importer(-1,00000000000000000000000000000000), Assets/Animations/Prairie/Prairiedogrig.fbx from editor
-Resuming Guid(d07c43c9e0c6ea7478a145bb6ca1d7f5) Importer(-1,00000000000000000000000000000000) -> 662e54c45685f3b2d9cde075b3bd3421 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
-Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7166dce12 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7166aebc2 (Unity) ResolveArtifactV2
-0x00007ff71667bcad (Unity) GUIDPersistentManagerV2::PathIDToPathNameInternal
-0x00007ff7157e69d4 (Unity) PersistentManager::GetStreamNameSpaceInternal
-0x00007ff7157e6286 (Unity) PersistentManager::GetSerializedFileIfObjectAvailable
-0x00007ff7157eb543 (Unity) PersistentManager::ReadAndActivateObjectThreaded
-0x00007ff7157ebdf4 (Unity) PersistentManager::ReadObjectThreaded
-0x00007ff7157ebb13 (Unity) PersistentManager::ReadObject
-0x00007ff714c08226 (Unity) ParticleSystemRenderer::UpdateCachedMesh
-0x00007ff714bff4c5 (Unity) ParticleSystemRenderer::AwakeFromLoad
-0x00007ff71581451f (Unity) AwakeFromLoadQueue::InvokePersistentManagerAwake
-0x00007ff715814eb2 (Unity) AwakeFromLoadQueue::PersistentManagerAwakeFromLoad
-0x00007ff715815023 (Unity) AwakeFromLoadQueue::PersistentManagerAwakeFromLoad
-0x00007ff7157e7a44 (Unity) PersistentManager::IntegrateAllThreadedObjects
-0x00007ff7157e8587 (Unity) PersistentManager::LoadAndIntegrateAllPreallocatedObjects
-0x00007ff7157ebb82 (Unity) PersistentManager::ReadObject
-0x00007ff71662a561 (Unity) WritePreviews
-0x00007ff716626ede (Unity) PreviewImporter::GenerateAssetData
-0x00007ff7166c8132 (Unity) ImportToObjects
-0x00007ff7166c71a8 (Unity) ImportAsset
-0x00007ff716661238 (Unity) AssetImportWorker::Import
-0x00007ff71668691a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff71670e2f2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff716710450 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff716713bce (Unity) asio::io_service::run
-0x00007ff7166af8db (Unity) RunAssetImportWorkerClientV2
-0x00007ff7166af930 (Unity) RunAssetImporterV2
-0x00007ff716155b49 (Unity) Application::InitializeProject
-0x00007ff7165ab4f2 (Unity) WinMain
-0x00007ff717c3bd4e (Unity) __scrt_common_main_seh
-0x00007ffc87087034 (KERNEL32) BaseThreadInitThunk
-0x00007ffc88342651 (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(c9a46024a6d99694790775d8df611749) Importer(-1,00000000000000000000000000000000), Assets/Obj/Particles/ico.obj from editor
-Resuming Guid(c9a46024a6d99694790775d8df611749) Importer(-1,00000000000000000000000000000000) -> 04ccb4c2f6a0f5aaa87ec98e8b9f2c51 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
-Diagnostics callstack to track who triggered the sub-import:
-0x00007ff7166dce12 (Unity) ImporterAssetResolver::ResolveAsset
-0x00007ff7166aebc2 (Unity) ResolveArtifactV2
-0x00007ff71667bcad (Unity) GUIDPersistentManagerV2::PathIDToPathNameInternal
-0x00007ff7157e69d4 (Unity) PersistentManager::GetStreamNameSpaceInternal
-0x00007ff7157e6286 (Unity) PersistentManager::GetSerializedFileIfObjectAvailable
-0x00007ff7157eb543 (Unity) PersistentManager::ReadAndActivateObjectThreaded
-0x00007ff7157ebdf4 (Unity) PersistentManager::ReadObjectThreaded
-0x00007ff7157ebb13 (Unity) PersistentManager::ReadObject
-0x00007ff714c08226 (Unity) ParticleSystemRenderer::UpdateCachedMesh
-0x00007ff714bff4c5 (Unity) ParticleSystemRenderer::AwakeFromLoad
-0x00007ff71581451f (Unity) AwakeFromLoadQueue::InvokePersistentManagerAwake
-0x00007ff715814eb2 (Unity) AwakeFromLoadQueue::PersistentManagerAwakeFromLoad
-0x00007ff715815023 (Unity) AwakeFromLoadQueue::PersistentManagerAwakeFromLoad
-0x00007ff7157e7a44 (Unity) PersistentManager::IntegrateAllThreadedObjects
-0x00007ff7157e8587 (Unity) PersistentManager::LoadAndIntegrateAllPreallocatedObjects
-0x00007ff7157ebb82 (Unity) PersistentManager::ReadObject
-0x00007ff71662a561 (Unity) WritePreviews
-0x00007ff716626ede (Unity) PreviewImporter::GenerateAssetData
-0x00007ff7166c8132 (Unity) ImportToObjects
-0x00007ff7166c71a8 (Unity) ImportAsset
-0x00007ff716661238 (Unity) AssetImportWorker::Import
-0x00007ff71668691a (Unity) <lambda_4a0f5575432e8e69ec585d1ca7897980>::operator()
-0x00007ff71670e2f2 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
-0x00007ff716710450 (Unity) asio::detail::win_iocp_io_service::do_one
-0x00007ff716713bce (Unity) asio::io_service::run
-0x00007ff7166af8db (Unity) RunAssetImportWorkerClientV2
-0x00007ff7166af930 (Unity) RunAssetImporterV2
-0x00007ff716155b49 (Unity) Application::InitializeProject
-0x00007ff7165ab4f2 (Unity) WinMain
-0x00007ff717c3bd4e (Unity) __scrt_common_main_seh
-0x00007ffc87087034 (KERNEL32) BaseThreadInitThunk
-0x00007ffc88342651 (ntdll) RtlUserThreadStart
-
-Requesting import of Guid(06194ea56a7049a4485cabd0bd49e2ef) Importer(-1,00000000000000000000000000000000), Assets/Prefabs/Particle Effects/star.fbx from editor
-Resuming Guid(06194ea56a7049a4485cabd0bd49e2ef) Importer(-1,00000000000000000000000000000000) -> 7b5f0d3072a6e34e71365de361c109dd 
-Assertion failed on expression: 'state.state == kUpToDate'
-Assertion failed on expression: 'state.artifactID == result'
- -> (artifact id: '540ca720aee5258edffb8e113929a57c') in 0.014917 seconds 
-  Import took 0.020833 seconds .
-
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
