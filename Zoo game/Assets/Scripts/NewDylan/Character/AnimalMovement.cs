@@ -29,7 +29,6 @@ public class AnimalMovement : MonoBehaviour
 
     [Header("Private Data")]
     private float currentSpeed = 5;
-    private Vector3 movementVelocity; //movement velocity
     private Vector3 impact = Vector3.zero;//extra velocity for adding forces on to the player
     private bool isGrounded;
     private bool allowJump = true;
@@ -39,13 +38,14 @@ public class AnimalMovement : MonoBehaviour
     private int currentLane = 1;
     private float clicks = 0;
     private Transform[] allTrackLines = new Transform[5];
+    private ParticleSystem groundPs;
 
     [Header("Swipe Data")]
     private Vector2 firstPressPos;
     private Vector2 secondPressPos;
     private Vector2 currentSwipe;
 
-    public void setStartData(GameObject newCheck,AnimalData newData,Transform[] newTrackLanes)
+    public void setStartData(GameObject newCheck,AnimalData newData,Transform[] newTrackLanes,ParticleSystem newPs)
     {
         groundCheck = newCheck.transform;
         for(int i=0; i<newTrackLanes.Length; i++)
@@ -53,6 +53,7 @@ public class AnimalMovement : MonoBehaviour
             allTrackLines[i] = newTrackLanes[i];
         }
 
+        groundPs = newPs;
         canRun = newData.canRun;
 
         jumpHeight = newData.jumpHeight;
@@ -68,13 +69,14 @@ public class AnimalMovement : MonoBehaviour
     private void Update()
     {
         getSwipe();
-        if(!Values.pauzed)
+        if(!Values.pauzed && !lockMovement)
         {
             clicks = Mathf.Lerp(clicks,0,1.0f * Time.deltaTime);
-            isGrounded = Physics.Raycast(groundCheck.position,-groundCheck.up,groundDistance,groundLayers);
             
+            isGrounded = Physics.Raycast(groundCheck.position,-groundCheck.up,groundDistance,groundLayers);
+           
+            checkGroundPs();
             checkBoost();
-            fakeForce();//sets impact for 
             
             Vector3 currentPos = transform.position;
             transform.position = Vector3.Lerp(transform.position, allTrackLines[currentLane].position, sideSpeed * Time.deltaTime);
@@ -82,7 +84,6 @@ public class AnimalMovement : MonoBehaviour
             transform.position = currentPos;
 
             rbPlayer.AddForce(-transform.up * gravity);
-            // rbPlayer.velocity = new Vector3(move.x ,rbPlayer.velocity.y, move.z) + (impact);
         }
     }
  
@@ -134,12 +135,12 @@ public class AnimalMovement : MonoBehaviour
             }
         }
     }
-    private void checkClicks()
+
+    private void checkClicks()//checks for double click
     {
         if(clicks > 0.5f)
         {
             //do special
-            Debug.Log("Do Special");
             clicks = 0;
         }
         else
@@ -148,48 +149,21 @@ public class AnimalMovement : MonoBehaviour
         }
     }
     
-    public virtual void OnPointerClick(PointerEventData eventData)
-    {
-        Debug.Log("click + " + eventData.clickCount);
-        if(eventData.clickCount == 2) 
-        {
-            jump();
-        }
-    }
 
     //collision functions
-    public void addKnockBack(Collision other,float collisionForce,float timeLocked)
+    public void addKnockBack(float collisionForce,float timeLocked)
     {
-        Debug.Log("added");
         lockMovement = true;//locks movement for concussion effect
+        groundPs.Stop();
         camScript.lockCam(true);//locks the camera from moving the player rotation (needs to change to maaikes camera follow)
-       
-        Vector3 dir = other.contacts[0].point - transform.position;
-        dir = -dir.normalized;
-        AddImpact(dir,collisionForce);//needs to be done differently 
-        
-        Invoke("unlockMovement",timeLocked);
+        rbPlayer.AddForce(-transform.forward * collisionForce, ForceMode.Impulse);
+        // Invoke("unlockMovement",timeLocked);
     }
 
     private void unlockMovement()
     {
         lockMovement = false;
         camScript.lockCam(false);
-    }
-
-    ///force functions
-    private void fakeForce()
-    {
-        if (impact.magnitude > 0.2F) 
-        {
-            impact = Vector3.Lerp(impact, Vector3.zero, 5 * Time.deltaTime);
-        }
-    }
-    public void AddImpact(Vector3 dir, float force)
-    {
-        dir.Normalize();
-        dir.y = 0;
-        impact += dir.normalized * force / rbPlayer.mass;
     }
 
     //jump functions
@@ -234,6 +208,18 @@ public class AnimalMovement : MonoBehaviour
         }
 
         boosted = active;
+    }
+
+    private void checkGroundPs()
+    {
+        if(isGrounded)
+        {
+            groundPs.Play();
+        }       
+        else
+        {
+            groundPs.Stop();
+        }
     }
 
     private void checkBoost()

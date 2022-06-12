@@ -18,6 +18,13 @@ public class Controller : MonoBehaviour
         }
     }
 
+    public void collided(float knockbackTime)
+    {
+        trackScript.stopTrack(true);
+        uiScript.endTrack();
+        Invoke("endMatch",knockbackTime);
+    }
+
     public void endMatch()
     {
         int currentAmount = collectScript.getMoney();

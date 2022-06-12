@@ -36,49 +36,41 @@ public class animalCol : MonoBehaviour
     {
         if(other.gameObject.layer != LayerMask.NameToLayer("Ground"))//when hitting something else thats not the ground
         {
-            if(true)//moveScript.getGroundPos().position.y < other.contacts[0].point.y //if collision is beneath ground check still needs fixing
+            if(!canbreak)
             {
-                if(!canbreak)
-                {
-                    controllerScript.endMatch();
-                    // addKnockBack(other);
-                }
-                else
-                {
-                    if(!other.transform.root.GetComponent<Rigidbody>())
-                    {
-                        Transform rootObj = other.transform.parent.parent.transform;
-                        if(rootObj.tag == "canBreak")
-                        {   
-                            CollidedObject effect = Instantiate(objectEffect,rootObj.transform.position,Quaternion.Euler(0,0,0)).GetComponent<CollidedObject>();
-                            effect.setObject(rootObj,other);
-                        }
-                        else
-                        {
-                            addKnockBack(other);
-                        }
-                        //needs to check what interaction needs to happen with object and if its breakable else also add knockback
-                        breakObject(other);
-                        StartCoroutine(shakeScript.Shake(0.25f,0.05f));
-                    }
-                }
+                controllerScript.collided(unlockTime);
+                addKnockBack();
             }
             else
             {
-                Debug.Log("Is beneath");
+                if(!other.transform.root.GetComponent<Rigidbody>())
+                {
+                    Transform rootObj = other.transform.parent.parent.transform;
+                    if(rootObj.tag == "canBreak")
+                    {   
+                        CollidedObject effect = Instantiate(objectEffect,rootObj.transform.position,Quaternion.Euler(0,0,0)).GetComponent<CollidedObject>();
+                        effect.setObject(rootObj,other);
+                    }
+                    else
+                    {
+                        addKnockBack();
+                    }
+                    //needs to check what interaction needs to happen with object and if its breakable else also add knockback
+                    breakObject(other);
+                    StartCoroutine(shakeScript.Shake(0.25f,0.05f));
+                }
             }
         }
     }
 
-    private void addKnockBack(Collision other)
+    private void addKnockBack()
     {
         if(!moveScript.getLocked())
         {
             Debug.Log("not locked");
             collEffect.Clear();
-//  GetComponent<ParticleSystem>().Simulate(GetComponent<ParticleSystem>().duration);
             collEffect.Play();
-            moveScript.addKnockBack(other,collisionForce,unlockTime);
+            moveScript.addKnockBack(collisionForce,unlockTime);
             StartCoroutine(shakeScript.Shake(0.25f,0.05f));
         }
     }

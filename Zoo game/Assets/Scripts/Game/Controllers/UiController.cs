@@ -79,9 +79,13 @@ public class UiController : MonoBehaviour
         distanceText.text = distance.ToString("F0");
     }
 
-    public void showEndScreen(int rating,int current,float distance)
+    public void endTrack()
     {
         gameEnded = true;
+    }
+
+    public void showEndScreen(int rating,int current,float distance)
+    {
         Values.pauzed = true;
         Time.timeScale = 0;
         cursorLock(false);

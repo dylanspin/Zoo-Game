@@ -16,10 +16,11 @@ public class TrackMovement : MonoBehaviour
     [Header("private data")]
     private float distanceMoved = 0;
     private float currentSpeed = 0;
+    private bool stopped = false;
 
     void Update()
     {
-        if(!Values.pauzed)
+        if(!Values.pauzed && !stopped)
         {
             transform.position += -transform.forward * ((1 + currentSpeed) * speedMultiplier) * Time.deltaTime;
             setSpeed();
@@ -38,6 +39,11 @@ public class TrackMovement : MonoBehaviour
         {
             currentSpeed = maxDistanceSpeed;
         }
+    }
+
+    public void stopTrack(bool active)
+    {
+        stopped = active;
     }
 
     public void setDistance()

@@ -7,4 +7,5 @@ public class AnimalPrefab : MonoBehaviour
     public GameObject animalBody;
     public GameObject groundCheck;
     public ParticleSystem collideEffect;
+    public ParticleSystem movePs;
 }
