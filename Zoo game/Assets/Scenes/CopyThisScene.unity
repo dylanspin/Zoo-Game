@@ -2115,6 +2115,7 @@ MonoBehaviour:
   endScript: {fileID: 2035877219}
   gameInfo: {fileID: 133809565}
   count: {fileID: 1372895819}
+  distanceText: {fileID: 0}
 --- !u!224 &1300071869
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2155,6 +2156,9 @@ MonoBehaviour:
   animalInfo: []
   animals: []
   moneyAmount: {fileID: 0}
+  highScore: {fileID: 0}
+  popUp: {fileID: 0}
+  unlockScreen: {fileID: 0}
   buttons: []
 --- !u!114 &1300071871
 MonoBehaviour:
@@ -2171,6 +2175,7 @@ MonoBehaviour:
   uiScript: {fileID: 1300071868}
   collectScript: {fileID: 1300071867}
   bookScript: {fileID: 1300071870}
+  trackScript: {fileID: 0}
 --- !u!114 &1300071872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4037,15 +4042,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   topText: {fileID: 368084300}
   count: {fileID: 133057226}
+  distanceText: {fileID: 0}
   bagImage: {fileID: 510561211}
   bags:
   - {fileID: 21300000, guid: 86f1d6e8cde7b5e43ac01d44cb4eef87, type: 3}
   - {fileID: 21300000, guid: 13669b7f1d4e3b64db29a16d79c7134a, type: 3}
   - {fileID: 21300000, guid: ee91fd01a6f2a3942ab3b60edaf1fa54, type: 3}
-  ratingText:
-  - Good!
-  - Great!
-  - Awesome!
+  normalScore: []
+  highScore: []
 --- !u!1 &2108213969
 GameObject:
   m_ObjectHideFlags: 0

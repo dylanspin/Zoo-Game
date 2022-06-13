@@ -13,14 +13,30 @@ public class EndScreen : MonoBehaviour
    
     [Header("Settings")]
     [SerializeField] private Sprite[] bags;
-    [SerializeField] private string[] ratingText;
+    [SerializeField] private string[] normalScore;
+    [SerializeField] private string[] highScore;
 
-    public void showEndScreen(int rating,int current,float distance)
+    [Header("Private")]
+    private int langues = 0;
+
+    public void setLangues(int newLang)
+    {
+        langues = newLang;
+    }
+
+    public void showEndScreen(int rating,int current,float distance,bool newHigh)
     {
         this.gameObject.SetActive(true);
         bagImage.sprite = bags[rating];
-        topText.text = ratingText[rating];
-        // count.text = current+"/"+max;
+        topText.GetComponent<Animator>().SetBool("NewHigh",newHigh);//shows scaling animation when new high score
+        if(newHigh)
+        {
+            topText.text = highScore[langues];
+        }
+        else
+        {
+            topText.text = normalScore[langues];
+        }
         count.text = current.ToString();
         distanceText.text = distance.ToString("F0");
     }

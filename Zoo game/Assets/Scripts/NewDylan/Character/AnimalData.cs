@@ -6,14 +6,17 @@ using UnityEngine.SceneManagement;
 [CreateAssetMenu(fileName = "Animal", menuName = "Animals/Animal")]
 public class AnimalData : ScriptableObject
 {
-    public string animalName = "AnimalName";
+    public string[] animalName = new string[2];
     [Header("Shop data")]
     public int price = 0;
     public bool codeunlock = false;
-    public string code = "someCode";
-    public string info1 = "Some info 1";
-    public string info2 = "Some info 2";
-    public string fact = "Some fact";
+    public string code = "VisitedWildLands426!";
+    public string[] info1 =  new string[2];
+    public string[] info2 =  new string[2];
+    public string[] fact =  new string[2];
+    public string[] unlockPagesEng =  new string[3];
+    public string[] unlockPagesDutch =  new string[3];
+    public Sprite[] pageImages =  new Sprite[3];
     public Sprite animalImage = null;//image that is shown in the shop
 
     [Header("Animal in game stats")]

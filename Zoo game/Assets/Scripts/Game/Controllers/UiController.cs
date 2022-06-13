@@ -84,12 +84,12 @@ public class UiController : MonoBehaviour
         gameEnded = true;
     }
 
-    public void showEndScreen(int rating,int current,float distance)
+    public void showEndScreen(int rating,int current,float distance,bool newHigh)
     {
         Values.pauzed = true;
         Time.timeScale = 0;
         cursorLock(false);
-        endScript.showEndScreen(rating,current,distance);
+        endScript.showEndScreen(rating,current,distance,newHigh);
         gameInfo.SetActive(false);//turns off timer and counter
     }
 

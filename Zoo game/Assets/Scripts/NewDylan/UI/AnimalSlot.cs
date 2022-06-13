@@ -14,7 +14,7 @@ public class AnimalSlot : MonoBehaviour
     private int slotId;
     private BookController controllerScript;
 
-    public void setData(int setId,AnimalData animalInfo,bool unlocked,bool active,BookController newController)//gets called from book controller script
+    public void setData(int setId,AnimalData animalInfo,bool unlocked,bool active,BookController newController,int langues)//gets called from book controller script
     {
         slotId = setId;
         animalImage.sprite = animalInfo.animalImage;
@@ -26,7 +26,7 @@ public class AnimalSlot : MonoBehaviour
         controllerScript = newController;
         if(unlocked)
         {
-            animalName.text = animalInfo.animalName; 
+            animalName.text = animalInfo.animalName[langues]; 
         }
         else
         {

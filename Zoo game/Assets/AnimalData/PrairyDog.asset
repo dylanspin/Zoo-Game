@@ -12,14 +12,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b92935fa8743f743a1e104e85f602c5, type: 3}
   m_Name: PrairyDog
   m_EditorClassIdentifier: 
-  animalName: Prairydog
+  animalName:
+  - Prairie dog
+  - prairiehond
   price: 0
   codeunlock: 0
   code: someCode
-  info1: Some info 1
-  info2: Some info 2
-  fact: Some fact
-  animalImage: {fileID: 21300000, guid: b5408b9a9d0c883419d502884a5d3dee, type: 3}
+  info1:
+  - I like and am friendly to other prairie dogs!
+  - Ik vind andere prairiehonden leuk en lief!
+  info2:
+  - Grass, Roots and  seeds
+  - Gras, wortels en zaden
+  fact:
+  - I can dig holes under the ground!
+  - 'Ik kan onder de grond graven! '
+  unlockPagesEng:
+  - 'You know that you can see me up close in WILDLANDS! But please don''t pet me.
+    Go to the Serenga section of the zoo, and I''ll be there! '
+  - I travelled all the way from North America! There, and in WILDLANDS, I like to
+    eat grass, roots and seeds.
+  - You know, I really like my family! We even greet each other with a kiss. And
+    our houses are underground because we are great at digging tunnels. Now we have
+    our own rooms underground!
+  unlockPagesDutch:
+  - 'Je weet dat je me van heel dichtbij kunt zien in WILDLANDS! Maar aai me alsjeblieft
+    niet. Ga naar het Serenga-gedeelte van de dierentuin en ik zal er zijn! '
+  - 'ik ben helemaal vanuit Noord-Amerika gereisd! Daar, en in WILDLANDS, eet ik
+    graag gras, wortels en zaden. '
+  - 'Weet je, ik hou echt van mijn familie! We begroeten elkaar zelfs met een kus.
+    En onze huizen zijn ondergronds, omdat we goed zijn in het graven van tunnels.
+    Nu hebben we onze eigen kamers onder de grond! '
+  pageImages:
+  - {fileID: 21300000, guid: ed5d8a7bf1a8a794db2e9c3a2fc3ec61, type: 3}
+  - {fileID: 21300000, guid: ed1359152e7ef9049bc6ea5f88a836b0, type: 3}
+  - {fileID: 21300000, guid: 2dcce5018bc815d40a72e04e2d132820, type: 3}
+  animalImage: {fileID: 21300000, guid: d10aa0a24bcaf5e43bd53eb5531d49be, type: 3}
   animalMass: 4
   speed: 5
   runSpeed: 10

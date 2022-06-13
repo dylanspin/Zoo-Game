@@ -9,12 +9,12 @@ public class buyPopUp : MonoBehaviour
     [SerializeField] private GameObject[] typeUnlock;
     [SerializeField] private TMPro.TMP_InputField inputIp;
 
-    public void showPopUp(AnimalData animal)
+    public void showPopUp(AnimalData animal,int langues)
     {
         gameObject.SetActive(true);
         typeUnlock[0].SetActive(!animal.codeunlock);
         typeUnlock[1].SetActive(animal.codeunlock);
-        animalText.text = animal.animalName;
+        animalText.text = animal.animalName[langues];
         priceText.text = animal.price.ToString();
     }
 

@@ -10,12 +10,13 @@ public class BookData
 
     [Header("Bools")]
     public bool[] unlocks = new bool[50];//bool array of unlocked animals
+    public int[] highScores = new int[50];//int array of animals highscores
 
     public BookData(BookController oData)
     { 
-
         unlocks = oData.getUnlocks();
         money = oData.getMoney();
+        highScores = oData.getHighScore();
         /*
             set the public values example : 
             username = oData.username;

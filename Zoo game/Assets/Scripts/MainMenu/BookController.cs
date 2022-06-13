@@ -16,14 +16,17 @@ public class BookController : MonoBehaviour
 
     [Header("Other UI Data")]
     [SerializeField] private TMPro.TextMeshProUGUI moneyAmount;
+    [SerializeField] private TMPro.TextMeshProUGUI highScore;
     [SerializeField] private buyPopUp popUp;
     [SerializeField] private unlockedAnimal unlockScreen;
     [SerializeField] private GameObject[] buttons;
 
     [Header("Private Data")]
+    private int[] highScores = new int[50];
     private bool[] unlocked = new bool[50];
     private int money = 0;
     private int lastSelected = 0;
+    private int langues = 0;//0 = english 1 = dutch
 
     private void Start()
     {
@@ -40,6 +43,7 @@ public class BookController : MonoBehaviour
         BookData loadData = SaveScript.loadBook();
         if(loadData != null)
         {
+            highScores = loadData.highScores;
             unlocked = loadData.unlocks;
             money = loadData.money;
         }
@@ -69,20 +73,29 @@ public class BookController : MonoBehaviour
             bool exist = i < animals.Length;
             if(exist)
             {
-                uiSlots[i].setData(i,animals[i],unlocked[i],true,this);
+                uiSlots[i].setData(i,animals[i],unlocked[i],true,this,langues);
             }
             uiSlots[i].gameObject.SetActive(exist);
         }
     }   
 
+    public void setLangues(int newLang)
+    {
+        langues = newLang;
+        setSlots();
+        showRight(lastSelected);
+        //refresh ui
+    }
+
+
     public void showCode()
     {
-        popUp.showPopUp(animals[lastSelected]);
+        popUp.showPopUp(animals[lastSelected],langues);
     }
 
     public void showBuy()
     {
-        popUp.showPopUp(animals[lastSelected]);
+        popUp.showPopUp(animals[lastSelected],langues);
     }
 
     public void buyAnimal()
@@ -103,10 +116,11 @@ public class BookController : MonoBehaviour
             unlocked[lastSelected] = true;
             SaveScript.saveBook(this);//saves book data
 
-            uiSlots[lastSelected].setData(lastSelected,animals[lastSelected],unlocked[lastSelected],true,this);
+            //ui
+            uiSlots[lastSelected].setData(lastSelected,animals[lastSelected],unlocked[lastSelected],true,this,langues);
             showRight(lastSelected);
             popUp.closePopUp();
-            unlockScreen.showUnlocked(animals[lastSelected]);
+            unlockScreen.showUnlocked(animals[lastSelected],langues);
             showButtons(0);
         }
         else
@@ -115,6 +129,14 @@ public class BookController : MonoBehaviour
             //show message or something else indicating not enough money
         }
     }   
+
+    public void showUnlocked()//for when the player wants to open the info again
+    {
+        if(unlocked[lastSelected])
+        {
+            unlockScreen.showUnlocked(animals[lastSelected],langues);
+        }
+    }
 
     public void hoverSet(int slotId,bool active)
     {
@@ -129,21 +151,29 @@ public class BookController : MonoBehaviour
 
     private void showRight(int id)
     {
-        rightAnimalSlot.setData(id,animals[id],unlocked[id],true,this);
+        rightAnimalSlot.setData(id,animals[id],unlocked[id],true,this,langues);
+        highScore.transform.parent.parent.gameObject.SetActive(unlocked[id]);//turns on highscore
 
         if(unlocked[id])
         {
-            animalInfo[0].text = animals[id].animalName;
-            animalInfo[1].text = animals[id].info1;
-            animalInfo[2].text = animals[id].info2;
-            animalInfo[3].text = animals[id].fact;
+            animalInfo[0].text = animals[id].animalName[langues];
+            animalInfo[1].text = animals[id].info1[langues];
+            animalInfo[2].text = animals[id].info2[langues];
+            animalInfo[3].text = animals[id].fact[langues];
             animalInfo[4].transform.parent.gameObject.SetActive(false);
+            highScore.text = highScores[id] + "M";
         }
         else
         {
+            string notKnown = "Unknown";
+            if(langues == 1)
+            {
+                notKnown = "Onbekend";
+            }
             for(int i=0; i<animalInfo.Length; i++)
             {
-                animalInfo[i].text = "Unknown";
+                
+                animalInfo[i].text = notKnown;
             }
             animalInfo[4].transform.parent.gameObject.SetActive(true);
             animalInfo[4].text = animals[id].price.ToString();
@@ -193,11 +223,12 @@ public class BookController : MonoBehaviour
             }
         }
     }
-
+    
     public AnimalData getCurrent()
     {
         if(unlocked[lastSelected])
         {
+            Values.activeId = lastSelected;//for saving the highScore
             return animals[lastSelected];
         }   
         else//when not unlocked
@@ -216,13 +247,25 @@ public class BookController : MonoBehaviour
         return money;
     }
 
+    public int[] getHighScore()
+    {
+        return highScores;
+    }
+
     /////////////in game
 
-    public void saveMoney(int amount)
+    public bool checkHighScore(int distance)
+    {
+        return distance > highScores[Values.activeId];
+    }
+
+    public void saveEndData(int amount,int distance)
     {
         money += amount;
+        if(distance > highScores[Values.activeId])
+        {
+            highScores[Values.activeId] = distance;
+        }
         SaveScript.saveBook(this);//saves book data
-
-        Debug.Log("Saved : " + money);
     }
 }

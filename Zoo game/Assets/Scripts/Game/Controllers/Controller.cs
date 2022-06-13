@@ -28,14 +28,12 @@ public class Controller : MonoBehaviour
     public void endMatch()
     {
         int currentAmount = collectScript.getMoney();
-        int maxAmount = collectScript.getmax();
-        if(currentAmount > maxAmount)
-        {
-            currentAmount = maxAmount;
-        }
+        int maxAmount = 500;
         int part = (int)Mathf.Floor((float)currentAmount / (maxAmount / 2));
+        int distance = (int)trackScript.getDistance(); 
+        bool newhigh = bookScript.checkHighScore(distance);
 
-        bookScript.saveMoney(currentAmount);
-        uiScript.showEndScreen(part,currentAmount,trackScript.getDistance());//needs distance
+        bookScript.saveEndData(currentAmount,distance);
+        uiScript.showEndScreen(part,currentAmount,distance,newhigh);
     }
 }
