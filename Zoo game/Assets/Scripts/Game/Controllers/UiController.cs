@@ -8,6 +8,7 @@ public class UiController : MonoBehaviour
     [Header("Set data")]
     [SerializeField] private GameObject escapeMenu;
     [SerializeField] private EndScreen endScript;
+    [SerializeField] private Controller controllerScript;
     [SerializeField] private GameObject gameInfo;//timer and counter
     [SerializeField] private TMPro.TextMeshProUGUI count;
     [SerializeField] private TMPro.TextMeshProUGUI distanceText;
@@ -95,11 +96,13 @@ public class UiController : MonoBehaviour
 
     public void returnMain()
     {
+        controllerScript.saveData();
         SceneManager.LoadScene("Dylan UI Testing");
     }
 
     public void restartLevel()
     {
+        controllerScript.saveData();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 

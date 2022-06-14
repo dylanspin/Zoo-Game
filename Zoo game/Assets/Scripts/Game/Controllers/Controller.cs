@@ -36,4 +36,15 @@ public class Controller : MonoBehaviour
         bookScript.saveEndData(currentAmount,distance);
         uiScript.showEndScreen(part,currentAmount,distance,newhigh);
     }
+
+    public void saveData()
+    {
+        int currentAmount = collectScript.getMoney();
+        int distance = (int)trackScript.getDistance(); 
+        bookScript.saveEndData(currentAmount,distance);
+    }
+
 }
+
+
+
