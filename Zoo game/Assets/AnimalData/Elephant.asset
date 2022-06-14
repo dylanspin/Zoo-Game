@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b92935fa8743f743a1e104e85f602c5, type: 3}
+  m_Name: Elephant
+  m_EditorClassIdentifier: 
+  animalName:
+  - Elephant
+  - Olifant
+  price: 0
+  codeunlock: 0
+  code: someCode
+  info1:
+  - 'I really love water! '
+  - 'Ik ben dol op water! '
+  info2:
+  - Grass, leaves, branches and even fruits.
+  - Gras, bladeren, takken en zelfs fruit.
+  fact:
+  - I use my trunk for a lot of different things!
+  - 'Ik kan heel veel dingen doen met mijn slurf! '
+  unlockPagesEng:
+  - "I am an elephant, but not just any elephant\u2026 I am an Asian elephant! I
+    am from Southern Asia. But in WILDLANDS you can find me in the Jungola. Come
+    quick!"
+  - 'Do you know I only have four teeth! But I will change these teeth six times
+    in my life. With these teeth I eat grass, leaves, branches and even fruits. '
+  - 'I have a very handy trunk! And I really like this because I can use it for a
+    lot of things! Grab things, knock things over, but also play with the water.
+    Because I love water! '
+  unlockPagesDutch:
+  - "Ik ben een olifant, maar niet zomaar \xE9\xE9n! Ik ben een aziatische olifant.
+    Ik kom namelijk uit Zuidelijk Azi\xEB. Maar in WILDLANDS kan je mij vinden in
+    het Jungola. Kom snel!"
+  - 'Eten: Weet je dat ik maar vier tanden heb! Maar ik wissel deze tanden zes keer
+    in mijn leven. Met deze tanden eet ik gras, bladeren, takken en zelfs fruit.'
+  - 'Ik heb een hele handige slurf! En dit vind ik super fijn want ik kan hem voor
+    heel veel dingen gebruiken! Spulletjes pakken, dingen omver gooien, maar ook
+    met het water spelen. Want ik vind water geweldig! '
+  pageImages:
+  - {fileID: 21300000, guid: f4feb6574e31d004891fe52295cf6549, type: 3}
+  - {fileID: 21300000, guid: c279c1c3524034c4a8fe517b036d2f25, type: 3}
+  - {fileID: 21300000, guid: 98350b6db9c295f4d837dc7cfed8582b, type: 3}
+  animalImage: {fileID: 21300000, guid: 83b9c1db783bc8f4f95174b48037c1bb, type: 3}
+  animalMass: 400
+  speed: 15
+  runSpeed: 20
+  jumpHeight: 20
+  canRun: 0
+  canJump: 1
+  canDig: 0
+  canBreak: 1
+  AnimalObject: {fileID: 949205982493644473, guid: d83e2ca4974a6b5438af463d6d2c2385, type: 3}
+  camOffset: {x: 0, y: 8, z: -11.3}
+  playLevelIndex: 1

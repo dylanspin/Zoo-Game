@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b92935fa8743f743a1e104e85f602c5, type: 3}
+  m_Name: Camel
+  m_EditorClassIdentifier: 
+  animalName:
+  - Camel
+  - Kameel
+  price: 0
+  codeunlock: 1
+  code: someCode
+  info1:
+  - Drinking a lot of water at a time.
+  - Ik kan heel veel water tegelijkertijd drinken!
+  info2:
+  - I like to eat plants.
+  - Planten vind ik heel erg lekker.
+  fact:
+  - 'I have two toes that keep me from sinking into the sand! '
+  - Aan mijn voeten heb ik twee tenen waardoor ik niet in het zand wegzak!
+  unlockPagesEng:
+  - ' I''m actually from Northern Asia, where I can walk really long distances! In
+    WILDLANDS you will find me in the Serenga section of the zoo. Come by and see
+    me up close during the truck safari!'
+  - 'I am not picky and eat every kind of plant! Whether it''s salty, bitter, or
+    prickly, I''ll eat it! '
+  - Do you know, I like to drink a lot of water at once! I can go without drinking
+    for weeks, but if I am thirsty, I can drink sixty litres in one minute.
+  unlockPagesDutch:
+  - "Ik kom eigenlijk uit Noordelijk Azi\xEB, waar ik hele lange afstanden kan lopen!
+    In WILDLANDS zul je mij vinden in het Serenga gedeelte van de dierentuin. Kom
+    langs en kom mij van dichtbij zien tijdens de truck safari! "
+  - 'Ik ben niet kieskeurig en eet iedere soort plant! Of het nou zout, bitter, of
+    stekelig is, ik eet het wel hoor! '
+  - "Weet je, ik drink graag veel water tegelijk! Ik kan weken zonder drinken, maar
+    als ik dorst heb, drink ik zestig liter in \xE9\xE9n minuut."
+  pageImages:
+  - {fileID: 21300000, guid: 29ec885d76069404d802150d4b99bbac, type: 3}
+  - {fileID: 21300000, guid: 20f9483a415e59847bd3469833c8e913, type: 3}
+  - {fileID: 21300000, guid: 54dbf3025f7ef7549a53af72c8b84b43, type: 3}
+  animalImage: {fileID: 21300000, guid: f53ac4bc664f29d4aba8c21786b3cf76, type: 3}
+  animalMass: 4
+  speed: 20
+  runSpeed: 25
+  jumpHeight: 25
+  canRun: 1
+  canJump: 1
+  canDig: 0
+  canBreak: 0
+  AnimalObject: {fileID: 1684825514099774455, guid: 5b29d4f972d2b544388c40e64ef24910, type: 3}
+  camOffset: {x: 0, y: 8, z: -11.3}
+  playLevelIndex: 1

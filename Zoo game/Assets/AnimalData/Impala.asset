@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b92935fa8743f743a1e104e85f602c5, type: 3}
+  m_Name: Impala
+  m_EditorClassIdentifier: 
+  animalName:
+  - Impala
+  - Impala
+  price: 0
+  codeunlock: 0
+  code: someCode
+  info1:
+  - I like standing together in a group.
+  - Ik vind het leuk om samen in een groep te staan.
+  info2:
+  - Grass, herbs, shoots and leaves.
+  - Gras, kruiden, scheuten en bladeren.
+  fact:
+  - I can jump really high and far!
+  - Ik kan heel ver en hoog springen!
+  unlockPagesEng:
+  - Would it not be amazing to see me in person! Come see me in the Serenga section
+    of the zoo, see you soon!
+  - 'I really like to eat grass, herbs, shoots and leaves. All things I can find
+    in the savannah in Africa, where I originally come from! '
+  - I like standing together in a group. This group can consist of 20 to 25 other
+    impalas! We recognize each other because we have glands in our heels that leave
+    a scent trail. So we have a group perfume. Cool right!
+  unlockPagesDutch:
+  - Zou het niet geweldig zijn om mij persoonlijk te zien! Kom me bezoeken in het
+    Serenga-gedeelte van de dierentuin, tot snel!
+  - 'Ik eet heel graag gras, kruiden, scheuten en bladeren. Allemaal dingen die ik
+    kan vinden in de savanne in Afrika, waar ik oorspronkelijk vandaan kom! '
+  - 'Ik vind het leuk om in een groep bij elkaar te staan. Deze groep kan bestaan
+    uit 20 tot 25 andere impala''s! We herkennen elkaar omdat we klieren in onze
+    hielen hebben die een geurspoor achterlaten. We hebben dus een gratis parfum.
+    Cool toch! '
+  pageImages:
+  - {fileID: 21300000, guid: b137cdebda3c50a4ca95a5a39ff889be, type: 3}
+  - {fileID: 21300000, guid: 88897d57c7c0f2348a2052faec1cd175, type: 3}
+  - {fileID: 21300000, guid: c5c7ee5bd0b497443875aa045fadaeaa, type: 3}
+  animalImage: {fileID: 21300000, guid: 4b3b1d790bd9cd44f82d50ff6c646fb6, type: 3}
+  animalMass: 4
+  speed: 25
+  runSpeed: 35
+  jumpHeight: 40
+  canRun: 1
+  canJump: 1
+  canDig: 0
+  canBreak: 0
+  AnimalObject: {fileID: 6319683713931511529, guid: 749c1e06a51779c4f8558bae84f78e74, type: 3}
+  camOffset: {x: 0, y: 8, z: -11.3}
+  playLevelIndex: 1

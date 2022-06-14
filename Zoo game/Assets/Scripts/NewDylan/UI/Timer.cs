@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
+    //////////////////////////////////////NOT USED ANYMORE////////////////////////////////////////
+
     [Header("Scripts")]
     [SerializeField] private Controller controllerScript;
 
@@ -52,6 +54,11 @@ public class Timer : MonoBehaviour
             {
                 count.text = minutes.ToString() + ":0" + seconds.ToString("F0");
             }
+        }
+        
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            endTime();
         }
     }
 
