@@ -69,6 +69,7 @@ public class AnimalMovement : MonoBehaviour
     private void Update()
     {
         getSwipe();
+        getKeys();
         if(!Values.pauzed && !lockMovement)
         {
             clicks = Mathf.Lerp(clicks,0,1.0f * Time.deltaTime);
@@ -133,6 +134,32 @@ public class AnimalMovement : MonoBehaviour
                 }
                 clicks = 0;
             }
+        }
+    }
+
+    private void getKeys()
+    {
+        if(Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            if(currentLane > 0)
+            {
+                currentLane --;
+            }
+        }
+        if(Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            if(currentLane < 2)
+            {
+                currentLane ++;
+            }
+        }
+        if(Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            jump();
+        }
+        if(Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            roll();
         }
     }
 

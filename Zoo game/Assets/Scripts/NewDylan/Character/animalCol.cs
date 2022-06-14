@@ -67,7 +67,7 @@ public class animalCol : MonoBehaviour
     {
         if(!moveScript.getLocked())
         {
-            Debug.Log("not locked");
+            inGameAudio.playSoundEffect(1);
             collEffect.Clear();
             collEffect.Play();
             moveScript.addKnockBack(collisionForce,unlockTime);
