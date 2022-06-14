@@ -38,6 +38,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\LevelLoader.cs" />
      <Compile Include="Assets\Scripts\NewDylan\Other\CamShake.cs" />
+     <Compile Include="Assets\Scripts\NewDylan\UI\ingameSettings.cs" />
      <Compile Include="Assets\Scripts\NewDylan\Character\AnimalController.cs" />
      <Compile Include="Assets\Scripts\NewDylan\Character\AnimalPrefab.cs" />
      <Compile Include="Assets\Scripts\NewDylan\UI\SettingsController.cs" />
@@ -65,10 +66,12 @@
      <Compile Include="Assets\Scripts\Faye\UI\NewCursor.cs" />
      <Compile Include="Assets\Scripts\NewDylan\Other\CollidedObject.cs" />
      <Compile Include="Assets\Scripts\NewDylan\Track\TrackController.cs" />
+     <Compile Include="Assets\Scripts\NewDylan\UI\Translate.cs" />
      <Compile Include="Assets\Scripts\Faye\UI\CursorScript.cs" />
      <Compile Include="Assets\Scripts\MainMenu\BookController.cs" />
      <Compile Include="Assets\Scripts\MainMenu\Save\SettingData.cs" />
      <Compile Include="Assets\Scripts\NewDylan\Character\LookAnimal.cs" />
+     <Compile Include="Assets\Scripts\NewDylan\UI\SoundController.cs" />
      <Compile Include="Assets\Scripts\Faye\UI\TooltipManager.cs" />
      <Compile Include="Assets\Scripts\NewDylan\Other\CollectController.cs" />
      <Compile Include="Assets\Scripts\MainMenu\Values.cs" />
@@ -82,12 +85,9 @@
      <Compile Include="Assets\Scripts\NewDylan\UI\LevelControllerUi.cs" />
      <Compile Include="Assets\Scripts\NewDylan\Other\RandomRuby.cs" />
      <Compile Include="Assets\Scripts\MainMenu\Save\SaveScript.cs" />
+     <Compile Include="Assets\Scripts\NewDylan\UI\languesController.cs" />
      <Compile Include="Assets\Scripts\NewDylan\UI\buyPopUp.cs" />
      <Compile Include="Assets\Scripts\Game\character\Juan\elephanttrunkcontroller.cs" />
-     <Compile Include="Assets\Scripts\NewDylan\UI\Translate.cs" />
-     <Compile Include="Assets\Scripts\NewDylan\UI\languesController.cs" />
-     <Compile Include="Assets\Scripts\NewDylan\UI\ingameSettings.cs" />
-     <Compile Include="Assets\Scripts\NewDylan\UI\SoundController.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -336,12 +336,6 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
         <HintPath>D:\CMGT\Block 4\Zoo Game\Zoo-game\Zoo game\Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
-        <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.28f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Common">
-        <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.28f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.28f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\mscorlib.dll</HintPath>
@@ -733,8 +727,8 @@
     <Reference Include="Unity.InternalAPIEditorBridge.001">
         <HintPath>D:\CMGT\Block 4\Zoo Game\Zoo-game\Zoo game\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.Postprocessing.Editor">
-        <HintPath>D:\CMGT\Block 4\Zoo Game\Zoo-game\Zoo game\Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+        <HintPath>D:\CMGT\Block 4\Zoo Game\Zoo-game\Zoo game\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
         <HintPath>D:\CMGT\Block 4\Zoo Game\Zoo-game\Zoo game\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
@@ -750,9 +744,6 @@
     </Reference>
     <Reference Include="UnityEngine.UI">
         <HintPath>D:\CMGT\Block 4\Zoo Game\Zoo-game\Zoo game\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.Runtime">
-        <HintPath>D:\CMGT\Block 4\Zoo Game\Zoo-game\Zoo game\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Animation.Rigging">
         <HintPath>D:\CMGT\Block 4\Zoo Game\Zoo-game\Zoo game\Library\ScriptAssemblies\Unity.Animation.Rigging.dll</HintPath>
@@ -774,9 +765,6 @@
     </Reference>
     <Reference Include="com.unity.cinemachine.editor">
         <HintPath>D:\CMGT\Block 4\Zoo Game\Zoo-game\Zoo game\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Runtime">
-        <HintPath>D:\CMGT\Block 4\Zoo Game\Zoo-game\Zoo game\Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Editor">
         <HintPath>D:\CMGT\Block 4\Zoo Game\Zoo-game\Zoo game\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
