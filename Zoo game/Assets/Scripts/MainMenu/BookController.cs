@@ -38,6 +38,26 @@ public class BookController : MonoBehaviour
         // unlocked[0] = true;
     }
 
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Numlock))
+        {
+            if(loadUi)
+            {
+                for(int i=0; i<unlocked.Length; i++)
+                {
+                    unlocked[i] = false;
+                    highScores[i] = 0;
+                }
+                unlocked[0] = true;
+                money = 0;
+                SaveScript.saveBook(this);//saves book data
+                setData();
+                showRight(lastSelected);
+            }
+        }
+    }
+
     private void loadData()
     {
         BookData loadData = SaveScript.loadBook();

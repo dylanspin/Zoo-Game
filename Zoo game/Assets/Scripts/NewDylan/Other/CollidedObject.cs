@@ -10,7 +10,10 @@ public class CollidedObject : MonoBehaviour
 
     public void setObject(Transform newChild,Collision other)
     {
-        other.gameObject.GetComponent<MeshCollider>().convex = true;
+        if(other.gameObject.GetComponent<MeshCollider>())
+        {
+            other.gameObject.GetComponent<MeshCollider>().convex = true;
+        }
         newChild.parent = holder;
         Invoke("activateEnd",animTrigger);
     }
