@@ -5,8 +5,7 @@ using TMPro;
 
 public class Skip : MonoBehaviour
 {
-
-    [SerializeField] TextMeshProUGUI fastAndNormalText;
+    [SerializeField] TMPro.TextMeshProUGUI fastAndNormalText;
 
     public void FastAndNormal ()
     {

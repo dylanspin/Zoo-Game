@@ -17,22 +17,18 @@ public class AnimalMovement : MonoBehaviour
     [SerializeField] private Abilities abilityScript;
 
     [Header("Movements settings")]
-    private float normalSpeed = 10;
-    private float runSpeed = 15;
-    private float minBoost = 15;
-    private float boostStaminaDrain = 15;
-    private float jumpHeight = 10;
     [SerializeField] private float rollSpeed = 10;
     [SerializeField] private float jumpRecharge = 0.5f;
     [SerializeField] private float sideSpeed = 10;
-    [SerializeField] private float gravity = 10;
+    [SerializeField] private float airTimeMultiplier = 8;
 
     [Header("Private Data")]
+    private float jumpHeight = 10;
+    private float gravity = 10;
     private float currentSpeed = 5;
     private Vector3 impact = Vector3.zero;//extra velocity for adding forces on to the player
     private bool isGrounded;
     private bool allowJump = true;
-    private bool canRun = true;
     private bool lockMovement = false;
     private bool boosted = false;
     private int currentLane = 1;
@@ -45,6 +41,7 @@ public class AnimalMovement : MonoBehaviour
     private Vector2 firstPressPos;
     private Vector2 secondPressPos;
     private Vector2 currentSwipe;
+    private float airTime = 1;
 
     public void setStartData(GameObject newCheck,AnimalData newData,Transform[] newTrackLanes,ParticleSystem newPs,Animator newAnim)
     {
@@ -56,16 +53,14 @@ public class AnimalMovement : MonoBehaviour
 
         groundPs = newPs;
         anim = newAnim;
-        canRun = newData.canRun;
 
         jumpHeight = newData.jumpHeight;
         allowJump = newData.canJump;
 
         currentSpeed = newData.speed;
-        normalSpeed = newData.speed;
-        runSpeed = newData.runSpeed;
 
         rbPlayer.mass = newData.animalMass;
+        rbPlayer.mass = newData.gravity;
     }
 
     private void Update()
@@ -77,16 +72,16 @@ public class AnimalMovement : MonoBehaviour
             clicks = Mathf.Lerp(clicks,0,1.0f * Time.deltaTime);
             
             isGrounded = Physics.Raycast(groundCheck.position,-groundCheck.up,groundDistance,groundLayers);
-           
+            
+            getAirTime();
             checkGroundPs();
-            checkBoost();
             
             Vector3 currentPos = transform.position;
             transform.position = Vector3.Lerp(transform.position, allTrackLines[currentLane].position, sideSpeed * Time.deltaTime);
             currentPos.x = transform.position.x;
             transform.position = currentPos;
 
-            rbPlayer.AddForce(-transform.up * gravity);
+            rbPlayer.AddForce(-transform.up * gravity * airTime);
         }
     }
  
@@ -178,15 +173,30 @@ public class AnimalMovement : MonoBehaviour
         }
     }
     
+    private void getAirTime()
+    {
+        if(isGrounded)
+        {
+            airTime = 1;
+        }
+        else
+        {
+            airTime += airTimeMultiplier * Time.deltaTime;
+        }
+    }
+
 
     //collision functions
-    public void addKnockBack(float collisionForce,float timeLocked)
+    public void addKnockBack(float collisionForce,float timeLocked,bool dead)
     {
         lockMovement = true;//locks movement for concussion effect
         groundPs.Stop();
         camScript.lockCam(true);//locks the camera from moving the player rotation (needs to change to maaikes camera follow)
         rbPlayer.AddForce(-transform.forward * collisionForce, ForceMode.Impulse);
-        // Invoke("unlockMovement",timeLocked);
+        if(!dead)
+        {
+            Invoke("unlockMovement",timeLocked);
+        }
     }
 
     private void unlockMovement()
@@ -222,22 +232,6 @@ public class AnimalMovement : MonoBehaviour
     }
 
     //boost functions
-    private void boost(bool active)
-    {
-        if(active)
-        {
-            if(statsScript.getStam() > minBoost)
-            {
-                currentSpeed = runSpeed;
-            }
-        }
-        else
-        {
-            currentSpeed = normalSpeed;
-        }
-
-        boosted = active;
-    }
 
     private void checkGroundPs()
     {
@@ -248,30 +242,6 @@ public class AnimalMovement : MonoBehaviour
         else
         {
             groundPs.Stop();
-        }
-    }
-
-    private void checkBoost()
-    {   
-        if(canRun)
-        {
-            if(Input.GetKeyDown(KeyCode.LeftShift) && !abilityScript.getDigging())//needs to be mobile input later
-            {
-                boost(true);
-            }
-            if(Input.GetKeyUp(KeyCode.LeftShift) || abilityScript.getDigging())//needs to be mobile input later
-            {
-                boost(false);
-            }
-        }
-
-        if(boosted)
-        {
-            statsScript.lose(boostStaminaDrain * Time.deltaTime);
-            if(statsScript.getStam() < boostStaminaDrain)
-            {
-                boost(false);
-            }
         }
     }
 

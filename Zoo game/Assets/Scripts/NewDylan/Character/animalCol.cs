@@ -18,12 +18,15 @@ public class animalCol : MonoBehaviour
     [SerializeField] private Controller controllerScript; 
 
     [Header("Private data")]
+    private int health = 4;
     private bool canbreak = false;
     private ParticleSystem collEffect;
 
     public void setStartData(AnimalData newData,ParticleSystem newPs)
     {
         canbreak = newData.canBreak;
+        health = newData.health;
+        controllerScript.setAnimal(newData);
         collEffect = newPs;
     }   
 
@@ -38,8 +41,13 @@ public class animalCol : MonoBehaviour
         {
             if(!canbreak)
             {
-                controllerScript.collided(unlockTime);
-                addKnockBack();
+                if(!moveScript.getLocked())
+                {
+                    bool dead = loseHealth();
+                    controllerScript.collided(unlockTime,dead);
+                    controllerScript.setHealth(health);
+                    addKnockBack(dead);
+                }
             }
             else
             {
@@ -53,30 +61,40 @@ public class animalCol : MonoBehaviour
                     }
                     else
                     {
-                        addKnockBack();
+                        bool dead = loseHealth();
+                        addKnockBack(dead);
                     }
                     //needs to check what interaction needs to happen with object and if its breakable else also add knockback
-                    breakObject(other);
                     StartCoroutine(shakeScript.Shake(0.25f,0.05f));
                 }
             }
         }
     }
 
-    private void addKnockBack()
+    private void addKnockBack(bool dead)
     {
         if(!moveScript.getLocked())
         {
             inGameAudio.playSoundEffect(1);
             collEffect.Clear();
             collEffect.Play();
-            moveScript.addKnockBack(collisionForce,unlockTime);
+            moveScript.addKnockBack(collisionForce,unlockTime,dead);
             StartCoroutine(shakeScript.Shake(0.25f,0.05f));
         }
     }
 
-    private void breakObject(Collision other)
+    private bool loseHealth()
     {
-       
+        Debug.Log("Lose Health");
+        if(health > 1)
+        {
+            health --;
+            return false;
+        }
+        else
+        {
+            health = 0;
+            return true;
+        }
     }
 }
