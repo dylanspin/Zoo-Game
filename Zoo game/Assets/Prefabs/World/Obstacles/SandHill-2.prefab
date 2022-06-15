@@ -28,9 +28,9 @@ Transform:
   m_GameObject: {fileID: 340936049331484121}
   m_LocalRotation: {x: -0, y: -0, z: -0.006420037, w: 0.9999794}
   m_LocalPosition: {x: 0, y: -0.77, z: 0}
-  m_LocalScale: {x: 7.7430096, y: 5.1792207, z: 8.924413}
+  m_LocalScale: {x: 7.7430096, y: 5.179221, z: 8.924413}
   m_Children: []
-  m_Father: {fileID: 8577369156318753589}
+  m_Father: {fileID: 4136929400046431448}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.736}
 --- !u!33 &912277800486357602
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 8577369156318753589}
   m_Layer: 0
   m_Name: SandHill-2
-  m_TagString: Untagged
+  m_TagString: canBreak
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -123,7 +123,38 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 9205882531955819893}
+  - {fileID: 4136929400046431448}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7410007487116219152
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4136929400046431448}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4136929400046431448
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7410007487116219152}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 9205882531955819893}
+  m_Father: {fileID: 8577369156318753589}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

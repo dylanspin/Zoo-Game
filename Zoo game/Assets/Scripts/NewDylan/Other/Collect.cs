@@ -30,6 +30,7 @@ public class Collect : MonoBehaviour
             collected = true;
             anim.SetBool("Collect",true);
             // gameObject.SetActive(false);
+            inGameAudio.playSoundEffect(0);
             if(collectEffect)
             {
                 collectEffect.Play();
