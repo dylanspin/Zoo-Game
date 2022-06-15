@@ -25,7 +25,6 @@ public class LevelControllerUi : MonoBehaviour
     private float progress = 0;
     private bool loading = false;
     private int langues = 0;
-
     private void Update()
     {
         if(loading)

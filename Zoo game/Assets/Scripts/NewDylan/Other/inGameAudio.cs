@@ -5,16 +5,26 @@ using UnityEngine;
 public class inGameAudio : MonoBehaviour
 {
     [SerializeField] private AudioSource[] audios;
+    [SerializeField] private AudioSource music;
     private static AudioSource[] staticAudios;
+    private static bool sound = false;
 
-    private void Start()
+    public void setStart(bool soundOn, bool musicOn)
     {
+        if(musicOn)
+        {
+            music.Play();
+        }
+        sound = soundOn ;
         staticAudios = audios;
     }
 
     public static void playSoundEffect(int soundId)
     {
-        staticAudios[soundId].Play();
+        if(sound)
+        {
+            staticAudios[soundId].Play();
+        }
     }
 
 

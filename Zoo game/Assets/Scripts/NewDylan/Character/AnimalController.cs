@@ -41,7 +41,7 @@ public class AnimalController : MonoBehaviour
         AnimalPrefab prefabScript = Instantiate(newAnimal.AnimalObject, bodySpawnPos.transform.position, Quaternion.Euler(0,0,0),transform).GetComponent<AnimalPrefab>(); 
 
         abilitieScript.setStartData(prefabScript.animalBody,newAnimal);
-        moveScript.setStartData(prefabScript.groundCheck,newAnimal,trackScript.getLanes(),prefabScript.movePs);
+        moveScript.setStartData(prefabScript.groundCheck,newAnimal,trackScript.getLanes(),prefabScript.movePs,prefabScript.anim);
         colScript.setStartData(newAnimal,prefabScript.collideEffect);
         followScript.setStartData(newAnimal);
     }

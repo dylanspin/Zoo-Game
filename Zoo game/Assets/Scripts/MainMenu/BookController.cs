@@ -141,7 +141,7 @@ public class BookController : MonoBehaviour
             showRight(lastSelected);
             popUp.closePopUp();
             unlockScreen.showUnlocked(animals[lastSelected],langues);
-            showButtons(0);
+            showButtons(0,3);
         }
         else
         {
@@ -217,29 +217,32 @@ public class BookController : MonoBehaviour
     {
         if(unlocked[id])
         {
-            showButtons(0);//play button
+            showButtons(0,3);//play button
         }
         else
         {
             if(animals[id].codeunlock)
             {
-                showButtons(2);//code button
+                showButtons(2,-1);//code button
             }
             else
             {
-                showButtons(1);//buy button
+                showButtons(1,-1);//buy button
             }
         }
     }
 
-    public void showButtons(int slot)
+    public void showButtons(int slot,int second)
     {
-        buttons[slot].SetActive(true);
         for(int i=0; i<buttons.Length; i++)
         {
-            if(i != slot)
+            if(i != slot && i != second)
             {
                 buttons[i].SetActive(false);
+            }
+            else
+            {
+                buttons[i].SetActive(true);
             }
         }
     }

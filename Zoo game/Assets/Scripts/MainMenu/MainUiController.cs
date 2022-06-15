@@ -12,6 +12,7 @@ public class MainUiController : MonoBehaviour
     private void Start()
     {
         Values.pauzed = false;
+        anim.SetInteger("Page",Values.lastPage);
         Time.timeScale = 1;
     }
 
@@ -30,6 +31,7 @@ public class MainUiController : MonoBehaviour
     {
         anim.SetInteger("Page",open);
         activePage = open;
+        Values.lastPage = open;
     }
 
     public void quitGame()
