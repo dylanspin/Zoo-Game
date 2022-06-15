@@ -9,6 +9,9 @@ public class TypeEffect : MonoBehaviour
     Text _text;
 		string writer;
 
+
+	//Adding fields that can be directly changed in Unity, convinient for testing.
+
 	[SerializeField] float delayBeforeStart = 0f;
 	[SerializeField] float timeBtwChars = 0.1f;
 	[SerializeField] string leadingChar = "";
@@ -36,7 +39,7 @@ public class TypeEffect : MonoBehaviour
     }
 
 
-
+	//Checking the length of the text, if the character is not null, the next letter is typed and added to the current length of the text. 
 
     IEnumerator TypeWriterText()
 	{
