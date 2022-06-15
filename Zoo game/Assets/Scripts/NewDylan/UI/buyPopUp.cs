@@ -6,6 +6,7 @@ public class buyPopUp : MonoBehaviour
 {
     [SerializeField] private TMPro.TextMeshProUGUI priceText;
     [SerializeField] private TMPro.TextMeshProUGUI animalText;
+    [SerializeField] private Animator anim;
     [SerializeField] private GameObject[] typeUnlock;
     [SerializeField] private TMPro.TMP_InputField inputIp;
 
@@ -25,7 +26,7 @@ public class buyPopUp : MonoBehaviour
 
     public void cantBuy()
     {
-        
+        anim.Play("shakeBuy",0, 0.25f);
     }
 
     public string getCode()

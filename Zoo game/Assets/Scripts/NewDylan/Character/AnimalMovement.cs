@@ -39,13 +39,14 @@ public class AnimalMovement : MonoBehaviour
     private float clicks = 0;
     private Transform[] allTrackLines = new Transform[5];
     private ParticleSystem groundPs;
+    private Animator anim;
 
     [Header("Swipe Data")]
     private Vector2 firstPressPos;
     private Vector2 secondPressPos;
     private Vector2 currentSwipe;
 
-    public void setStartData(GameObject newCheck,AnimalData newData,Transform[] newTrackLanes,ParticleSystem newPs)
+    public void setStartData(GameObject newCheck,AnimalData newData,Transform[] newTrackLanes,ParticleSystem newPs,Animator newAnim)
     {
         groundCheck = newCheck.transform;
         for(int i=0; i<newTrackLanes.Length; i++)
@@ -54,6 +55,7 @@ public class AnimalMovement : MonoBehaviour
         }
 
         groundPs = newPs;
+        anim = newAnim;
         canRun = newData.canRun;
 
         jumpHeight = newData.jumpHeight;
@@ -139,25 +141,25 @@ public class AnimalMovement : MonoBehaviour
 
     private void getKeys()
     {
-        if(Input.GetKeyDown(KeyCode.LeftArrow))
+        if(Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
         {
             if(currentLane > 0)
             {
                 currentLane --;
             }
         }
-        if(Input.GetKeyDown(KeyCode.RightArrow))
+        if(Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
         {
             if(currentLane < 2)
             {
                 currentLane ++;
             }
         }
-        if(Input.GetKeyDown(KeyCode.UpArrow))
+        if(Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
         {
             jump();
         }
-        if(Input.GetKeyDown(KeyCode.DownArrow))
+        if(Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
         {
             roll();
         }

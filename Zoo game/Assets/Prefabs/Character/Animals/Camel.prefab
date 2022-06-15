@@ -380,7 +380,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2029543762281023821}
   - component: {fileID: 3464686177152178704}
-  - component: {fileID: 6048144113499627374}
   - component: {fileID: 4846811559353436941}
   m_Layer: 0
   m_Name: Camel
@@ -423,26 +422,8 @@ MonoBehaviour:
   animalBody: {fileID: 1725744287368273502}
   groundCheck: {fileID: 2403477959825890706}
   collideEffect: {fileID: 1569294654255038298}
+  anim: {fileID: 8682553185589438579}
   movePs: {fileID: 9066939456843286808}
---- !u!95 &6048144113499627374
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1684825514099774455}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!65 &4846811559353436941
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2207,6 +2188,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018164348608519440}
+  - component: {fileID: 8682553185589438579}
   m_Layer: 0
   m_Name: rig
   m_TagString: Untagged
@@ -2230,6 +2212,25 @@ Transform:
   m_Father: {fileID: 2029543762281023821}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &8682553185589438579
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7892989030698420700}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c1391fde0b5eb714aab6f59d6bad313a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7957459891159915315
 GameObject:
   m_ObjectHideFlags: 0
