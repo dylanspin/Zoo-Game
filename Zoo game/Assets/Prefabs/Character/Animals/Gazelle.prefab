@@ -40,7 +40,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6701310574305074259}
   - component: {fileID: 4739187826421853565}
-  - component: {fileID: 1511209635800253937}
   - component: {fileID: 6158299290108523077}
   m_Layer: 0
   m_Name: Gazelle
@@ -58,7 +57,7 @@ Transform:
   m_GameObject: {fileID: 6319683713931511529}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 106.64, y: 7.4517603, z: -137.26634}
-  m_LocalScale: {x: 1.1278, y: 1, z: 1}
+  m_LocalScale: {x: 0.90224, y: 0.8, z: 0.8}
   m_Children:
   - {fileID: 745687311378238238}
   - {fileID: 3148038797757496562}
@@ -82,26 +81,8 @@ MonoBehaviour:
   animalBody: {fileID: 3667570087858228966}
   groundCheck: {fileID: 6086357775141714772}
   collideEffect: {fileID: 5930304272906696936}
+  anim: {fileID: 0}
   movePs: {fileID: 8571863924062492189}
---- !u!95 &1511209635800253937
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6319683713931511529}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!65 &6158299290108523077
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -360,7 +341,7 @@ Animator:
   m_GameObject: {fileID: 77377049387798948}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0f5ab24af0ea54d4884b3a87ad09f423, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

@@ -6,10 +6,17 @@ public class Controller : MonoBehaviour
 {
     [Header("Scripts")]
     [SerializeField] private UiController uiScript;
+    [SerializeField] private HealthBar healthScript;
     [SerializeField] private CollectController collectScript;
     [SerializeField] private BookController bookScript;
     [SerializeField] private TrackMovement trackScript;
+    [SerializeField] private SlowMoEnd endEffectScript;
 
+    public void setAnimal(AnimalData newData)
+    {
+        healthScript.setStart(newData.health);
+    }
+    
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.P))
@@ -18,11 +25,30 @@ public class Controller : MonoBehaviour
         }
     }
 
-    public void collided(float knockbackTime)
+    public void collided(float knockbackTime,bool dead)
     {
         trackScript.stopTrack(true);
-        uiScript.endTrack();
-        Invoke("endMatch",knockbackTime);
+        if(dead)
+        {
+            uiScript.endTrack();
+            // endEffectScript.turnOn();
+            // StartCoroutine (endGame(knockbackTime));
+            Invoke("endMatch",knockbackTime);
+        }
+        else
+        {
+            Invoke("unlock",knockbackTime);
+        }
+    }
+
+    private void unlock()
+    {
+        trackScript.stopTrack(false);
+    }
+
+    public void setHealth(int health)
+    {
+        healthScript.sethealthBar(health);
     }
 
     public void endMatch()
@@ -43,7 +69,6 @@ public class Controller : MonoBehaviour
         int distance = (int)trackScript.getDistance(); 
         bookScript.saveEndData(currentAmount,distance);
     }
-
 }
 
 

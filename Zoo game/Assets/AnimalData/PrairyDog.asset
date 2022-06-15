@@ -15,7 +15,7 @@ MonoBehaviour:
   animalName:
   - Prairie dog
   - prairiehond
-  price: 0
+  price: 2500
   codeunlock: 0
   code: someCode
   info1:
@@ -48,11 +48,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: ed1359152e7ef9049bc6ea5f88a836b0, type: 3}
   - {fileID: 21300000, guid: 2dcce5018bc815d40a72e04e2d132820, type: 3}
   animalImage: {fileID: 21300000, guid: d10aa0a24bcaf5e43bd53eb5531d49be, type: 3}
+  health: 2
   animalMass: 4
+  gravity: 12
   speed: 5
-  runSpeed: 10
-  jumpHeight: 30
-  canRun: 1
+  jumpHeight: 100
   canJump: 1
   canDig: 1
   canBreak: 0

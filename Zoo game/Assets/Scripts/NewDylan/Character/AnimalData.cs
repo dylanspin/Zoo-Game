@@ -20,11 +20,11 @@ public class AnimalData : ScriptableObject
     public Sprite animalImage = null;//image that is shown in the shop
 
     [Header("Animal in game stats")]
+    public int health = 4;
     public float animalMass = 4;
+    public float gravity = 9;
     public float speed = 10;
-    public float runSpeed = 10;
     public float jumpHeight = 20;
-    public bool canRun = false;
     public bool canJump = false;
     public bool canDig = false;
     public bool canBreak = false;
