@@ -5,28 +5,28 @@ using UnityEngine.SceneManagement;
 public class LevelLoader : MonoBehaviour
 {
     public Animator transition;
+    [SerializeField] private int nextLevel = 0;
+    public float startTime = 2.5f;
     public float transitionTime = 1f;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        if (Input.GetMouseButtonDown(0))
+        if(startTime != 0)
         {
-            LoadNextLevel();
+            Invoke("LoadNextLevel",startTime);
         }
     }
 
     public void LoadNextLevel ()
     {
-        //SceneManager.LoadScene(4);
-        StartCoroutine (LoadLevel(SceneManager.GetActiveScene(). buildIndex +1));
+        StartCoroutine (LoadLevel(nextLevel));
     }
 
     IEnumerator LoadLevel (int LevelIndex)
     {
-        transition.SetTrigger ("Start");
+        transition.SetBool("Start",true);
         yield return new WaitForSeconds (transitionTime);
-        SceneManager.LoadScene (LevelIndex);
+        SceneManager.LoadScene(LevelIndex);
     }
 }
 

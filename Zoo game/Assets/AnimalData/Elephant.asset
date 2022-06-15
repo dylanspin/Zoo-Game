@@ -15,7 +15,7 @@ MonoBehaviour:
   animalName:
   - Elephant
   - Olifant
-  price: 1000
+  price: 6000
   codeunlock: 0
   code: someCode
   info1:
@@ -50,14 +50,14 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c279c1c3524034c4a8fe517b036d2f25, type: 3}
   - {fileID: 21300000, guid: 98350b6db9c295f4d837dc7cfed8582b, type: 3}
   animalImage: {fileID: 21300000, guid: 83b9c1db783bc8f4f95174b48037c1bb, type: 3}
-  animalMass: 400
+  health: 2
+  animalMass: 4
+  gravity: 12
   speed: 15
-  runSpeed: 20
   jumpHeight: 20
-  canRun: 0
   canJump: 0
   canDig: 0
   canBreak: 1
   AnimalObject: {fileID: 949205982493644473, guid: d83e2ca4974a6b5438af463d6d2c2385, type: 3}
   camOffset: {x: 0, y: 8, z: -11.3}
-  playLevelIndex: 1
+  playLevelIndex: 3

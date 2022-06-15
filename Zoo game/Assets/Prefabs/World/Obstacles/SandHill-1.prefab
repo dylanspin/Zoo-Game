@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6126304206443088108}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SandHill-1
   m_TagString: canBreak
   m_Icon: {fileID: 0}
@@ -101,6 +101,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 05c6ceda32014e540a401b28b8cf05f4, type: 3}
       propertyPath: m_Name
       value: hill-1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 05c6ceda32014e540a401b28b8cf05f4, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: 05c6ceda32014e540a401b28b8cf05f4, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05c6ceda32014e540a401b28b8cf05f4, type: 3}
