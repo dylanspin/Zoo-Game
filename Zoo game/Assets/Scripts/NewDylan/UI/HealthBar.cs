@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
+    [SerializeField] private Animator anim;
     [SerializeField] private Image fillImage;
     [SerializeField] private Slider slider;
     [SerializeField] private Color[] colorStages;
@@ -23,5 +24,6 @@ public class HealthBar : MonoBehaviour
         }
         slider.value = setAmount; 
         fillImage.color = colorStages[setAmount]; 
+        anim.Play("loseHealth",0, 0.25f);
     }
 }

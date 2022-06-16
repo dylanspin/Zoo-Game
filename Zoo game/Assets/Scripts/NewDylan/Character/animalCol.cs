@@ -14,20 +14,20 @@ public class animalCol : MonoBehaviour
     [Header("Scripts")]
     [SerializeField] private AnimalMovement moveScript;
     [SerializeField] private Abilities abilityScript;
-    [SerializeField] private CamShake shakeScript;//camera shake/camera 
-    [SerializeField] private Controller controllerScript; 
+    [SerializeField] private CamShake shakeScript;//camera shake/camera  
 
     [Header("Private data")]
     private int health = 4;
     private bool canbreak = false;
     private ParticleSystem collEffect;
+    private Controller controllerScript;
 
-    public void setStartData(AnimalData newData,ParticleSystem newPs)
+    public void setStartData(AnimalData newData,ParticleSystem newPs,Controller newController)
     {
         canbreak = newData.canBreak;
         health = newData.health;
-        controllerScript.setAnimal(newData);
         collEffect = newPs;
+        controllerScript = newController;
     }   
 
     private void OnCollisionEnter(Collision other) 
@@ -46,6 +46,7 @@ public class animalCol : MonoBehaviour
                     bool dead = loseHealth();
                     controllerScript.collided(unlockTime,dead);
                     controllerScript.setHealth(health);
+                    removeAllFromPart(dead,other);
                     addKnockBack(dead);
                 }
             }
@@ -62,12 +63,21 @@ public class animalCol : MonoBehaviour
                     else
                     {
                         bool dead = loseHealth();
+                        removeAllFromPart(dead,other);
                         addKnockBack(dead);
                     }
                     //needs to check what interaction needs to happen with object and if its breakable else also add knockback
                     StartCoroutine(shakeScript.Shake(0.25f,0.05f));
                 }
             }
+        }
+    }
+
+    private void removeAllFromPart(bool dead,Collision other)
+    {
+        if(!dead)
+        {
+            other.transform.GetComponentInParent<TrackPart>().removeObstacles(objectEffect);
         }
     }
 

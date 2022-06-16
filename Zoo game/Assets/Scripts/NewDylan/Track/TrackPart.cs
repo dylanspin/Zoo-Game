@@ -7,6 +7,7 @@ public class TrackPart : MonoBehaviour
     [SerializeField] private GameObject[] possibleEndParts;
     [SerializeField] private Transform[] coinSpawns;
     [SerializeField] private GameObject coinPrefab;
+    [SerializeField] private Transform[] obstacles;
     private TrackController controllerScript;
     private CollectController collectScript;
     private bool coinSpawned = false;
@@ -57,6 +58,15 @@ public class TrackPart : MonoBehaviour
                 spawnedCoin.GetComponent<Animator>().speed = Random.Range(0.7f,1.0f);
                 spawnedCoin.GetComponent<Collect>().setStart(collectScript);
             }
+        }
+    }
+
+    public void removeObstacles(GameObject spawnEffect)
+    {
+        for(int i=0; i<obstacles.Length; i++)
+        {
+            CollidedObject effect = Instantiate(spawnEffect,obstacles[i].position,Quaternion.Euler(0,0,0)).GetComponent<CollidedObject>();
+            effect.setObject(obstacles[i],null);
         }
     }
 }

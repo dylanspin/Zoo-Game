@@ -13,7 +13,7 @@ public class SettingsController : MonoBehaviour
     [Header("Private Data")]
     private bool soundOn = true;
     private bool musicOn = true;
-    private int langues = 0;//0 = english 1 = dutch
+    private int langues = 1;//0 = english 1 = dutch
 
     private void Start()
     {
@@ -33,7 +33,7 @@ public class SettingsController : MonoBehaviour
         {
             soundOn = true;
             musicOn = true;
-            langues = 0;
+            langues = 1;
         }
 
         if(gameScript)

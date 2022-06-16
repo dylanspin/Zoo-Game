@@ -9,6 +9,7 @@ public class Abilities : MonoBehaviour
 
     [Header("Scripts")]
     [SerializeField] private AnimalMovement moveScript;
+    [SerializeField] private AbilityBar barScript;
 
     [Header("SetData")]
     [SerializeField] private GameObject animalObject;
@@ -18,11 +19,14 @@ public class Abilities : MonoBehaviour
     private bool digging = false;
     private bool canDig = true;
 
-    public void setStartData(GameObject newAnimalObject,AnimalData newData)
+    public void setStartData(GameObject newAnimalObject,AnimalData newData,AbilityBar newBarScript)
     {
         animalObject = newAnimalObject;
         canDig = newData.canDig;
+        barScript = newBarScript;
     }
+
+
 
     private void Update()
     {
@@ -45,26 +49,36 @@ public class Abilities : MonoBehaviour
 
     private void dig(bool active)
     {
-        if(canDig && moveScript.getGrounded())
+        if(active)
         {
-            if(active)
+            if(canDig && moveScript.getGrounded() && barScript.canActivate())
             {
-                animalObject.transform.parent.gameObject.layer = LayerMask.NameToLayer(playerLayers[1]);
+                barScript.activate(true);
+                animalObject.transform.parent.parent.gameObject.layer = LayerMask.NameToLayer(playerLayers[1]);
+                digging = true;  
+                animalObject.SetActive(false);
             }
-            else
-            {
-                animalObject.transform.parent.gameObject.layer = LayerMask.NameToLayer(playerLayers[0]);
-            }
-
-            animalObject.SetActive(!active);//temp needs to be animation that digs down??
-            digging = active;   
+        }
+        else
+        {
+            barScript.activate(false);
+            animalObject.transform.parent.parent.gameObject.layer = LayerMask.NameToLayer(playerLayers[0]);
+            digging = false;
+            animalObject.SetActive(true);
         }
     }
-
 
     public bool getDigging()
     {
         return digging;
+    }
+
+    public void stopAbil()
+    {
+        if(canDig)
+        {
+            dig(false);
+        }
     }
 
 }

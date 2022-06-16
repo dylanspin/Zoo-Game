@@ -20,11 +20,13 @@ public class AnimalData : ScriptableObject
     public Sprite animalImage = null;//image that is shown in the shop
 
     [Header("Animal in game stats")]
-    public int health = 4;
-    public float animalMass = 4;
+    public int health = 4;//max amount of times the player can collide with something 
+    public float animalMass = 4;//rb mass
     public float gravity = 9;
     public float speed = 10;
     public float jumpHeight = 20;
+    public float regainSpeed = 0.5f;//speed the ability bar is filled again
+    public float abilityTime = 3;//max time of ability 
     public bool canJump = false;
     public bool canDig = false;
     public bool canBreak = false;

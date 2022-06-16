@@ -12,14 +12,12 @@ public class AnimalController : MonoBehaviour
     [SerializeField] private GameObject bodySpawnPos;
 
     [Header("Scripts")]
+    [SerializeField] private Controller controllerScript;
     [SerializeField] private TrackController trackScript;
     [SerializeField] private camFollow followScript;
     [SerializeField] private animalCol colScript;
     [SerializeField] private AnimalMovement moveScript;
     [SerializeField] private Abilities abilitieScript;
-
-    // [Header("Private Script")]
-    // private game
 
     void Start()
     {
@@ -40,9 +38,10 @@ public class AnimalController : MonoBehaviour
 
         AnimalPrefab prefabScript = Instantiate(newAnimal.AnimalObject, bodySpawnPos.transform.position, Quaternion.Euler(0,0,0),transform).GetComponent<AnimalPrefab>(); 
 
-        abilitieScript.setStartData(prefabScript.animalBody,newAnimal);
+        controllerScript.setAnimal(newAnimal,abilitieScript);
+        abilitieScript.setStartData(prefabScript.animalBody,newAnimal,controllerScript.getBarScript());
         moveScript.setStartData(prefabScript.groundCheck,newAnimal,trackScript.getLanes(),prefabScript.movePs,prefabScript.anim);
-        colScript.setStartData(newAnimal,prefabScript.collideEffect);
+        colScript.setStartData(newAnimal,prefabScript.collideEffect,controllerScript);
         followScript.setStartData(newAnimal);
     }
 
