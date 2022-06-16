@@ -36,7 +36,7 @@ public class TrackController : MonoBehaviour
         TrackPart partScript = trackPart.GetComponent<TrackPart>();
         partScript.setStart(this,collecScript);
         partTracks.Add(partScript);
-        if(partTracks.Count-4 > lengthInfront)
+        if(partTracks.Count-2 > lengthInfront)
         {
             Destroy(partTracks[0].gameObject);
             partTracks.RemoveAt(0);
