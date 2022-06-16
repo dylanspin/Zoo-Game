@@ -30,11 +30,15 @@ public class AbilityBar : MonoBehaviour
         setBar();
     }
 
-    public void activate(bool active)//called when ability is activated
+    public void activate(bool active,bool setZero)//called when ability is activated
     {
         if(active)
         {
            setBarActive(true);
+        }
+        if(setZero)
+        {
+            currentTime = 0;
         }
         isOn = active;
     }
@@ -69,9 +73,15 @@ public class AbilityBar : MonoBehaviour
             {
                 currentTime = maxTime;
                 setBarActive(false);
+                barFilled();
             }
         }
         slider.value = currentTime;
+    }
+
+    private void barFilled()
+    {
+        abilityScript.filled();
     }
 
     private void stopAbility()

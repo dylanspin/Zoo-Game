@@ -105,10 +105,10 @@ MonoBehaviour:
   camScript: {fileID: 8668239562702084704}
   statsScript: {fileID: 8668239562702084710}
   abilityScript: {fileID: 5044783219817332670}
-  rollSpeed: 100
+  rollSpeed: 200
   jumpRecharge: 0.5
   sideSpeed: 10
-  gravity: 8
+  airTimeMultiplier: 10
 --- !u!114 &8668239562702084704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,12 +154,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectEffect: {fileID: 5918296069875703995, guid: 79147a2a6ab7395488794ef67490b445, type: 3}
-  collisionForce: 100
-  unlockTime: 1
+  collisionForce: 400
+  unlockTime: 1.5
   moveScript: {fileID: 8668239562702084706}
   abilityScript: {fileID: 5044783219817332670}
   shakeScript: {fileID: 8668239562783247520}
-  controllerScript: {fileID: 0}
 --- !u!114 &5044783219817332670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,6 +172,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveScript: {fileID: 8668239562702084706}
+  colScript: {fileID: 5044783219817332669}
+  barScript: {fileID: 0}
   animalObject: {fileID: 0}
   playerLayers:
   - Player
@@ -192,6 +193,7 @@ MonoBehaviour:
   testAnimal: {fileID: 11400000, guid: 3e75f8ac9b94f624185a5ddee1c35623, type: 2}
   cameraObj: {fileID: 8668239563304494289}
   bodySpawnPos: {fileID: 5044783220440576797}
+  controllerScript: {fileID: 0}
   trackScript: {fileID: 0}
   followScript: {fileID: 8668239563304494294}
   colScript: {fileID: 5044783219817332669}
@@ -383,7 +385,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8668239563304494289}
   m_LocalRotation: {x: 0.24285321, y: 0, z: 0, w: 0.9700631}
-  m_LocalPosition: {x: 0, y: 7.92, z: -11.33}
+  m_LocalPosition: {x: 0, y: 10.63, z: -56.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8668239562783247523}
@@ -397,12 +399,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8668239563304494289}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c2db6ac602c58a47baf799a29560d84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   offset: {x: 0, y: 5, z: -15}
   target: {fileID: 8668239562702084705}
-  translateSpeed: 10
+  translateSpeed: 0.5
   rotationSpeed: 10

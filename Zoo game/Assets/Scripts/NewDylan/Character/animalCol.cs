@@ -18,6 +18,7 @@ public class animalCol : MonoBehaviour
 
     [Header("Private data")]
     private int health = 4;
+    private bool canCollide = true;
     private bool canbreak = false;
     private ParticleSystem collEffect;
     private Controller controllerScript;
@@ -39,37 +40,53 @@ public class animalCol : MonoBehaviour
     {
         if(other.gameObject.layer != LayerMask.NameToLayer("Ground"))//when hitting something else thats not the ground
         {
-            if(!canbreak)
+            if(!other.transform.root.GetComponent<Rigidbody>())
             {
-                if(!moveScript.getLocked())
+                if(!canbreak)
                 {
-                    bool dead = loseHealth();
-                    controllerScript.collided(unlockTime,dead);
-                    controllerScript.setHealth(health);
-                    removeAllFromPart(dead,other);
-                    addKnockBack(dead);
+                    collided(other);
                 }
-            }
-            else
-            {
-                if(!other.transform.root.GetComponent<Rigidbody>())
+                else
                 {
                     Transform rootObj = other.transform.parent.parent.transform;
-                    if(rootObj.tag == "canBreak")
-                    {   
-                        CollidedObject effect = Instantiate(objectEffect,rootObj.transform.position,Quaternion.Euler(0,0,0)).GetComponent<CollidedObject>();
-                        effect.setObject(rootObj,other);
+                    // if(rootObj.tag == "canBreak")
+                    // {   
+                    //     CollidedObject effect = Instantiate(objectEffect,rootObj.transform.position,Quaternion.Euler(0,0,0)).GetComponent<CollidedObject>();
+                    //     effect.setObject(rootObj,other);
+                    // }
+                    if(rootObj.tag == "bigBreak" || rootObj.tag == "canBreak")
+                    {
+                        if(canCollide)
+                        {
+                            canCollide = false;
+                            CollidedObject effect = Instantiate(objectEffect,rootObj.transform.position,Quaternion.Euler(0,0,0)).GetComponent<CollidedObject>();
+                            effect.setObject(rootObj,other);
+                            abilityScript.setBarZero();
+                        }
+                        else
+                        {
+                            collided(other);
+                        }
                     }
                     else
                     {
-                        bool dead = loseHealth();
-                        removeAllFromPart(dead,other);
-                        addKnockBack(dead);
+                        collided(other);
                     }
-                    //needs to check what interaction needs to happen with object and if its breakable else also add knockback
                     StartCoroutine(shakeScript.Shake(0.25f,0.05f));
                 }
             }
+        }
+    }
+
+    private void collided(Collision other)
+    {
+        if(!moveScript.getLocked())
+        {
+            bool dead = loseHealth();
+            controllerScript.collided(unlockTime,dead);
+            controllerScript.setHealth(health);
+            removeAllFromPart(dead,other);
+            addKnockBack(dead);
         }
     }
 
@@ -90,6 +107,14 @@ public class animalCol : MonoBehaviour
             collEffect.Play();
             moveScript.addKnockBack(collisionForce,unlockTime,dead);
             StartCoroutine(shakeScript.Shake(0.25f,0.05f));
+        }
+    }
+    
+    public void resetCol()
+    {
+        if(canbreak)
+        {
+            canCollide = true;
         }
     }
 

@@ -48,16 +48,22 @@ public class SettingsController : MonoBehaviour
     
     private void loadSettings()
     {
-        settings[0].startData(this,soundOn);//sound
-        settings[1].startData(this,musicOn);//music
+        if(settings.Length > 0)
+        {
+            settings[0].startData(this,soundOn);//sound
+            settings[1].startData(this,musicOn);//music
+        }
         languesScript.loadLang(langues);
         setSettings();
     }
     
     private void setSettings()
     {
-        soundScript.setMusic(musicOn);
-        soundScript.setSound(soundOn);
+        if(soundScript)
+        {
+            soundScript.setMusic(musicOn);
+            soundScript.setSound(soundOn);
+        }
     }
 
     public void saveLang(int newLang)
