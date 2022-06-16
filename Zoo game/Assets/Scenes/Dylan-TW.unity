@@ -2213,6 +2213,7 @@ MonoBehaviour:
   highScore: {fileID: 0}
   popUp: {fileID: 0}
   unlockScreen: {fileID: 0}
+  soundScript: {fileID: 0}
   buttons: []
 --- !u!114 &245984673
 MonoBehaviour:
@@ -15458,6 +15459,10 @@ PrefabInstance:
       propertyPath: controllerScript
       value: 
       objectReference: {fileID: 245984670}
+    - target: {fileID: 8668239562702084706, guid: 7d1064527e24b914aaec579b4a82af93, type: 3}
+      propertyPath: airTimeMultiplier
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 8668239563148490796, guid: 7d1064527e24b914aaec579b4a82af93, type: 3}
       propertyPath: m_RootOrder
       value: 7
