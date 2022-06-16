@@ -7,14 +7,16 @@ public class Controller : MonoBehaviour
     [Header("Scripts")]
     [SerializeField] private UiController uiScript;
     [SerializeField] private HealthBar healthScript;
+    [SerializeField] private AbilityBar abilityScript;
     [SerializeField] private CollectController collectScript;
     [SerializeField] private BookController bookScript;
     [SerializeField] private TrackMovement trackScript;
     [SerializeField] private SlowMoEnd endEffectScript;
 
-    public void setAnimal(AnimalData newData)
+    public void setAnimal(AnimalData newData,Abilities abilScript)//start called from the animal
     {
         healthScript.setStart(newData.health);
+        abilityScript.setStart(newData,abilScript);
     }
     
     private void Update()
@@ -68,6 +70,11 @@ public class Controller : MonoBehaviour
         int currentAmount = collectScript.getMoney();
         int distance = (int)trackScript.getDistance(); 
         bookScript.saveEndData(currentAmount,distance);
+    }
+
+    public AbilityBar getBarScript()
+    {
+        return  abilityScript;
     }
 }
 

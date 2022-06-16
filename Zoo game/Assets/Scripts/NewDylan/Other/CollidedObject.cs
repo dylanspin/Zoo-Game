@@ -10,9 +10,24 @@ public class CollidedObject : MonoBehaviour
 
     public void setObject(Transform newChild,Collision other)
     {
-        if(other.gameObject.GetComponent<MeshCollider>())
+        if(other != null)
         {
-            other.gameObject.GetComponent<MeshCollider>().convex = true;
+            if(other.gameObject.GetComponent<MeshCollider>())
+            {
+                other.gameObject.GetComponent<MeshCollider>().convex = true;
+            }
+            else if(other.gameObject.GetComponentInChildren<MeshCollider>())
+            {
+                other.gameObject.GetComponentInChildren<MeshCollider>().convex = true;
+            }
+        }
+        else if(newChild.GetComponentInChildren<MeshCollider>())
+        {
+            newChild.GetComponentInChildren<MeshCollider>().convex = true;
+        }
+        else
+        {
+            newChild.gameObject.SetActive(false);
         }
         newChild.parent = holder;
         Invoke("activateEnd",animTrigger);
