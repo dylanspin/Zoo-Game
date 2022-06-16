@@ -13,6 +13,7 @@ public class SettingsController : MonoBehaviour
     [Header("Private Data")]
     private bool soundOn = true;
     private bool musicOn = true;
+    private bool tips = true;
     private int langues = 1;//0 = english 1 = dutch
 
     private void Start()
@@ -28,17 +29,19 @@ public class SettingsController : MonoBehaviour
             soundOn = loadData.soundOn;
             musicOn = loadData.musicOn;
             langues = loadData.langues;
+            tips = loadData.tips;
         }
         else
         {
             soundOn = true;
             musicOn = true;
+            tips = true;
             langues = 1;
         }
 
         if(gameScript)
         {
-            gameScript.setSettings(soundOn,musicOn,langues);
+            gameScript.setSettings(soundOn,musicOn,langues,tips);
         }
         else
         {
@@ -52,6 +55,7 @@ public class SettingsController : MonoBehaviour
         {
             settings[0].startData(this,soundOn);//sound
             settings[1].startData(this,musicOn);//music
+            settings[2].startData(this,tips);//tips in game
         }
         languesScript.loadLang(langues);
         setSettings();
@@ -84,8 +88,17 @@ public class SettingsController : MonoBehaviour
             musicOn = state;
             soundScript.setMusic(musicOn);
         }
-
+        else if(setting == 2)
+        {
+            tips = state;
+        }
+        soundScript.playSoundEffect(1);
         SaveScript.saveSettings(this);//saves book data
+    }
+
+    public bool getTips()
+    {
+        return tips;   
     }
 
     public bool getMusic()

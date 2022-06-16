@@ -19,6 +19,7 @@ public class BookController : MonoBehaviour
     [SerializeField] private TMPro.TextMeshProUGUI highScore;
     [SerializeField] private buyPopUp popUp;
     [SerializeField] private unlockedAnimal unlockScreen;
+    [SerializeField] private SoundController soundScript;
     [SerializeField] private GameObject[] buttons;
 
     [Header("Private Data")]
@@ -39,6 +40,11 @@ public class BookController : MonoBehaviour
     }
 
     private void Update()
+    {
+        resetBook();
+    }
+
+    private void resetBook()//for demo resseting
     {
         if(Input.GetKeyDown(KeyCode.Numlock))
         {
@@ -86,7 +92,7 @@ public class BookController : MonoBehaviour
         moneyAmount.text = money.ToString();
     }
 
-    private void setSlots()//later needs page offset
+    private void setSlots()
     {
         for(int i=0; i<uiSlots.Length; i++)
         {
@@ -107,15 +113,22 @@ public class BookController : MonoBehaviour
         //refresh ui
     }
 
+    public void closeAll()
+    {
+        popUp.closePopUp();
+        unlockScreen.closeWindow();
+    }
 
     public void showCode()
     {
         popUp.showPopUp(animals[lastSelected],langues);
+        soundScript.playSoundEffect(0);
     }
 
     public void showBuy()
     {
         popUp.showPopUp(animals[lastSelected],langues);
+        soundScript.playSoundEffect(0);
     }
 
     public void buyAnimal()
@@ -154,6 +167,7 @@ public class BookController : MonoBehaviour
     {
         if(unlocked[lastSelected])
         {
+            soundScript.playSoundEffect(0);
             unlockScreen.showUnlocked(animals[lastSelected],langues);
         }
     }
@@ -211,6 +225,7 @@ public class BookController : MonoBehaviour
         lastSelected = id;
         showRight(lastSelected);
         checkButtons(lastSelected);
+        soundScript.playSoundEffect(2);
     }
 
     private void checkButtons(int id)

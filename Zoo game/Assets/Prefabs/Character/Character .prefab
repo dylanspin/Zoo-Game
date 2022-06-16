@@ -107,7 +107,7 @@ MonoBehaviour:
   abilityScript: {fileID: 5044783219817332670}
   rollSpeed: 200
   jumpRecharge: 0.5
-  sideSpeed: 10
+  sideSpeed: 5
   airTimeMultiplier: 10
 --- !u!114 &8668239562702084704
 MonoBehaviour:
@@ -153,7 +153,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63b885c6a32bbc549954c93d2ea4064d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectEffect: {fileID: 5918296069875703995, guid: 79147a2a6ab7395488794ef67490b445, type: 3}
+  objectEffect:
+  - {fileID: 5918296069875703995, guid: 79147a2a6ab7395488794ef67490b445, type: 3}
+  - {fileID: 973556472106308814, guid: 6f230fd4e02bd974aad3ddc89c732145, type: 3}
   collisionForce: 400
   unlockTime: 1.5
   moveScript: {fileID: 8668239562702084706}

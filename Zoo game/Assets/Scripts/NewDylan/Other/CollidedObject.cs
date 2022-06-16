@@ -40,6 +40,6 @@ public class CollidedObject : MonoBehaviour
 
     public void endAnim()
     {
-        Destroy(this.gameObject);
+        Destroy(this.gameObject,1.5f);
     }
 }

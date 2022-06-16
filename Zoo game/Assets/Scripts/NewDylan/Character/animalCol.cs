@@ -5,7 +5,7 @@ using UnityEngine;
 public class animalCol : MonoBehaviour
 {
     [Header("Objects")]
-    [SerializeField] private GameObject objectEffect;
+    [SerializeField] private GameObject[] objectEffect;
 
     [Header("Settings")]
     [SerializeField] private float collisionForce = 100;
@@ -59,7 +59,7 @@ public class animalCol : MonoBehaviour
                         if(canCollide)
                         {
                             canCollide = false;
-                            CollidedObject effect = Instantiate(objectEffect,rootObj.transform.position,Quaternion.Euler(0,0,0)).GetComponent<CollidedObject>();
+                            CollidedObject effect = Instantiate(objectEffect[0],rootObj.transform.position,Quaternion.Euler(0,0,0)).GetComponent<CollidedObject>();
                             effect.setObject(rootObj,other);
                             abilityScript.setBarZero();
                         }
@@ -94,7 +94,7 @@ public class animalCol : MonoBehaviour
     {
         if(!dead)
         {
-            other.transform.GetComponentInParent<TrackPart>().removeObstacles(objectEffect);
+            other.transform.GetComponentInParent<TrackPart>().removeObstacles(objectEffect[1]);
         }
     }
 

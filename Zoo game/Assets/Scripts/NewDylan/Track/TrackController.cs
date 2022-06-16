@@ -40,14 +40,12 @@ public class TrackController : MonoBehaviour
         {
             Destroy(partTracks[0].gameObject);
             partTracks.RemoveAt(0);
-            Debug.Log("Destroyed behind");
         }
     }
 
     public void createEnd()
     {
         partTracks[partTracks.Count-1].createNewPart();
-        Debug.Log("added at end");
     }
 
 

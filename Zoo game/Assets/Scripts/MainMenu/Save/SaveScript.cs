@@ -6,7 +6,7 @@ public static class SaveScript
 {
     [Header("Save Paths")]
     public static string saveBookLoc = "/scrapBook1.save";//where the scrapBook settings get saved
-    public static string saveSettingsLoc = "/scrapSettings2.save";//where the settings get saved
+    public static string saveSettingsLoc = "/scrapSettings3.save";//where the settings get saved
 
     public static void saveBook(BookController oData)///called after something is unlocked for example
     {
