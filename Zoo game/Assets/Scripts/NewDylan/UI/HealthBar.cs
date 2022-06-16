@@ -22,6 +22,10 @@ public class HealthBar : MonoBehaviour
         {
             setAmount = 0;
         }
+        if(newHealth >= colorStages.Length)
+        {
+            setAmount = colorStages.Length-1;
+        }
         slider.value = setAmount; 
         fillImage.color = colorStages[setAmount]; 
         anim.Play("loseHealth",0, 0.25f);

@@ -15,7 +15,7 @@ MonoBehaviour:
   animalName:
   - Elephant
   - Olifant
-  price: 6000
+  price: 1000
   codeunlock: 0
   code: someCode
   info1:
@@ -53,8 +53,9 @@ MonoBehaviour:
   health: 2
   animalMass: 4
   gravity: 12
-  speed: 15
   jumpHeight: 20
+  regainSpeed: 0.25
+  abilityTime: 5
   canJump: 0
   canDig: 0
   canBreak: 1

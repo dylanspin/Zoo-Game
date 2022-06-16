@@ -7,12 +7,14 @@ public class SettingData
 {
     public bool soundOn = true;
     public bool musicOn = true;
+    public bool tips = true;
     public int langues = 1;//0 = english 1 = dutch
 
     public SettingData(SettingsController oData)
     { 
         soundOn = oData.getSound();
         musicOn = oData.getMusic();
+        tips = oData.getTips();
         langues = oData.getLang();
     }
 }

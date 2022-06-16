@@ -27,7 +27,6 @@ public class EndScreen : MonoBehaviour
     public void showEndScreen(int rating,int current,float distance,bool newHigh)
     {
         this.gameObject.SetActive(true);
-        bagImage.sprite = bags[rating];
         topText.GetComponent<Animator>().SetBool("NewHigh",newHigh);//shows scaling animation when new high score
         if(newHigh)
         {
@@ -39,6 +38,11 @@ public class EndScreen : MonoBehaviour
         }
         count.text = current.ToString();
         distanceText.text = distance.ToString("F0");
+        if(rating >= bags.Length)
+        {
+            rating = bags.Length-1;
+        }   
+        bagImage.sprite = bags[rating];
     }
     
 }

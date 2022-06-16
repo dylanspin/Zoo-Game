@@ -9,6 +9,7 @@ public class Abilities : MonoBehaviour
 
     [Header("Scripts")]
     [SerializeField] private AnimalMovement moveScript;
+    [SerializeField] private animalCol colScript;
     [SerializeField] private AbilityBar barScript;
 
     [Header("SetData")]
@@ -25,8 +26,6 @@ public class Abilities : MonoBehaviour
         canDig = newData.canDig;
         barScript = newBarScript;
     }
-
-
 
     private void Update()
     {
@@ -53,7 +52,7 @@ public class Abilities : MonoBehaviour
         {
             if(canDig && moveScript.getGrounded() && barScript.canActivate())
             {
-                barScript.activate(true);
+                barScript.activate(true,false);
                 animalObject.transform.parent.parent.gameObject.layer = LayerMask.NameToLayer(playerLayers[1]);
                 digging = true;  
                 animalObject.SetActive(false);
@@ -61,19 +60,24 @@ public class Abilities : MonoBehaviour
         }
         else
         {
-            barScript.activate(false);
+            barScript.activate(false,false);
             animalObject.transform.parent.parent.gameObject.layer = LayerMask.NameToLayer(playerLayers[0]);
             digging = false;
             animalObject.SetActive(true);
         }
     }
 
-    public bool getDigging()
+    public void setBarZero()
     {
-        return digging;
+        barScript.activate(true,true);
     }
 
-    public void stopAbil()
+    public void filled()//when bar is filled up
+    {
+        colScript.resetCol();
+    }
+
+    public void stopAbil()//when bar is drained fully 
     {
         if(canDig)
         {
@@ -81,4 +85,8 @@ public class Abilities : MonoBehaviour
         }
     }
 
+    public bool getDigging()
+    {
+        return digging;
+    }
 }

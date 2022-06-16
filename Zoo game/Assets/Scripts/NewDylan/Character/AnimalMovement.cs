@@ -25,8 +25,6 @@ public class AnimalMovement : MonoBehaviour
     [Header("Private Data")]
     private float jumpHeight = 10;
     private float gravity = 10;
-    private float currentSpeed = 5;
-    private Vector3 impact = Vector3.zero;//extra velocity for adding forces on to the player
     private bool isGrounded;
     private bool allowJump = true;
     private bool lockMovement = false;
@@ -56,8 +54,6 @@ public class AnimalMovement : MonoBehaviour
 
         jumpHeight = newData.jumpHeight;
         allowJump = newData.canJump;
-
-        currentSpeed = newData.speed;
 
         rbPlayer.mass = newData.animalMass;
         rbPlayer.mass = newData.gravity;

@@ -16,6 +16,7 @@ public class TypeEffect : MonoBehaviour
 	[SerializeField] private float timeBtwChars = 0.1f;
 	[SerializeField] private string leadingChar = "";
 	[SerializeField] private bool leadingCharBeforeDelay = false;
+	private bool done = false;
 
 	//private AudioManager audioManager;
 
@@ -24,12 +25,23 @@ public class TypeEffect : MonoBehaviour
     {
 		if(_text != null)
         {
-			writer = _text.text;
 			_text.text = "";
-
-			StartCoroutine("TypeWriterText");
 		}
     }
+
+	public void setLangText(string newText)
+	{
+		writer = newText;
+		if(!done)
+		{
+			StopCoroutine("TypeWriterText");
+			StartCoroutine("TypeWriterText");
+		}
+		else
+		{
+			_text.text = writer;
+		}
+	}
 
 	//Checking the length of the text, if the character is not null, the next letter is typed and added to the current length of the text. 
 
@@ -38,7 +50,9 @@ public class TypeEffect : MonoBehaviour
 		_text.text = leadingCharBeforeDelay ? leadingChar : "";
 
 		yield return new WaitForSeconds(delayBeforeStart);
+		
 		Typing.Play();
+		
 		foreach (char c in writer)
 		{
 			if (_text.text.Length > 0)
@@ -48,15 +62,6 @@ public class TypeEffect : MonoBehaviour
 			_text.text += c;
 			_text.text += leadingChar;
 
-			// if (c != ' ')
-			// {
-			// 	Typing.Play();
-			// } 
-			// else 
-			// {
-			// 	Typing.Stop();
-			// }
-                    
 			yield return new WaitForSeconds(timeBtwChars);
 		}
 
@@ -64,15 +69,21 @@ public class TypeEffect : MonoBehaviour
         {
 			_text.text = _text.text.Substring(0, _text.text.Length - leadingChar.Length);
 		}
+		doneWriting();
+	}
+
+	private void doneWriting()
+	{
 		Typing.Stop();
+		done = true;
 		skipButton.SetActive(false);
 	}
 
+	
 	public void skip()
 	{
 		StopCoroutine("TypeWriterText");
 		_text.text = writer;
-		Typing.Stop();
-		skipButton.SetActive(false);
+		doneWriting();
 	}
 }
