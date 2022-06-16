@@ -51,9 +51,12 @@ public class TrackPart : MonoBehaviour
     {
         for(int i=0; i<coinSpawns.Length; i++)
         {
-            GameObject spawnedCoin = Instantiate(coinPrefab,coinSpawns[i].position,Quaternion.Euler(0,0,0),transform);
-            spawnedCoin.GetComponent<Animator>().speed = Random.Range(0.7f,1.0f);
-            spawnedCoin.GetComponent<Collect>().setStart(collectScript);
+            if(coinSpawns[i])
+            {
+                GameObject spawnedCoin = Instantiate(coinPrefab,coinSpawns[i].position,Quaternion.Euler(0,0,0),transform);
+                spawnedCoin.GetComponent<Animator>().speed = Random.Range(0.7f,1.0f);
+                spawnedCoin.GetComponent<Collect>().setStart(collectScript);
+            }
         }
     }
 }
