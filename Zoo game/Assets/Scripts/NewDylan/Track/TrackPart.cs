@@ -65,8 +65,11 @@ public class TrackPart : MonoBehaviour
     {
         for(int i=0; i<obstacles.Length; i++)
         {
-            CollidedObject effect = Instantiate(spawnEffect,obstacles[i].position,Quaternion.Euler(0,0,0)).GetComponent<CollidedObject>();
-            effect.setObject(obstacles[i],null);
+            if(obstacles[i])
+            {
+                CollidedObject effect = Instantiate(spawnEffect,obstacles[i].position,Quaternion.Euler(0,0,0)).GetComponent<CollidedObject>();
+                effect.setObject(obstacles[i],null);
+            }
         }
     }
 }
