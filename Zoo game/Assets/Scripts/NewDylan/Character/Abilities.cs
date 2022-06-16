@@ -29,7 +29,7 @@ public class Abilities : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.R))
+        if(Input.GetKeyDown("space"))
         {
             dig(!digging);
         }
