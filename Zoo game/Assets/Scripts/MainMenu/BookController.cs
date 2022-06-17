@@ -150,6 +150,7 @@ public class BookController : MonoBehaviour
             SaveScript.saveBook(this);//saves book data
 
             //ui
+            moneyAmount.text = money.ToString();
             uiSlots[lastSelected].setData(lastSelected,animals[lastSelected],unlocked[lastSelected],true,this,langues);
             showRight(lastSelected);
             popUp.closePopUp();
