@@ -22,12 +22,14 @@ public class animalCol : MonoBehaviour
     private bool canbreak = false;
     private ParticleSystem collEffect;
     private Controller controllerScript;
+    private GameObject animalObject;
 
-    public void setStartData(AnimalData newData,ParticleSystem newPs,Controller newController)
+    public void setStartData(AnimalData newData,ParticleSystem newPs,Controller newController, GameObject animalBody)
     {
         canbreak = newData.canBreak;
         health = newData.health;
         collEffect = newPs;
+        animalObject = animalBody;
         controllerScript = newController;
     }   
 
@@ -102,6 +104,10 @@ public class animalCol : MonoBehaviour
     {
         if(!moveScript.getLocked())
         {
+            if(dead)
+            {
+                animalObject.transform.parent.parent.gameObject.layer = LayerMask.NameToLayer("KnockBackLayer");
+            }
             inGameAudio.playSoundEffect(1);
             collEffect.Clear();
             collEffect.Play();

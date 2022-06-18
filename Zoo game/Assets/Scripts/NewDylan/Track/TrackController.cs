@@ -31,6 +31,10 @@ public class TrackController : MonoBehaviour
         {
             spawnPos += spawnOffset;
         }
+        if(!newPart)
+        {
+            newPart = startTrack;
+        }
 
         GameObject trackPart = Instantiate(newPart, spawnPos, Quaternion.Euler(0,0,0),transform) as GameObject; 
         TrackPart partScript = trackPart.GetComponent<TrackPart>();
