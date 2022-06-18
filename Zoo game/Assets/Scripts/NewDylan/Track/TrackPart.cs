@@ -13,6 +13,7 @@ public class TrackPart : MonoBehaviour
     private bool coinSpawned = false;
     private bool created = false;
     private bool triggerd = false;
+    private int coinCount = 0;
 
     public void setStart(TrackController newController,CollectController newCollect)
     {
@@ -21,7 +22,14 @@ public class TrackPart : MonoBehaviour
             coinSpawned = true;
             controllerScript = newController;
             collectScript = newCollect;
-            spawnCoins();//bugged
+            spawnCoins();
+            if(coinSpawns.Length > 0)
+            {
+                if(coinSpawns[0])
+                {
+                    coinSpawns[0].parent.gameObject.SetActive(false);
+                }
+            }
         }
     }
 
@@ -54,6 +62,7 @@ public class TrackPart : MonoBehaviour
         {
             if(coinSpawns[i])
             {
+                coinCount ++;
                 GameObject spawnedCoin = Instantiate(coinPrefab,coinSpawns[i].position,Quaternion.Euler(0,0,0),transform);
                 spawnedCoin.GetComponent<Animator>().speed = Random.Range(0.7f,1.0f);
                 spawnedCoin.GetComponent<Collect>().setStart(collectScript);

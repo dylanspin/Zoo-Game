@@ -41,7 +41,7 @@ public class AnimalController : MonoBehaviour
         controllerScript.setAnimal(newAnimal,abilitieScript);
         abilitieScript.setStartData(prefabScript.animalBody,newAnimal,controllerScript.getBarScript());
         moveScript.setStartData(prefabScript.groundCheck,newAnimal,trackScript.getLanes(),prefabScript.movePs,prefabScript.anim);
-        colScript.setStartData(newAnimal,prefabScript.collideEffect,controllerScript);
+        colScript.setStartData(newAnimal,prefabScript.collideEffect,controllerScript,prefabScript.animalBody);
         followScript.setStartData(newAnimal);
     }
 
