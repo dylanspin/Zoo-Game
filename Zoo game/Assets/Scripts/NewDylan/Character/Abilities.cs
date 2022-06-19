@@ -31,6 +31,14 @@ public class Abilities : MonoBehaviour
     {
         if(Input.GetKeyDown("space"))
         {
+            checkSpecial();
+        }
+    }
+
+    public void checkSpecial()
+    {
+        if(canDig)
+        {
             dig(!digging);
         }
     }

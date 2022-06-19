@@ -86,7 +86,6 @@ public class AnimalMovement : MonoBehaviour
         if(Input.GetMouseButtonDown(0))
         {
             firstPressPos = new Vector2(Input.mousePosition.x,Input.mousePosition.y);
-            checkClicks();
         }
 
         if(Input.GetMouseButtonUp(0))
@@ -127,6 +126,10 @@ public class AnimalMovement : MonoBehaviour
                 }
                 clicks = 0;
             }
+            if(Mathf.Abs(Vector2.Distance(secondPressPos,firstPressPos)) < 20)
+            {
+                checkClicks();
+            }
         }
     }
 
@@ -160,7 +163,7 @@ public class AnimalMovement : MonoBehaviour
     {
         if(clicks > 0.5f)
         {
-            //do special
+            abilityScript.checkSpecial();
             clicks = 0;
         }
         else
@@ -204,7 +207,6 @@ public class AnimalMovement : MonoBehaviour
     //jump functions
     private void jump()
     {
-        Debug.Log("Try jump");
         if(isGrounded && allowJump && !abilityScript.getDigging())
         {
             isGrounded = false;

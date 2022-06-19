@@ -37,7 +37,7 @@ public class EndScreen : MonoBehaviour
             topText.text = normalScore[langues];
         }
         count.text = current.ToString();
-        distanceText.text = distance.ToString("F0");
+        distanceText.text = distance.ToString("F0")+"M";
         if(rating >= bags.Length)
         {
             rating = bags.Length-1;

@@ -77,7 +77,7 @@ public class UiController : MonoBehaviour
 
     public void setDistance(float distance)
     {
-        distanceText.text = distance.ToString("F0");
+        distanceText.text = "M"+distance.ToString("F0");
     }
 
     public void endTrack()
