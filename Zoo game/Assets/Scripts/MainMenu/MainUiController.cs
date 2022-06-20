@@ -16,6 +16,8 @@ public class MainUiController : MonoBehaviour
         Values.pauzed = false;
         anim.SetInteger("Page",Values.lastPage);
         Time.timeScale = 1;
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = Screen.currentResolution.refreshRate;
     }
 
     public void Update()

@@ -20,16 +20,17 @@ public class animalCol : MonoBehaviour
     private int health = 4;
     private bool canCollide = true;
     private bool canbreak = false;
+    private bool charging = false;
     private ParticleSystem collEffect;
     private Controller controllerScript;
     private GameObject animalObject;
 
-    public void setStartData(AnimalData newData,ParticleSystem newPs,Controller newController, GameObject animalBody)
+    public void setStartData(AnimalData newData,AnimalPrefab prefabScript,Controller newController)
     {
         canbreak = newData.canBreak;
         health = newData.health;
-        collEffect = newPs;
-        animalObject = animalBody;
+        collEffect = prefabScript.collideEffect;
+        animalObject = prefabScript.animalBody;;
         controllerScript = newController;
     }   
 
@@ -44,7 +45,7 @@ public class animalCol : MonoBehaviour
         {
             if(!other.transform.root.GetComponent<Rigidbody>())
             {
-                if(!canbreak)
+                if(!canbreak && !charging)
                 {
                     collided(other);
                 }
@@ -58,12 +59,15 @@ public class animalCol : MonoBehaviour
                     // }
                     if(rootObj.tag == "bigBreak" || rootObj.tag == "canBreak")
                     {
-                        if(canCollide)
+                        if(canCollide || charging)
                         {
-                            canCollide = false;
+                            if(!charging)
+                            {
+                                canCollide = false;
+                                abilityScript.setBarZero();
+                            }
                             CollidedObject effect = Instantiate(objectEffect[0],rootObj.transform.position,Quaternion.Euler(0,0,0)).GetComponent<CollidedObject>();
                             effect.setObject(rootObj,other);
-                            abilityScript.setBarZero();
                         }
                         else
                         {
@@ -114,6 +118,11 @@ public class animalCol : MonoBehaviour
             moveScript.addKnockBack(collisionForce,unlockTime,dead);
             StartCoroutine(shakeScript.Shake(0.25f,0.05f));
         }
+    }
+
+    public void setCharging(bool active)
+    {
+        charging = active;
     }
     
     public void resetCol()

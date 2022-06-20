@@ -18,14 +18,6 @@ public class Controller : MonoBehaviour
         healthScript.setStart(newData.health);
         abilityScript.setStart(newData,abilScript);
     }
-    
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.P))
-        {
-            endMatch();
-        }
-    }
 
     public void collided(float knockbackTime,bool dead)
     {

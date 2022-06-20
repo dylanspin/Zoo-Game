@@ -22,14 +22,6 @@ public class CollectController : MonoBehaviour
         spawnCoins();
     }
 
-    private void Update()
-    {
-        if(Input.GetKey(KeyCode.O))
-        {
-            collectItem(true);
-        }
-    }
-
     private void spawnFriend()
     {
         if(hiddenPoints.Count > 1)

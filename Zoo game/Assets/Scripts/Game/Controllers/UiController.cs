@@ -21,11 +21,13 @@ public class UiController : MonoBehaviour
         cursorLock(true);
         Values.pauzed = false;
         Time.timeScale = 1;
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = Screen.currentResolution.refreshRate;
     }
   
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
         {
             escape(!Values.pauzed);
         }

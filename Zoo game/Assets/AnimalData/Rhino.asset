@@ -15,7 +15,7 @@ MonoBehaviour:
   animalName:
   - Rhino
   - Neushoorn
-  price: 2000
+  price: 1500
   codeunlock: 0
   code: VisitedWildLands426!
   info1:
@@ -27,8 +27,10 @@ MonoBehaviour:
   - 'I love to eat grass! '
   - 'Ik eet heel graag gras! '
   fact:
-  - Because of my size and my horn I am really strong!
-  - Door mijn grootte en mijn hoorn ben ik echt sterk!
+  - Because of my size and my horn, I can push everything out of the way if I have
+    the energy!
+  - Door mijn grootte en mijn hoorn kan ik alles uit de weg duwen als ik energie
+    heb!
   unlockPagesEng:
   - y ancestors lived on Earth 55 million years ago! Now I live in South and Central
     Africa, or the Serenga part of WILDLANDS.
@@ -42,19 +44,22 @@ MonoBehaviour:
   - Mijn huid is best wel gevoelig, dus ik rol graag in modder en stof om mijn huid
     te beschermen tegen insectenbeten en zonnebrand!
   pageImages:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: bba6126039e6324479923c875c5b92b3, type: 3}
+  - {fileID: 21300000, guid: 372cbe7de8afbc04fb430dc96f2ad4da, type: 3}
+  - {fileID: 21300000, guid: d3dd7d62fd9da194aa5d6c54e9138c57, type: 3}
   animalImage: {fileID: 21300000, guid: c88ff5daad6ee9a4ea9a2544142f1c05, type: 3}
-  health: 3
+  health: 2
   animalMass: 4
   gravity: 9
   jumpHeight: 20
   regainSpeed: 0.5
-  abilityTime: 3
+  abilityTime: 5
   canJump: 0
   canDig: 0
   canBreak: 0
+  canCharge: 1
+  rockJump: 0
+  showSpace: 1
   AnimalObject: {fileID: 5730639349740609358, guid: f56c271e97e27e24fa691d373d13fe0a, type: 3}
   camOffset: {x: 0, y: 8, z: -11.3}
   playLevelIndex: 3

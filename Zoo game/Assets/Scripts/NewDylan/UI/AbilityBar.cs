@@ -7,6 +7,7 @@ public class AbilityBar : MonoBehaviour
 {
     [Header("Set Data")]
     [SerializeField] private Slider slider;
+    [SerializeField] private GameObject abilityStatus;
 
     [Header("Private Data")]
     
@@ -77,6 +78,11 @@ public class AbilityBar : MonoBehaviour
             }
         }
         slider.value = currentTime;
+    }
+
+    public void showStatus(bool active)
+    {
+        abilityStatus.SetActive(active);
     }
 
     private void barFilled()

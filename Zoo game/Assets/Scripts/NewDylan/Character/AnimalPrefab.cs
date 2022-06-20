@@ -9,4 +9,5 @@ public class AnimalPrefab : MonoBehaviour
     public ParticleSystem collideEffect;
     public Animator anim;
     public ParticleSystem movePs;
+    public ParticleSystem specialPs;
 }

@@ -15,7 +15,7 @@ MonoBehaviour:
   animalName:
   - Baboon
   - Baviaan
-  price: 1500
+  price: 0
   codeunlock: 0
   code: VisitedWildLands426!
   info1:
@@ -25,8 +25,8 @@ MonoBehaviour:
   - I like eating a lot of different things! Especially tubers, fruits and roots
   - 'Ik eet graag verschillende dingen! Maar vooral knollen, vruchten en wortels '
   fact:
-  - I can climb rocky walls, especially when I want to take a nap!
-  - Ik kan rotswanden beklimmen, vooral als ik een dutje wil doen!
+  - ' I can climb rocky walls, that is why I can jump higher near stones!'
+  - Ik kan rotswanden beklimmen, daarom kan ik hoger springen in de buurt van stenen!
   unlockPagesEng:
   - 'In the past, I was considered a sacred animal by the Egyptians! Now you can
     find me In Northeast Africa and in the Serenga part of WILDLANDS. '
@@ -41,19 +41,22 @@ MonoBehaviour:
   - Ik vind het leuk om tijd door te brengen met andere bavianen! Vooral al we elkaar
     te vlooien.
   pageImages:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 684423b1f57ccc84e8b0799166be85ef, type: 3}
+  - {fileID: 21300000, guid: 1ce52ed6ef6fbc7499177964bafcc220, type: 3}
+  - {fileID: 21300000, guid: 4eae7313c73062f438a8c5edf73c84c2, type: 3}
   animalImage: {fileID: 21300000, guid: 779fa8de61ec80045ac423849508008a, type: 3}
   health: 2
   animalMass: 4
-  gravity: 18
-  jumpHeight: 120
+  gravity: 25
+  jumpHeight: 160
   regainSpeed: 0.25
   abilityTime: 3
   canJump: 1
   canDig: 0
   canBreak: 0
+  canCharge: 0
+  rockJump: 1
+  showSpace: 0
   AnimalObject: {fileID: 196962715460059637, guid: c5ee344a6457b80409b13b21fbf471be, type: 3}
   camOffset: {x: 0, y: 8, z: -11.3}
   playLevelIndex: 3

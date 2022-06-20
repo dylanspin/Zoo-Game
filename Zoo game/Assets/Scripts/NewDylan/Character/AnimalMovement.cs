@@ -24,6 +24,7 @@ public class AnimalMovement : MonoBehaviour
 
     [Header("Private Data")]
     private float jumpHeight = 10;
+    private float baseJumpHeight = 0;
     private float gravity = 10;
     private bool isGrounded;
     private bool allowJump = true;
@@ -31,6 +32,7 @@ public class AnimalMovement : MonoBehaviour
     private bool boosted = false;
     private int currentLane = 1;
     private float clicks = 0;
+    private float airTime = 1;
     private Transform[] allTrackLines = new Transform[5];
     private ParticleSystem groundPs;
     private Animator anim;
@@ -39,20 +41,21 @@ public class AnimalMovement : MonoBehaviour
     private Vector2 firstPressPos;
     private Vector2 secondPressPos;
     private Vector2 currentSwipe;
-    private float airTime = 1;
+   
 
-    public void setStartData(GameObject newCheck,AnimalData newData,Transform[] newTrackLanes,ParticleSystem newPs,Animator newAnim)
+    public void setStartData(AnimalPrefab prefavScript,AnimalData newData,Transform[] newTrackLanes)
     {
-        groundCheck = newCheck.transform;
+        groundCheck = prefavScript.groundCheck.transform;
         for(int i=0; i<newTrackLanes.Length; i++)
         {
             allTrackLines[i] = newTrackLanes[i];
         }
 
-        groundPs = newPs;
-        anim = newAnim;
+        groundPs = prefavScript.movePs;
+        anim = prefavScript.anim;
 
         jumpHeight = newData.jumpHeight;
+        baseJumpHeight = jumpHeight;
         allowJump = newData.canJump;
 
         rbPlayer.mass = newData.animalMass;
@@ -161,14 +164,17 @@ public class AnimalMovement : MonoBehaviour
 
     private void checkClicks()//checks for double click
     {
-        if(clicks > 0.5f)
+        if(!Values.pauzed)
         {
-            abilityScript.checkSpecial();
-            clicks = 0;
-        }
-        else
-        {
-            clicks ++;
+            if(clicks > 0.5f)
+            {
+                abilityScript.checkSpecial();
+                clicks = 0;
+            }
+            else
+            {
+                clicks ++;
+            }
         }
     }
     
@@ -229,7 +235,17 @@ public class AnimalMovement : MonoBehaviour
         allowJump = true;
     }
 
-    //boost functions
+    public void setDoubleJump(bool active)
+    {
+        if(active)
+        {
+            jumpHeight = baseJumpHeight * 2;
+        }
+        else
+        {
+            jumpHeight = baseJumpHeight;
+        }
+    }
 
     private void checkGroundPs()
     {

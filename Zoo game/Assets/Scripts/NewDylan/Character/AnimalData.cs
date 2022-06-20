@@ -29,8 +29,11 @@ public class AnimalData : ScriptableObject
     public bool canJump = false;
     public bool canDig = false;
     public bool canBreak = false;
+    public bool canCharge = false;
+    public bool rockJump = false;
 
     [Header("In Game data")]
+    public bool showSpace = false;
     public GameObject AnimalObject;
     public Vector3 camOffset = new Vector3(0,5,-15);
     public int playLevelIndex = 1;

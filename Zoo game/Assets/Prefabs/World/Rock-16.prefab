@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3366196838956143533}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Rock-16
   m_TagString: bigBreak
   m_Icon: {fileID: 0}
@@ -91,8 +91,16 @@ PrefabInstance:
       value: rock-15
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0c762dd9974a90a4b9e931b48065b903, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0c762dd9974a90a4b9e931b48065b903, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: 0c762dd9974a90a4b9e931b48065b903, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8164078558771037576, guid: 0c762dd9974a90a4b9e931b48065b903, type: 3}
       propertyPath: m_StaticEditorFlags

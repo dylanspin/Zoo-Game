@@ -6085,6 +6085,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: ee866d0c445011546b8677903e099759, type: 3}
+    - target: {fileID: 2177537520608724475, guid: 74b7ce9415e5f9d4f82cdbaadc92e58d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2177537520608724475, guid: 74b7ce9415e5f9d4f82cdbaadc92e58d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2177537520608724475, guid: 74b7ce9415e5f9d4f82cdbaadc92e58d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -73.7
+      objectReference: {fileID: 0}
     - target: {fileID: 2177537520631365315, guid: 74b7ce9415e5f9d4f82cdbaadc92e58d, type: 3}
       propertyPath: m_sharedMaterial
       value: 
@@ -8061,7 +8073,19 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1810411636}
+        m_TargetAssemblyTypeName: BookController, Assembly-CSharp
+        m_MethodName: buyAnimal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnSubmit:
     m_PersistentCalls:
       m_Calls: []
@@ -8636,7 +8660,19 @@ PrefabInstance:
     - target: {fileID: 2177537520608724472, guid: 74b7ce9415e5f9d4f82cdbaadc92e58d, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: dfed8373ae6dafd4fa81932dc5467d8f, type: 3}
+      objectReference: {fileID: 21300000, guid: ed17eb1496fa06a4db6a7699a766e6aa, type: 3}
+    - target: {fileID: 2177537520608724475, guid: 74b7ce9415e5f9d4f82cdbaadc92e58d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2177537520608724475, guid: 74b7ce9415e5f9d4f82cdbaadc92e58d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2177537520608724475, guid: 74b7ce9415e5f9d4f82cdbaadc92e58d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -73.7
+      objectReference: {fileID: 0}
     - target: {fileID: 2177537520631365315, guid: 74b7ce9415e5f9d4f82cdbaadc92e58d, type: 3}
       propertyPath: m_sharedMaterial
       value: 
@@ -10265,11 +10301,11 @@ MonoBehaviour:
   - {fileID: 257808532}
   - {fileID: 1773860184}
   animals:
-  - {fileID: 11400000, guid: 1f1d8192488176e4292723b8123ebfe5, type: 2}
+  - {fileID: 11400000, guid: 73d065a79c89fed44876b24a10de29f5, type: 2}
   - {fileID: 11400000, guid: 3e75f8ac9b94f624185a5ddee1c35623, type: 2}
   - {fileID: 11400000, guid: eebb34663d5a5a34290dcb4eaac9ae52, type: 2}
   - {fileID: 11400000, guid: d9c2eaad652d3ec479f80985b1b5ecea, type: 2}
-  - {fileID: 11400000, guid: 73d065a79c89fed44876b24a10de29f5, type: 2}
+  - {fileID: 11400000, guid: 1f1d8192488176e4292723b8123ebfe5, type: 2}
   - {fileID: 11400000, guid: 0c6e9c3d9133c1746930f6bed36cc976, type: 2}
   moneyAmount: {fileID: 1197472703}
   highScore: {fileID: 1150521981}
@@ -12488,6 +12524,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1442242919}
     m_Modifications:
+    - target: {fileID: 2177537520608724472, guid: 74b7ce9415e5f9d4f82cdbaadc92e58d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c63819dd49a64cb4e897197ade671aa9, type: 3}
+    - target: {fileID: 2177537520608724475, guid: 74b7ce9415e5f9d4f82cdbaadc92e58d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2177537520608724475, guid: 74b7ce9415e5f9d4f82cdbaadc92e58d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2177537520608724475, guid: 74b7ce9415e5f9d4f82cdbaadc92e58d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -73.7
+      objectReference: {fileID: 0}
     - target: {fileID: 2177537522617085867, guid: 74b7ce9415e5f9d4f82cdbaadc92e58d, type: 3}
       propertyPath: m_SizeDelta.x
       value: 32
