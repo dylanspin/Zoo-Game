@@ -15,7 +15,8 @@ public class buyPopUp : MonoBehaviour
         gameObject.SetActive(true);
         typeUnlock[0].SetActive(!animal.codeunlock);
         typeUnlock[1].SetActive(animal.codeunlock);
-        animalText.text = animal.animalName[langues];
+        // animalText.text = animal.animalName[langues];
+        animalText.text = "Unknown";
         priceText.text = animal.price.ToString();
     }
 

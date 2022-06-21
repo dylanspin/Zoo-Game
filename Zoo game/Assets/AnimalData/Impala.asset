@@ -15,7 +15,7 @@ MonoBehaviour:
   animalName:
   - Impala
   - Impala
-  price: 2000
+  price: 1500
   codeunlock: 0
   code: someCode
   info1:
@@ -52,7 +52,7 @@ MonoBehaviour:
   health: 2
   animalMass: 4
   gravity: 8
-  jumpHeight: 130
+  jumpHeight: 100
   regainSpeed: 0.5
   abilityTime: 3
   canJump: 1
@@ -60,6 +60,7 @@ MonoBehaviour:
   canBreak: 0
   canCharge: 0
   rockJump: 0
+  showSpace: 0
   AnimalObject: {fileID: 6319683713931511529, guid: 749c1e06a51779c4f8558bae84f78e74, type: 3}
   camOffset: {x: 0, y: 8, z: -11.3}
   playLevelIndex: 3
