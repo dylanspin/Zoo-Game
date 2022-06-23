@@ -17,10 +17,6 @@ public class BookData
         unlocks = oData.getUnlocks();
         money = oData.getMoney();
         highScores = oData.getHighScore();
-        /*
-            set the public values example : 
-            username = oData.username;
-        */
     }
     
 }

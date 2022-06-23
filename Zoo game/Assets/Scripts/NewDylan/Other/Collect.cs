@@ -5,20 +5,20 @@ using UnityEngine;
 public class Collect : MonoBehaviour
 {
     [Header("Set data")]
-    [SerializeField] private ParticleSystem collectEffect;
-    [SerializeField] private Animator anim;
-    [SerializeField] private bool isCoin = true;
+    [SerializeField] private ParticleSystem collectEffect;//particle effect for the collectable 
+    [SerializeField] private Animator anim;//collect animator
+    [SerializeField] private bool isCoin = true;//if its a coin collectable
 
     [Header("Private data")]
     private bool collected = false;
-    private CollectController controlScript;
+    private CollectController controlScript;//main collect controller what keeps track of collected items
     
-    public void setStart(CollectController newScript)
+    public void setStart(CollectController newScript)//sets the start data
     {
         controlScript = newScript;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)//when something triggers the trigger around the collectable
     {
         collectThis();
     }
@@ -27,15 +27,14 @@ public class Collect : MonoBehaviour
     {
         if(!collected)  
         {
-            collected = true;
-            anim.SetBool("Collect",true);
-            // gameObject.SetActive(false);
-            inGameAudio.playSoundEffect(0);
+            collected = true;//so it cant be collected again
+            anim.SetBool("Collect",true);//activates schrinking animation
+            inGameAudio.playSoundEffect(0);//play collect sound effect
             if(collectEffect)
             {
-                collectEffect.Play();
+                collectEffect.Play();//plays collect particle effect
             }
-            controlScript.collectItem(isCoin);
+            controlScript.collectItem(isCoin);//ads the coin to the collected amount
         }
     }
 }

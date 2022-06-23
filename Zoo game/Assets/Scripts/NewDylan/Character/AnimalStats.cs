@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AnimalStats : MonoBehaviour
 {
+    ////////////////////////////not used anymore
     [Header("Settings")]
     [SerializeField] private float maxStamina = 100;
     [SerializeField] private float staminaGain = 10;
@@ -34,7 +35,6 @@ public class AnimalStats : MonoBehaviour
             else
             {
                 stamina = maxStamina;
-                //show something maybe
             }
         }
     }
@@ -51,7 +51,6 @@ public class AnimalStats : MonoBehaviour
         else
         {
             stamina = 0;
-            //show something and do something when stamina ran out
         }
     }
 

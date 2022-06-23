@@ -8,7 +8,7 @@ public class CheckStartIntro : MonoBehaviour
     private void Start()
     {
         Values.lastPage = 1;
-    //    check();
+        //check();
     }
 
     private void check()

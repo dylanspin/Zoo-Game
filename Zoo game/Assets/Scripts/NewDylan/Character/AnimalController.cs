@@ -21,11 +21,11 @@ public class AnimalController : MonoBehaviour
 
     void Start()
     {
-        if(Values.selectedAnimal == null)
+        if(Values.selectedAnimal == null)//for when testing in the track scene and the value is not set
         {
             Values.selectedAnimal = testAnimal;
         }
-        setStartData(Values.selectedAnimal);
+        setStartData(Values.selectedAnimal);//sets the start info for the animal based of the animal data scriptable object
     }
 
     public void setStartData(AnimalData newAnimal)

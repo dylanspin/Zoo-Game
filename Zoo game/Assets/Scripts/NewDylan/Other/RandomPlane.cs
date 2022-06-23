@@ -10,7 +10,6 @@ public class RandomPlane : MonoBehaviour
     {
         Invoke("activateAnim",Random.Range(30,300));
     }
-
     private void activateAnim()
     {
         anim.SetBool("Start",true);

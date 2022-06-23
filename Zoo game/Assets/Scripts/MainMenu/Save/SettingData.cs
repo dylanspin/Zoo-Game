@@ -10,7 +10,7 @@ public class SettingData
     public bool tips = true;
     public int langues = 1;//0 = english 1 = dutch
 
-    public SettingData(SettingsController oData)
+    public SettingData(SettingsController oData)//saves data
     { 
         soundOn = oData.getSound();
         musicOn = oData.getMusic();

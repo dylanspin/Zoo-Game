@@ -9,13 +9,13 @@ public class MainUiController : MonoBehaviour
     [SerializeField] private Animator anim;
     [SerializeField] private BookController bookScript;
     [SerializeField] private SoundController soundScript;
-    private int activePage = 0;
     
     private void Start()
     {
         Values.pauzed = false;
-        anim.SetInteger("Page",Values.lastPage);
-        Time.timeScale = 1;
+        Time.timeScale = 1;//sets the game speed to normal again
+        anim.SetInteger("Page",Values.lastPage);//sets the start page 
+        //limits the fps count 
         QualitySettings.vSyncCount = 0;
         Application.targetFrameRate = Screen.currentResolution.refreshRate;
     }
@@ -24,9 +24,9 @@ public class MainUiController : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-            if(activePage != 0)
+            if(Values.lastPage != 0)
             {
-                openPage(0);
+                openPage(0);//goes back to the main page
             }
         }
     }
@@ -34,13 +34,12 @@ public class MainUiController : MonoBehaviour
     public void openPage(int open)//later we can add animations
     {
         soundScript.playSoundEffect(0);
-        anim.SetInteger("Page",open);
-        activePage = open;
+        anim.SetInteger("Page",open);//sets the animator page
         Values.lastPage = open;
         bookScript.closeAll();
     }
 
-    public void quitGame()
+    public void quitGame()//quits the game when the quit button is pressed
     {
         Application.Quit();
     }
