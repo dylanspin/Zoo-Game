@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b92935fa8743f743a1e104e85f602c5, type: 3}
+  m_Name: Baboon
+  m_EditorClassIdentifier: 
+  animalName:
+  - Baboon
+  - Baviaan
+  price: 0
+  codeunlock: 0
+  code: VisitedWildLands426!
+  info1:
+  - 'I like grooming others! '
+  - Ik vind het leuk om te 'vlooien'!
+  info2:
+  - I like eating a lot of different things! Especially tubers, fruits and roots
+  - 'Ik eet graag verschillende dingen! Maar vooral knollen, vruchten en wortels '
+  fact:
+  - ' I can climb rocky walls, that is why I can jump higher near stones!'
+  - Ik kan rotswanden beklimmen, daarom kan ik hoger springen in de buurt van stenen!
+  unlockPagesEng:
+  - 'In the past, I was considered a sacred animal by the Egyptians! Now you can
+    find me In Northeast Africa and in the Serenga part of WILDLANDS. '
+  - 'I live in an environment that has little to offer, so I''m flexible and eat
+    whatever edible I can find! '
+  - I enjoy spending time with other baboons! Especially when we groom each other!
+  unlockPagesDutch:
+  - 'Vroeger, werd ik door de Egyptenaren als heilig dier gezien! Nu kan je mij vinden
+    In Noordoost-Afrika en in het Serenga gedeelte in WILDLANDS. '
+  - 'Ik leef in een omgeving die weinig te bieden hebben, dus ik ben flexibel en
+    eet alle eetbare dingen die ik kan vinden! '
+  - Ik vind het leuk om tijd door te brengen met andere bavianen! Vooral al we elkaar
+    te vlooien.
+  pageImages:
+  - {fileID: 21300000, guid: 684423b1f57ccc84e8b0799166be85ef, type: 3}
+  - {fileID: 21300000, guid: 1ce52ed6ef6fbc7499177964bafcc220, type: 3}
+  - {fileID: 21300000, guid: 4eae7313c73062f438a8c5edf73c84c2, type: 3}
+  animalImage: {fileID: 21300000, guid: 779fa8de61ec80045ac423849508008a, type: 3}
+  health: 2
+  animalMass: 4
+  gravity: 25
+  jumpHeight: 160
+  regainSpeed: 0.25
+  abilityTime: 3
+  canJump: 1
+  canDig: 0
+  canBreak: 0
+  canCharge: 0
+  rockJump: 1
+  showSpace: 0
+  AnimalObject: {fileID: 196962715460059637, guid: c5ee344a6457b80409b13b21fbf471be, type: 3}
+  camOffset: {x: 0, y: 8, z: -11.3}
+  playLevelIndex: 3

@@ -26,6 +26,4 @@ public class inGameAudio : MonoBehaviour
             staticAudios[soundId].Play();
         }
     }
-
-
 }

@@ -7,22 +7,22 @@ public class AbilityBar : MonoBehaviour
 {
     [Header("Set Data")]
     [SerializeField] private Slider slider;
+    [SerializeField] private GameObject abilityStatus;
 
     [Header("Private Data")]
-    
-    private Abilities abilityScript;
-    private float regainSpeed = 2;
-    private float maxTime = 2;
-    private float currentTime = 0;
-    private bool isOn = false;
+    private Abilities abilityScript;//the animal ability script
+    private float regainSpeed = 2;//the speed the bar fills again per second
+    private float maxTime = 2;//the max length of the timer
+    private float currentTime = 0;//current time
+    private bool isOn = false;//if is draining
 
     public void setStart(AnimalData animal,Abilities abilScript)//called from controller script
     {
-        abilityScript = abilScript;
-        maxTime = animal.abilityTime;
-        regainSpeed = animal.regainSpeed;
+        abilityScript = abilScript;//animal ability script
+        maxTime = animal.abilityTime;//length of the timer
+        regainSpeed = animal.regainSpeed;//the speed the bar fills again per second
         currentTime = maxTime;
-        slider.maxValue = maxTime;
+        slider.maxValue = maxTime;//sets the max value in the slider component
     }
 
     void Update()
@@ -56,11 +56,11 @@ public class AbilityBar : MonoBehaviour
             {
                 currentTime -= 1 * Time.deltaTime;
             }
-            else
+            else//when the bar is drained
             {
                 currentTime = 0;
                 isOn = false;
-                stopAbility();
+                stopAbility();//if the bar is drained stop the ability
             }
         }
         else
@@ -69,27 +69,32 @@ public class AbilityBar : MonoBehaviour
             {
                 currentTime += regainSpeed * Time.deltaTime;
             }
-            else
+            else//when the bar is filled
             {
                 currentTime = maxTime;
                 setBarActive(false);
-                barFilled();
+                barFilled();//calls functions related to when the bar is filled
             }
         }
         slider.value = currentTime;
     }
 
+    public void showStatus(bool active)//shows the ability icon in this case its used for the baboon when in front of a rock
+    {
+        abilityStatus.SetActive(active);
+    }
+
     private void barFilled()
     {
-        abilityScript.filled();
+        abilityScript.filled();//calls functions related to when the bar is filled
     }
 
     private void stopAbility()
     {
-        abilityScript.stopAbil();
+        abilityScript.stopAbil();//stops abilities when the bar is drained
     }
 
-    public bool canActivate()
+    public bool canActivate()//returns bool if the bar is filled
     {
         return currentTime == maxTime;
     }

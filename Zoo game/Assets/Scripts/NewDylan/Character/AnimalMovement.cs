@@ -24,6 +24,7 @@ public class AnimalMovement : MonoBehaviour
 
     [Header("Private Data")]
     private float jumpHeight = 10;
+    private float baseJumpHeight = 0;
     private float gravity = 10;
     private bool isGrounded;
     private bool allowJump = true;
@@ -31,6 +32,7 @@ public class AnimalMovement : MonoBehaviour
     private bool boosted = false;
     private int currentLane = 1;
     private float clicks = 0;
+    private float airTime = 1;
     private Transform[] allTrackLines = new Transform[5];
     private ParticleSystem groundPs;
     private Animator anim;
@@ -39,54 +41,56 @@ public class AnimalMovement : MonoBehaviour
     private Vector2 firstPressPos;
     private Vector2 secondPressPos;
     private Vector2 currentSwipe;
-    private float airTime = 1;
-
-    public void setStartData(GameObject newCheck,AnimalData newData,Transform[] newTrackLanes,ParticleSystem newPs,Animator newAnim)
+    
+    //gets the starting data from the animal controller
+    public void setStartData(AnimalPrefab prefavScript,AnimalData newData,Transform[] newTrackLanes)
     {
-        groundCheck = newCheck.transform;
+        groundCheck = prefavScript.groundCheck.transform;
         for(int i=0; i<newTrackLanes.Length; i++)
         {
             allTrackLines[i] = newTrackLanes[i];
         }
 
-        groundPs = newPs;
-        anim = newAnim;
+        groundPs = prefavScript.movePs;
+        anim = prefavScript.anim;
 
         jumpHeight = newData.jumpHeight;
+        baseJumpHeight = jumpHeight;
         allowJump = newData.canJump;
 
         rbPlayer.mass = newData.animalMass;
-        rbPlayer.mass = newData.gravity;
+        // gravity = newData.gravity;//mistake 
     }
 
     private void Update()
     {
+        //these are outside the pauze check because it needs to get the up key
         getSwipe();
         getKeys();
         if(!Values.pauzed && !lockMovement)
         {
-            clicks = Mathf.Lerp(clicks,0,1.0f * Time.deltaTime);
+            clicks = Mathf.Lerp(clicks,0,1.0f * Time.deltaTime);//for double click
             
-            isGrounded = Physics.Raycast(groundCheck.position,-groundCheck.up,groundDistance,groundLayers);
+            isGrounded = Physics.Raycast(groundCheck.position,-groundCheck.up,groundDistance,groundLayers);///check if the player is on the ground
             
-            getAirTime();
-            checkGroundPs();
+            getAirTime();//checks how long the player is in the air
+            checkGroundPs();//sets the dust trail particle effect
             
+            //moves the player to the lane positions
             Vector3 currentPos = transform.position;
             transform.position = Vector3.Lerp(transform.position, allTrackLines[currentLane].position, sideSpeed * Time.deltaTime);
             currentPos.x = transform.position.x;
             transform.position = currentPos;
 
-            rbPlayer.AddForce(-transform.up * gravity * airTime);
+            rbPlayer.AddForce(-transform.up * gravity * airTime);//gravity force
         }
     }
  
-    private void getSwipe()
+    private void getSwipe()//gets swiping inputs
     {
         if(Input.GetMouseButtonDown(0))
         {
             firstPressPos = new Vector2(Input.mousePosition.x,Input.mousePosition.y);
-            checkClicks();
         }
 
         if(Input.GetMouseButtonUp(0))
@@ -125,12 +129,16 @@ public class AnimalMovement : MonoBehaviour
                         jump();
                     }
                 }
-                clicks = 0;
+                clicks = 0;//resets the double click
+            }
+            if(Mathf.Abs(Vector2.Distance(secondPressPos,firstPressPos)) < 20)//checks if postion didnt move enough for a double click 
+            {
+                checkClicks();
             }
         }
     }
 
-    private void getKeys()
+    private void getKeys()//gets keyboard inputs
     {
         if(Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
         {
@@ -154,22 +162,29 @@ public class AnimalMovement : MonoBehaviour
         {
             roll();
         }
+        if(Input.GetKeyDown("space"))
+        {
+            abilityScript.checkSpecial();
+        }
     }
 
     private void checkClicks()//checks for double click
     {
-        if(clicks > 0.5f)
+        if(!Values.pauzed)
         {
-            //do special
-            clicks = 0;
-        }
-        else
-        {
-            clicks ++;
+            if(clicks > 0.5f)
+            {
+                abilityScript.checkSpecial();
+                clicks = 0;
+            }
+            else
+            {
+                clicks ++;
+            }
         }
     }
     
-    private void getAirTime()
+    private void getAirTime()//checks how long the player is in the air and changes the gravity based on that
     {
         if(isGrounded)
         {
@@ -195,7 +210,7 @@ public class AnimalMovement : MonoBehaviour
         }
     }
 
-    private void unlockMovement()
+    private void unlockMovement()//unlocks the movement after a collision
     {
         lockMovement = false;
         camScript.lockCam(false);
@@ -204,7 +219,6 @@ public class AnimalMovement : MonoBehaviour
     //jump functions
     private void jump()
     {
-        Debug.Log("Try jump");
         if(isGrounded && allowJump && !abilityScript.getDigging())
         {
             isGrounded = false;
@@ -214,7 +228,7 @@ public class AnimalMovement : MonoBehaviour
         }
     }
 
-    private void roll()
+    private void roll()//dash down
     {
         if(!isGrounded && !abilityScript.getDigging())
         {
@@ -222,12 +236,22 @@ public class AnimalMovement : MonoBehaviour
         }
     }
 
-    private void rechargeJump()
+    private void rechargeJump()//allows the player to jump again
     {
         allowJump = true;
     }
 
-    //boost functions
+    public void setDoubleJump(bool active)//sets the jump height
+    {
+        if(active)
+        {
+            jumpHeight = baseJumpHeight * 2;
+        }
+        else
+        {
+            jumpHeight = baseJumpHeight;
+        }
+    }
 
     private void checkGroundPs()
     {

@@ -5,42 +5,33 @@ using UnityEngine;
 public class CollectController : MonoBehaviour
 {
     [Header("Set Data")]
-    [SerializeField] private List<Transform> hiddenPoints = new List<Transform>();
-    [SerializeField] private Transform[] coinSpawns;
-    [SerializeField] private GameObject coinPrefab;
-    [SerializeField] private GameObject friendPrefab;
-    [SerializeField] private UiController uiScript;
-    [SerializeField] private int coinAmount = 30;
+    [SerializeField] private List<Transform> hiddenPoints = new List<Transform>();//hidden friend spawn points
+    [SerializeField] private Transform[] coinSpawns;//rubby spawn points
+    [SerializeField] private GameObject coinPrefab;//rubby prefab
+    [SerializeField] private GameObject friendPrefab;//hidden friend prefab
+    [SerializeField] private UiController uiScript;//in game ui script
+    [SerializeField] private int coinAmount = 30;//max amount of coins to spawn isnt used anymore
     
     [Header("Private Data")]
-    private int coinsCollected = 0;
-    private int friendsCollected = 0;
+    private int coinsCollected = 0;//total amount of coins collected
+    private int friendsCollected = 0;//not used anymore
 
     private void Start() 
     {
-        spawnFriend();
-        spawnCoins();
+        //for the open world it spawns coins and hidden friend at the start
+        // spawnFriend();
+        // spawnCoins();
     }
 
     private void Update()
     {
-        if(Input.GetKey(KeyCode.O))
+        if(Input.GetKey(KeyCode.L))//for cheating coins in the demo
         {
             collectItem(true);
         }
     }
 
-    private void spawnFriend()
-    {
-        if(hiddenPoints.Count > 1)
-        {
-            Transform hiddenPoint = hiddenPoints[Random.Range(0,hiddenPoints.Count)];
-            GameObject spawnedHidden = Instantiate(friendPrefab,hiddenPoint.position,Quaternion.Euler(0,0,0));
-            spawnedHidden.GetComponent<Collect>().setStart(this);
-        }
-    }
-    
-    private void spawnCoins()
+    private void spawnCoins()//spawns coins at the start of the match in the open world but isnt used anymore
     {
         for(int i=0; i<coinSpawns.Length; i++)
         {
@@ -51,7 +42,7 @@ public class CollectController : MonoBehaviour
         uiScript.setCollected(0,coinAmount);
     }
 
-    public void collectItem(bool isCoin)
+    public void collectItem(bool isCoin)//add collectable to the counter
     {
         if(isCoin)
         {
@@ -64,12 +55,23 @@ public class CollectController : MonoBehaviour
         }
     }
 
-    public int getMoney()
+    private void spawnFriend()//not used anymore was for spawning a hidden friend at a random point in the world
+    {
+        if(hiddenPoints.Count > 1)
+        {
+            Transform hiddenPoint = hiddenPoints[Random.Range(0,hiddenPoints.Count)];
+            GameObject spawnedHidden = Instantiate(friendPrefab,hiddenPoint.position,Quaternion.Euler(0,0,0));
+            spawnedHidden.GetComponent<Collect>().setStart(this);
+        }
+    }
+    
+
+    public int getMoney()//sends the current coin amount
     {
         return coinsCollected;
     }
 
-    public int getmax()
+    public int getmax()//sends the max amount of coins
     {
         return coinAmount;
     }

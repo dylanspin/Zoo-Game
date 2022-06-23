@@ -5,15 +5,15 @@ using UnityEngine;
 public class SettingsController : MonoBehaviour
 {
     [Header("Set Data")]
-    [SerializeField] private Setting[] settings;
-    [SerializeField] private SoundController soundScript;
-    [SerializeField] private languesController languesScript;
-    [SerializeField] private ingameSettings gameScript;
+    [SerializeField] private Setting[] settings;//all the individual settings
+    [SerializeField] private SoundController soundScript;//this script controls the sounds in the main menu
+    [SerializeField] private languesController languesScript;//this script controlls the langues in the main menu
+    [SerializeField] private ingameSettings gameScript;//this script controlls the settings in the track scene
 
     [Header("Private Data")]
     private bool soundOn = true;
     private bool musicOn = true;
-    private bool tips = true;
+    private bool tips = true;//if it should show the intructions at the start of the match
     private int langues = 1;//0 = english 1 = dutch
 
     private void Start()
@@ -24,14 +24,14 @@ public class SettingsController : MonoBehaviour
     private void loadData()
     {
         SettingData loadData = SaveScript.loadSettings();
-        if(loadData != null)
+        if(loadData != null)//if there was data found from the save file
         {
             soundOn = loadData.soundOn;
             musicOn = loadData.musicOn;
             langues = loadData.langues;
             tips = loadData.tips;
         }
-        else
+        else//if there is not nothing found set the values to these default settings
         {
             soundOn = true;
             musicOn = true;
@@ -39,11 +39,11 @@ public class SettingsController : MonoBehaviour
             langues = 1;
         }
 
-        if(gameScript)
+        if(gameScript)///if in game set the settings
         {
             gameScript.setSettings(soundOn,musicOn,langues,tips);
         }
-        else
+        else//if in main meny display setting data in UI
         {
             loadSettings();
         }
@@ -57,23 +57,23 @@ public class SettingsController : MonoBehaviour
             settings[1].startData(this,musicOn);//music
             settings[2].startData(this,tips);//tips in game
         }
-        languesScript.loadLang(langues);
+        languesScript.loadLang(langues);//sets the set langues 
         setSettings();
     }
     
     private void setSettings()
     {
-        if(soundScript)
+        if(soundScript)//sets the audio options
         {
             soundScript.setMusic(musicOn);
             soundScript.setSound(soundOn);
         }
     }
 
-    public void saveLang(int newLang)
+    public void saveLang(int newLang)//for when new langues is selected save that
     {
         langues = newLang;
-        SaveScript.saveSettings(this);//saves book data
+        SaveScript.saveSettings(this);//saves setting data
     }
 
     public void setSetting(int setting,bool state)
@@ -92,10 +92,11 @@ public class SettingsController : MonoBehaviour
         {
             tips = state;
         }
-        soundScript.playSoundEffect(1);
-        SaveScript.saveSettings(this);//saves book data
+        soundScript.playSoundEffect(1);//play button sound effect
+        SaveScript.saveSettings(this);//saves setting data
     }
 
+    ///get functions for getting data needed for saving it 
     public bool getTips()
     {
         return tips;   

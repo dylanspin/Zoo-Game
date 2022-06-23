@@ -18,14 +18,14 @@ public class Translate : MonoBehaviour
 
     public void setLangues(int newLangues)
     {
-        if(bookScript)
+        if(bookScript)//if main ui
         {
             bookScript.setLangues(newLangues);
             levelScript.setLangues(newLangues);
             unlockScript.setLang(newLangues);
         }
         
-        if(typeScript)
+        if(typeScript)//for the intro in the game 
         {
             if(newLangues == 0)
             {
@@ -37,8 +37,7 @@ public class Translate : MonoBehaviour
             }
         }
 
-        // setLangues
-        for(int i=0; i<translateText.Length; i++)
+        for(int i=0; i<translateText.Length; i++)// setLangues
         {
             if(translateText[i])
             {
@@ -53,5 +52,4 @@ public class Translate : MonoBehaviour
             }
         }
     }
-
 }

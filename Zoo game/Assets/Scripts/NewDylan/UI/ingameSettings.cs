@@ -4,17 +4,16 @@ using UnityEngine;
 
 public class ingameSettings : MonoBehaviour
 {
-    [SerializeField] private inGameAudio audioScript;
-    [SerializeField] private Translate translateScript;
-    [SerializeField] private EndScreen endScript;
-    [SerializeField] private GameObject instructions;
+    [SerializeField] private inGameAudio audioScript;//this controlls the audio in the game 
+    [SerializeField] private Translate translateScript;//this translates text
+    [SerializeField] private EndScreen endScript;//end screen script
+    [SerializeField] private GameObject instructions;//instructions object
     
     public void setSettings(bool soundOn,bool musicOn,int langues,bool tips)
     {
-        //still needs to set the audio
-        translateScript.setLangues(langues);
-        endScript.setLangues(langues);
-        audioScript.setStart(soundOn,musicOn);
-        instructions.SetActive(tips);
+        translateScript.setLangues(langues);//translates all other text in the game 
+        endScript.setLangues(langues);//sets the langues for the end screen 
+        audioScript.setStart(soundOn,musicOn);//sets the audio options
+        instructions.SetActive(tips);//turns on or off the instructions at the start
     }
 }

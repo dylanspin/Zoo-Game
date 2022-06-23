@@ -18,18 +18,11 @@ public class Controller : MonoBehaviour
         healthScript.setStart(newData.health);
         abilityScript.setStart(newData,abilScript);
     }
-    
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.P))
-        {
-            endMatch();
-        }
-    }
 
-    public void collided(float knockbackTime,bool dead)
+    public void collided(float knockbackTime,bool dead,int health)
     {
         trackScript.stopTrack(true);
+        healthScript.sethealthBar(health);
         if(dead)
         {
             uiScript.endTrack();
@@ -46,11 +39,6 @@ public class Controller : MonoBehaviour
     private void unlock()
     {
         trackScript.stopTrack(false);
-    }
-
-    public void setHealth(int health)
-    {
-        healthScript.sethealthBar(health);
     }
 
     public void endMatch()

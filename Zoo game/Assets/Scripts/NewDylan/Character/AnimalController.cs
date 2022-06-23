@@ -21,27 +21,23 @@ public class AnimalController : MonoBehaviour
 
     void Start()
     {
-        if(Values.selectedAnimal != null)
+        if(Values.selectedAnimal == null)//for when testing in the track scene and the value is not set
         {
-            setStartData(Values.selectedAnimal);
+            Values.selectedAnimal = testAnimal;
         }
-        else
-        {
-            setStartData(testAnimal);
-        }
+        setStartData(Values.selectedAnimal);//sets the start info for the animal based of the animal data scriptable object
     }
 
     public void setStartData(AnimalData newAnimal)
     {
-      //  cameraObj.transform.parent = null;
         transform.parent = null;
 
         AnimalPrefab prefabScript = Instantiate(newAnimal.AnimalObject, bodySpawnPos.transform.position, Quaternion.Euler(0,0,0),transform).GetComponent<AnimalPrefab>(); 
 
         controllerScript.setAnimal(newAnimal,abilitieScript);
-        abilitieScript.setStartData(prefabScript.animalBody,newAnimal,controllerScript.getBarScript());
-        moveScript.setStartData(prefabScript.groundCheck,newAnimal,trackScript.getLanes(),prefabScript.movePs,prefabScript.anim);
-        colScript.setStartData(newAnimal,prefabScript.collideEffect,controllerScript,prefabScript.animalBody);
+        abilitieScript.setStartData(prefabScript,newAnimal,controllerScript.getBarScript());
+        moveScript.setStartData(prefabScript,newAnimal,trackScript.getLanes());
+        colScript.setStartData(newAnimal,prefabScript,controllerScript);
         followScript.setStartData(newAnimal);
     }
 
