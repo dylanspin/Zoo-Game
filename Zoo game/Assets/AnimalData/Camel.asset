@@ -49,7 +49,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 54dbf3025f7ef7549a53af72c8b84b43, type: 3}
   animalImage: {fileID: 21300000, guid: 1aff677b3f5ba4c44af61864af22cd2e, type: 3}
   health: 2
-  animalMass: 4
+  animalMass: 12
   gravity: 12
   jumpHeight: 80
   regainSpeed: 0.5
@@ -57,6 +57,9 @@ MonoBehaviour:
   canJump: 1
   canDig: 0
   canBreak: 0
+  canCharge: 0
+  rockJump: 0
+  showSpace: 0
   AnimalObject: {fileID: 1684825514099774455, guid: 5b29d4f972d2b544388c40e64ef24910, type: 3}
   camOffset: {x: 0, y: 8, z: -11.3}
   playLevelIndex: 3
